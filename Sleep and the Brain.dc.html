@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/styles.css">
+<script src="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-600); }
+  * :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  input[type=range] { accent-color: var(--color-accent-600); height: 28px; }
+  [data-sidebar] { display: block; }
+  @media (max-width: 780px) { [data-sidebar] { display: none; } }
+</style>
+</helmet>
+
+<div style="width: 100%; background: var(--color-bg);">
+
+  <div style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--color-divider);">
+    <div style="max-width: 1020px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+      <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .04em;">Sleep Rinses the Brain</span>
+      <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600);">Xie et al. &nbsp;·&nbsp; a 10-minute read</span>
+    </div>
+    <div style="height: 2px;"><div style="{{ progressStyle }}"></div></div>
+  </div>
+
+  <article style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px;">
+
+    <header style="padding: 76px 24px 40px; margin: 0 -24px; background-image: radial-gradient(ellipse 60% 80% at 85% 20%, rgba(250,203,141,0.35), transparent 70%), linear-gradient(rgba(32,31,29,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(32,31,29,0.05) 1px, transparent 1px); background-size: auto, 28px 28px, 28px 28px;">
+      <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px; font-variant-numeric: tabular-nums;">Science 342, 373 &nbsp;·&nbsp; Xie, Nedergaard et al., Rochester</p>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(44px, 8.5vw, 88px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 18px;">Does sleep clean the brain?</h1>
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 2.7vw, 26px); line-height: 1.3; font-style: italic; color: var(--color-neutral-800); margin: 0 0 32px; max-width: 32ch;">Why would an animal spend a third of its life unconscious?</p>
+      <p style="font-size: 18px; line-height: 1.7; margin: 0 0 12px; max-width: 58ch; text-wrap: pretty;">Every animal studied so far sleeps, despite the obvious risk of lying still and unaware. In 2013 Maiken Nedergaard's lab offered a concrete reason: during sleep, the space between brain cells expands and cerebrospinal fluid flushes metabolic waste out of the tissue, including the amyloid-β protein associated with Alzheimer's disease. This page condenses the paper into a 10-minute read.</p>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 32px; max-width: 58ch; color: var(--color-neutral-700); text-wrap: pretty;">No background in neuroscience is assumed. Each section stands alone.</p>
+      <div style="border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 8px 0 0; margin: 0 0 22px;">
+        <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-accent-700); margin: 14px 0 6px;">The whole paper in three lines</p>
+        <a href="#f1" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">01</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">When a mouse falls asleep, the space between its brain cells grows by about 60%.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Put it to sleep &rarr;</span>
+        </a>
+        <a href="#f2" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">02</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">With wider channels, amyloid-β is cleared from the brain about twice as fast as during waking.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Race them &rarr;</span>
+        </a>
+        <a href="#f3" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">03</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">The switch is noradrenaline, the brain's alertness signal. Block it in an awake mouse and the spaces open anyway.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Turn it down &rarr;</span>
+        </a>
+      </div>
+    </header>
+
+    <div style="display: flex; gap: 32px; align-items: flex-start;">
+
+      <aside data-sidebar="1" style="position: sticky; top: 64px; flex: 0 1 200px; min-width: 164px; padding: 8px 0; max-height: calc(100vh - 110px); overflow-y: auto;">
+        <p style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 10px 12px;">Contents</p>
+        <nav style="display: grid; gap: 2px; border-left: 1px solid var(--color-divider);">
+          <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+            <a href="{{ item.href }}" style="{{ item.style }}">
+              <span style="{{ item.labelStyle }}">{{ item.label }}</span>
+              <span style="{{ item.minStyle }}">{{ item.mins }}</span>
+            </a>
+          </sc-for>
+        </nav>
+        <dc-import name="Series Nav" current="sleep" layout="sidebar" hint-size="100%,360px"></dc-import>
+      </aside>
+
+      <div style="flex: 1 1 0; min-width: 0; max-width: 1020px;">
+
+    <div id="core" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Start here</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the core idea</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 28ch;">A city that washes its streets at night</h2>
+      <div style="display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+        <div style="display: grid; gap: 18px;">
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Most of the body removes cellular waste through the lymphatic system, a network of vessels that drains fluid from tissue. The brain has no lymphatic vessels inside it, and it is the most metabolically active organ we have. How it disposes of its waste was an open question for a long time.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">In 2012 the same lab described the glymphatic system: cerebrospinal fluid enters the brain along the outside of arteries, washes through the gaps between cells, and leaves along veins, carrying waste with it. This paper asked when that system does most of its work. The answer was during sleep.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">The experiments were done in mice, using dyes injected into cerebrospinal fluid and live imaging through a small window in the skull.</p>
+        </div>
+        <div style="display: grid; gap: 16px; border: 1px solid var(--color-divider); border-radius: 4px; padding: 22px; background: var(--color-neutral-100);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Try this right now</span>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">Picture a kitchen sponge squeezed in your fist, then held under a running tap. Nothing much gets through. Open your hand and the sponge expands; water rushes through it and carries the grit out.</p>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">Your brain tissue behaves roughly like that sponge. Awake, the cells are swollen and the gaps are tight. Asleep, the cells shrink slightly and fluid can pass between them.</p>
+          <p style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .02em; margin: 0; color: var(--color-accent-800); border-top: 1px solid var(--color-divider); padding-top: 14px;">Sleep changes the physical structure of the brain, and that change is what lets it clean itself.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="f1" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 01</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the space between cells</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Asleep, the gaps between brain cells grow by about 60%</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">The team measured the interstitial space, the fluid-filled gaps between cells, in the same mice awake and asleep. Awake, it made up about 14% of brain volume. Asleep, about 23%. Cerebrospinal fluid flowed into the tissue far more readily as a result. Toggle the state and watch the fluid move.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">{{ f1Hint }}</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ setAwake }}" style="{{ awakeBtn }}">Awake</button>
+            <button type="button" onClick="{{ setAsleep }}" style="{{ asleepBtn }}">Asleep</button>
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv1Ref }}" style="width: 100%; height: 260px; display: block;"></canvas>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--color-divider); padding-top: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Space between cells</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums;">{{ gap1 }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Fluid inflow</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-accent-700);">{{ flow1 }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f1Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Schematic. Volume fractions were measured with a tetramethylammonium diffusion method in the cortex of the same mice across states. Anaesthesia produced a similar expansion.</p>
+    </section>
+
+    <div id="f2" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 02</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; clearing amyloid-β</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Waste leaves the sleeping brain about twice as fast</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">To test whether wider channels mattered, the researchers injected labelled amyloid-β into the brain and measured how quickly it disappeared. In sleeping and anaesthetised mice it was cleared about twice as fast as in awake ones. Release the same dose into both brains and compare.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">{{ f2Hint }}</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ release }}" style="{{ releaseBtn }}" style-hover="background: var(--color-accent-100);">{{ releaseLabel }}</button>
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv2Ref }}" style="width: 100%; height: 300px; display: block;"></canvas>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--color-divider); padding-top: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Cleared, awake</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums;">{{ clearedAwake }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Cleared, asleep</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">{{ clearedAsleep }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f2Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Schematic. Radiolabelled amyloid-β was injected into the cortex and the amount remaining was measured after a fixed interval. The animation compresses the timescale.</p>
+    </section>
+
+    <div id="f3" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 03</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the switch</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Noradrenaline holds the channels shut</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">Noradrenaline is the neurotransmitter that keeps the brain alert; its levels fall during sleep. When the researchers applied drugs that block noradrenaline's receptors to the brains of awake mice, the interstitial space expanded almost to sleeping levels. Wakefulness itself, through this one chemical, keeps the cells swollen. Drag the slider down.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Lower the noradrenaline signal and watch the cells respond.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: grid; gap: 6px; max-width: 420px;">
+            <label for="naSlider" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Noradrenaline signal &nbsp;<span style="color: var(--color-accent-800); font-variant-numeric: tabular-nums;">{{ naLabel }}</span></label>
+            <input id="naSlider" type="range" min="0" max="100" step="1" value="{{ na }}" onChange="{{ setNa }}" onInput="{{ setNa }}" style="width: 100%;">
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv3Ref }}" style="width: 100%; height: 220px; display: block;"></canvas>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--color-divider); padding-top: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Space between cells</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums;">{{ gap3 }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Resembles</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-accent-700);">{{ state3 }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">The finding reframes sleep. It is not only that the brain is offline; a single alertness chemical, withdrawn, physically reshapes the tissue so it can be cleaned. The two jobs, being alert and being maintained, appear to compete for the same space.</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Schematic. A cocktail of adrenergic receptor antagonists was applied to the cortex of awake mice.</p>
+    </section>
+
+    <div id="conclusion" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">In conclusion</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; what follows, and what is still argued</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 30ch;">Sleep as maintenance</h2>
+      <p style="font-size: 18px; line-height: 1.75; margin: 0 0 30px; max-width: 62ch;">The paper gave sleep a physical, measurable function. It also opened a debate that is still running.</p>
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Health</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Rest is not idle time</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">If clearance depends on sleep, then chronically short sleep is not only tiredness. It may mean waste accumulating in tissue that has no other way to remove it.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Alzheimer's</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">A plausible link, not a proven cause</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">Amyloid-β build-up is a hallmark of Alzheimer's, and poor sleep is common years before diagnosis. A 2018 human brain-imaging study found that one night without sleep raised amyloid-β levels in healthy adults. Whether better sleep prevents disease remains untested.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">The debate</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Not everyone gets the same result</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">In 2024 a group at Imperial College London reported in <em>Nature Neuroscience</em> that brain clearance in mice fell during sleep and anaesthesia. The methods differ, and the field has not settled which measurements are right. The mouse-to-human step is also unproven.</p>
+        </div>
+      </div>
+    </section>
+
+      </div>
+    </div>
+
+    <footer style="margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--color-divider); display: grid; gap: 12px;">
+      <p style="font-size: 15px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); max-width: 70ch;">Xie, L., Kang, H., Xu, Q., et al. <em>Sleep Drives Metabolite Clearance from the Adult Brain.</em> Science <span style="font-variant-numeric: tabular-nums;">2013, 342(6156), 373&ndash;377</span>.</p>
+      <p style="font-size: 15px; line-height: 1.65; margin: 0;"><a href="https://doi.org/10.1126/science.1241224" target="_blank" rel="noopener">Read the full paper &rarr;</a></p>
+      <p style="font-size: 14px; line-height: 1.65; margin: 0; color: var(--color-neutral-600); max-width: 70ch;">The simulations are simplified illustrations of each result, not the paper's data; values shown are the paper's reported averages.</p>
+      <div style="margin-top: 36px;"><dc-import name="Series Nav" current="sleep" layout="footer" hint-size="100%,320px"></dc-import></div>
+    </footer>
+  </article>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { progress: 0, activeSec: 'core', s1: 'awake', na: 100, running: false, done: false, cleared: [0, 0] };
+  m1 = 0;
+
+  componentDidMount() {
+    this.seed();
+    this.onScroll();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.last = performance.now();
+    const loop = (t) => { this.tick(t); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); window.removeEventListener('scroll', this.onScroll); }
+
+  sectionList() {
+    return [
+      { id: 'core', label: 'The core idea', mins: '2 min' },
+      { id: 'f1', label: 'The space between cells', mins: '2 min' },
+      { id: 'f2', label: 'Clearing amyloid-\u03b2', mins: '2 min' },
+      { id: 'f3', label: 'The switch', mins: '2 min' },
+      { id: 'conclusion', label: 'Why it matters', mins: '2 min' }
+    ];
+  }
+  onScroll = () => {
+    const d = document.documentElement;
+    const max = (d.scrollHeight - window.innerHeight) || 1;
+    const p = Math.max(0, Math.min(1, (window.scrollY || 0) / max));
+    let active = this.state.activeSec;
+    this.sectionList().forEach(s => { const el = document.getElementById(s.id); if (el && el.getBoundingClientRect().top < 160) active = s.id; });
+    if (Math.abs(p - this.state.progress) > 0.004 || active !== this.state.activeSec) this.setState({ progress: p, activeSec: active });
+  };
+
+  seed() {
+    let r = 11; const rnd = () => { r = (r * 16807) % 2147483647; return r / 2147483647; };
+    this.jit = []; for (let i = 0; i < 400; i++) this.jit.push({ x: rnd() - 0.5, y: rnd() - 0.5, s: 0.9 + rnd() * 0.2 });
+    this.flow = []; for (let i = 0; i < 70; i++) this.flow.push({ x: rnd(), row: Math.floor(rnd() * 6), sp: 0.6 + rnd() * 0.8 });
+    this.dots = [0, 1].map(() => { const a = []; for (let i = 0; i < 60; i++) a.push({ x0: rnd() * 0.5, y: 0.1 + rnd() * 0.8, v: 0.7 + rnd() * 0.6 }); return a; });
+  }
+
+  prep(cv) {
+    const w = cv.clientWidth || 520, h = cv.clientHeight || 240, dpr = window.devicePixelRatio || 1;
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+    const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h);
+    return { g, w, h };
+  }
+  cells(g, x0, y0, w, h, cols, rows, size) {
+    const cw = w / cols, ch = h / rows;
+    for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+      const j = this.jit[(r * cols + c) % this.jit.length];
+      const cx = x0 + (c + 0.5) * cw + j.x * cw * 0.08, cy = y0 + (r + 0.5) * ch + j.y * ch * 0.08;
+      g.beginPath();
+      g.ellipse(cx, cy, cw / 2 * size * j.s, ch / 2 * size * j.s, j.x, 0, 6.2832);
+      g.fillStyle = 'rgba(32,31,29,0.07)'; g.fill();
+      g.strokeStyle = 'rgba(32,31,29,0.4)'; g.lineWidth = 1; g.stroke();
+    }
+    return { cw, ch };
+  }
+  sizeFor(m) { return 0.97 - 0.2 * m; }
+
+  tick(t) {
+    const dt = Math.min(0.05, (t - this.last) / 1000); this.last = t;
+    const target = this.state.s1 === 'asleep' ? 1 : 0;
+    this.m1 += (target - this.m1) * Math.min(1, dt * 2.5);
+    this.draw1(dt); this.draw2(t); this.draw3();
+  }
+
+  draw1(dt) {
+    const cv = this.cv1; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const m = this.m1, rows = 6, cols = Math.max(8, Math.round(w / 52));
+    const { cw, ch } = this.cells(g, 0, 0, w, h, cols, rows, this.sizeFor(m));
+    this.flow.forEach(p => {
+      p.x += dt * p.sp * (0.02 + 0.16 * m); if (p.x > 1) p.x -= 1;
+      const y = (p.row + (p.row < rows - 1 ? 1 : 0.5)) * ch - (p.row < rows - 1 ? 0 : 0);
+      g.strokeStyle = 'rgba(160,111,36,' + (0.15 + 0.75 * m).toFixed(2) + ')'; g.lineWidth = 2; g.lineCap = 'round';
+      g.beginPath(); g.moveTo(p.x * w, y); g.lineTo(p.x * w + 6 + 10 * m, y); g.stroke();
+    });
+  }
+
+  draw2(t) {
+    const cv = this.cv2; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const lanes = ['Awake', 'Asleep'], laneH = (h - 30) / 2, drainW = 34;
+    let el = 0;
+    if (this.state.running) { el = (t - this.t0) / 1000; if (el >= 12) { el = 12; } }
+    else if (this.state.done) el = 12;
+    const counts = [0, 0];
+    lanes.forEach((lab, i) => {
+      const y0 = i * (laneH + 30);
+      const fw = w - drainW - 10;
+      this.cells(g, 0, y0 + 18, fw, laneH - 18, Math.max(8, Math.round(fw / 48)), 3, this.sizeFor(i));
+      g.fillStyle = '#605d5d'; g.font = '12px "Cormorant Garamond", serif'; g.textAlign = 'left';
+      g.fillText(lab.toUpperCase().split('').join('\u2009'), 0, y0 + 11);
+      g.fillStyle = 'rgba(182,130,53,0.14)'; g.fillRect(w - drainW, y0 + 18, drainW, laneH - 18);
+      g.strokeStyle = 'rgba(182,130,53,0.6)'; g.strokeRect(w - drainW + 0.5, y0 + 18.5, drainW - 1, laneH - 19);
+      g.save(); g.translate(w - drainW / 2 + 4, y0 + 18 + (laneH - 18) / 2); g.rotate(-Math.PI / 2);
+      g.fillStyle = '#7d5411'; g.textAlign = 'center'; g.font = 'italic 12px Lora, serif'; g.fillText('drain', 0, 0); g.restore();
+      const rate = i === 0 ? 0.04 : 0.08;
+      this.dots[i].forEach(d => {
+        const x = d.x0 + d.v * rate * el;
+        if (x >= 1) { counts[i]++; return; }
+        const px = x * (w - drainW), py = y0 + 18 + d.y * (laneH - 18);
+        g.beginPath(); g.arc(px, py, 3.2, 0, 6.2832); g.fillStyle = '#a06f24'; g.fill();
+      });
+    });
+    if (this.state.running) {
+      const c = counts.map(n => Math.round(n / 60 * 100));
+      if (!this.lastC || this.lastC[0] !== c[0] || this.lastC[1] !== c[1] || el >= 12) {
+        this.lastC = c;
+        this.setState(el >= 12 ? { cleared: c, running: false, done: true } : { cleared: c });
+      }
+    }
+  }
+
+  draw3() {
+    const cv = this.cv3; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const m = 1 - this.state.na / 100;
+    this.cells(g, 0, 0, w, h, Math.max(8, Math.round(w / 52)), 5, this.sizeFor(m));
+  }
+
+  btn(active) {
+    return {
+      fontFamily: 'var(--font-heading)', fontSize: '14px', letterSpacing: '.04em', padding: '10px 18px',
+      borderRadius: '4px', cursor: 'pointer', transition: 'all 160ms ease', borderWidth: '1px', borderStyle: 'solid',
+      borderColor: active ? 'var(--color-accent-600)' : 'var(--color-divider)',
+      backgroundColor: active ? 'var(--color-accent-100)' : 'transparent',
+      color: active ? 'var(--color-accent-900)' : 'var(--color-neutral-800)'
+    };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const asleep = s.s1 === 'asleep';
+    const m3 = 1 - s.na / 100;
+    const gap3 = 14 + 9 * m3;
+    return {
+      progressStyle: { height: '2px', width: (s.progress * 100).toFixed(2) + '%', backgroundColor: 'var(--color-accent)', transition: 'width 120ms linear' },
+      navItems: this.sectionList().map(sec => {
+        const on = sec.id === s.activeSec;
+        return {
+          key: sec.id, href: '#' + sec.id, label: sec.label, mins: sec.mins,
+          style: { display: 'flex', gap: '10px', alignItems: 'baseline', justifyContent: 'space-between', padding: '9px 12px', textDecoration: 'none', borderRadius: '4px', borderLeftWidth: '2px', borderLeftStyle: 'solid', marginLeft: '-1px', borderLeftColor: on ? 'var(--color-accent)' : 'transparent', backgroundColor: on ? 'var(--color-accent-100)' : 'transparent', color: on ? 'var(--color-accent-900)' : 'var(--color-neutral-700)', transition: 'all 160ms ease' },
+          labelStyle: { fontFamily: 'var(--font-heading)', fontSize: '15px', lineHeight: '1.25' },
+          minStyle: { fontFamily: 'var(--font-heading)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: on ? 'var(--color-accent-700)' : 'var(--color-neutral-500)', whiteSpace: 'nowrap' }
+        };
+      }),
+      cv1Ref: el => { this.cv1 = el; }, cv2Ref: el => { this.cv2 = el; }, cv3Ref: el => { this.cv3 = el; },
+
+      setAwake: () => this.setState({ s1: 'awake' }), setAsleep: () => this.setState({ s1: 'asleep' }),
+      awakeBtn: this.btn(!asleep), asleepBtn: this.btn(asleep),
+      f1Hint: asleep ? 'The cells have shrunk slightly. Fluid now moves freely through the gaps.' : 'Switch the mouse to sleep.',
+      gap1: asleep ? '23%' : '14%',
+      flow1: asleep ? 'High' : 'Low',
+      f1Note: asleep
+        ? 'A rise from 14% to 23% of brain volume is an expansion of roughly 60%. In the paper, tracer dye injected into cerebrospinal fluid spread through the sleeping cortex far faster and deeper than in the same animals awake.'
+        : 'Awake, the cells take up most of the volume. Fluid entering from the brain surface makes little headway into the tissue.',
+
+      release: () => { this.t0 = performance.now(); this.lastC = null; this.setState({ running: true, done: false, cleared: [0, 0] }); },
+      releaseLabel: s.running ? 'Clearing\u2026' : (s.done ? 'Release again' : 'Release amyloid-\u03b2'),
+      releaseBtn: Object.assign(this.btn(false), { borderColor: 'var(--color-accent-600)', color: 'var(--color-accent-900)' }),
+      f2Hint: s.done ? 'Same dose, same time. The sleeping brain cleared far more.' : 'Release the same dose of amyloid-\u03b2 into an awake and a sleeping brain.',
+      clearedAwake: s.cleared[0] + '%', clearedAsleep: s.cleared[1] + '%',
+      f2Note: s.done
+        ? 'The sleeping brain removed amyloid-\u03b2 at roughly twice the rate. Clearance rate, not total capacity, is what changed: the waste leaves along the same routes, only faster when the channels are open.'
+        : 'Each dot is a molecule of amyloid-\u03b2. It leaves the tissue by drifting with the fluid towards the vessels at the edge.',
+
+      na: s.na, naLabel: s.na + '%',
+      setNa: (e) => this.setState({ na: +e.target.value }),
+      gap3: gap3.toFixed(0) + '%',
+      state3: s.na > 66 ? 'Awake' : (s.na > 33 ? 'Drowsy' : 'Asleep')
+    };
+  }
+}
+</script>
+</body>
+</html>

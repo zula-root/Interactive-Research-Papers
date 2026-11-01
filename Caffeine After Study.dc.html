@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/styles.css">
+<script src="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-600); }
+  * :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  input[type=range] { accent-color: var(--color-accent-600); height: 28px; }
+  [data-sidebar] { display: block; }
+  @media (max-width: 780px) { [data-sidebar] { display: none; } }
+</style>
+</helmet>
+
+<div style="width: 100%; background: var(--color-bg);">
+
+  <div style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--color-divider);">
+    <div style="max-width: 1020px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+      <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .04em;">Caffeine After Studying</span>
+      <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600);">Borota et al. &nbsp;·&nbsp; a 10-minute read</span>
+    </div>
+    <div style="height: 2px;"><div style="{{ progressStyle }}"></div></div>
+  </div>
+
+  <article style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px;">
+
+    <header style="padding: 76px 24px 40px; margin: 0 -24px; background-image: radial-gradient(ellipse 60% 80% at 85% 20%, rgba(250,203,141,0.35), transparent 70%), linear-gradient(rgba(32,31,29,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(32,31,29,0.05) 1px, transparent 1px); background-size: auto, 28px 28px, 28px 28px;">
+      <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px; font-variant-numeric: tabular-nums;">Nature Neuroscience 17 &nbsp;·&nbsp; Borota, Murray, Keceli et al., Johns Hopkins</p>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(44px, 8.5vw, 88px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 18px;">Timing of caffeine matters when studying</h1>
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 2.7vw, 26px); line-height: 1.3; font-style: italic; color: var(--color-neutral-800); margin: 0 0 32px; max-width: 32ch;">Can a coffee after you learn help you remember tomorrow?</p>
+      <p style="font-size: 18px; line-height: 1.7; margin: 0 0 12px; max-width: 58ch; text-wrap: pretty;">Caffeine is known to make people more alert, which could help them learn. Whether it also strengthens memories once learning is over was unclear, because earlier studies gave caffeine before the learning began. This team gave it afterwards and tested memory the next day. Caffeine improved one specific kind of memory: telling apart things that are similar but not identical.</p>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 32px; max-width: 58ch; color: var(--color-neutral-700); text-wrap: pretty;">No background in neuroscience is assumed. Each section stands alone.</p>
+      <div style="border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 8px 0 0; margin: 0 0 22px;">
+        <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-accent-700); margin: 14px 0 6px;">The whole paper in three lines</p>
+        <a href="#f1" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">01</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Taken after studying, caffeine helped; taken just before the test, it did not.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Move the dose &rarr;</span>
+        </a>
+        <a href="#f2" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">02</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">The improvement was in spotting near-duplicates, not in recognising exact repeats.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Take the test &rarr;</span>
+        </a>
+        <a href="#f3" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">03</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">100 mg did nothing, 200 mg helped, and 300 mg helped no more than 200.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Set the dose &rarr;</span>
+        </a>
+      </div>
+    </header>
+
+    <div style="display: flex; gap: 32px; align-items: flex-start;">
+
+      <aside data-sidebar="1" style="position: sticky; top: 64px; flex: 0 1 200px; min-width: 164px; padding: 8px 0; max-height: calc(100vh - 110px); overflow-y: auto;">
+        <p style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 10px 12px;">Contents</p>
+        <nav style="display: grid; gap: 2px; border-left: 1px solid var(--color-divider);">
+          <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+            <a href="{{ item.href }}" style="{{ item.style }}">
+              <span style="{{ item.labelStyle }}">{{ item.label }}</span>
+              <span style="{{ item.minStyle }}">{{ item.mins }}</span>
+            </a>
+          </sc-for>
+        </nav>
+        <dc-import name="Series Nav" current="caffeine" layout="sidebar" hint-size="100%,360px"></dc-import>
+      </aside>
+
+      <div style="flex: 1 1 0; min-width: 0; max-width: 1020px;">
+
+    <div id="core" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Start here</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the core idea</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 28ch;">Memories keep forming after you stop learning</h2>
+      <div style="display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+        <div style="display: grid; gap: 18px;">
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">A new memory starts out fragile. Over the following hours, and especially during sleep, the brain stabilises it, a process called consolidation. Anything that acts during that window can strengthen or weaken what you keep.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Caffeine taken before studying changes alertness, attention and mood while you learn, so any memory benefit could come from any of those. Giving it only after the learning is over rules them out. If memory still improves, caffeine must be acting on consolidation.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">The participants were people who rarely consumed caffeine. They looked at pictures of everyday objects, then took a 200 mg tablet or a placebo five minutes later. Saliva samples confirmed the caffeine levels. The next day, they were tested.</p>
+        </div>
+        <div style="display: grid; gap: 16px; border: 1px solid var(--color-divider); border-radius: 4px; padding: 22px; background: var(--color-neutral-100);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Try this right now</span>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">Think of where you last parked a car or locked a bike in a place you use often. Now try to recall where you left it the time before.</p>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">The two memories are nearly identical, and they blur. Keeping similar memories separate is called pattern separation, and it is the ability this study found caffeine improved.</p>
+          <p style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .02em; margin: 0; color: var(--color-accent-800); border-top: 1px solid var(--color-divider); padding-top: 14px;">The hours after learning are part of learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="f1" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 01</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; timing</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">After studying, not before the test</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">To check that caffeine was not simply sharpening people up on test day, the team ran a version in which caffeine was given an hour before the test instead. That produced no benefit. The effect depended on caffeine being present while the memory was still settling. Move the dose along the timeline.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Choose when the caffeine is taken.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ tBefore }}" style="{{ beforeBtn }}">Before studying</button>
+            <button type="button" onClick="{{ tAfter }}" style="{{ afterBtn }}">Right after studying</button>
+            <button type="button" onClick="{{ tTest }}" style="{{ testBtn }}">Before the test</button>
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv1Ref }}" style="width: 100%; height: 180px; display: block;"></canvas>
+            <div style="display: grid; gap: 4px;">
+              <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Effect on next-day memory</span>
+              <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1.05; color: var(--color-accent-700);">{{ timingLabel }}</span>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f1Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Schematic timeline. The "before studying" condition was not part of this experiment; it is shown to explain why the design matters.</p>
+    </section>
+
+    <div id="f2" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 02</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">3 min &nbsp;·&nbsp; the test</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Telling similar things apart</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">On the second day, participants saw three kinds of picture: ones they had seen before, new ones, and lures that closely resembled earlier pictures. They labelled each as old, new or similar. Both groups recognised old pictures equally well. The caffeine group was better at calling the lures "similar" instead of mistaking them for the originals. The test below uses the same structure with simple shapes.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">{{ gameHint }}</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px; justify-items: center;">
+            <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700); font-variant-numeric: tabular-nums;">{{ gameStep }}</span>
+            <canvas ref="{{ cv2Ref }}" style="width: 100%; max-width: 360px; height: 200px; display: block;"></canvas>
+            <sc-if value="{{ showStart }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ startGame }}" style="{{ startBtn }}">{{ startLabel }}</button>
+            </sc-if>
+            <sc-if value="{{ showAnswers }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <button type="button" onClick="{{ ansOld }}" style="{{ ansBtn }}">Seen before</button>
+                <button type="button" onClick="{{ ansSim }}" style="{{ ansBtn }}">Similar</button>
+                <button type="button" onClick="{{ ansNew }}" style="{{ ansBtn }}">New</button>
+              </div>
+            </sc-if>
+            <sc-if value="{{ showResults }}" hint-placeholder-val="{{ false }}">
+              <div style="display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; max-width: 520px;">
+                <sc-for list="{{ results }}" as="r" hint-placeholder-count="3">
+                  <div style="display: grid; gap: 4px; text-align: center;">
+                    <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">{{ r.label }}</span>
+                    <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1; font-variant-numeric: tabular-nums;">{{ r.score }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f2Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">A short version of the task with shapes in place of photographs, tested after seconds rather than a day.</p>
+    </section>
+
+    <div id="f3" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 03</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; dose</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">More is not better</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">The team repeated the experiment at three doses. At 100 mg there was no measurable benefit. At 200 mg the improvement appeared. At 300 mg it was about the same as at 200. For comparison, a typical cup of brewed coffee contains around 95 mg. Set the dose.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Drag through the doses the study tested.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: grid; gap: 6px; max-width: 420px;">
+            <label for="dSlider" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Caffeine &nbsp;<span style="color: var(--color-accent-800); font-variant-numeric: tabular-nums;">{{ doseLabel }}</span></label>
+            <input id="dSlider" type="range" min="0" max="300" step="100" value="{{ dose }}" onChange="{{ setDose }}" onInput="{{ setDose }}" style="width: 100%;">
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv3Ref }}" style="width: 100%; height: 240px; display: block;"></canvas>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f3Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Illustrative heights showing the pattern the paper reports, not its measured values.</p>
+    </section>
+
+    <div id="conclusion" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">In conclusion</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; what follows from it</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 30ch;">A small, specific boost</h2>
+      <p style="font-size: 18px; line-height: 1.75; margin: 0 0 30px; max-width: 62ch;">The paper shows that caffeine can act on memory after learning, not only on attention during it. The effect was narrow and measured in a particular group of people.</p>
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">In practice</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">A coffee after the session, not at night</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">Consolidation also depends on sleep, and caffeine late in the day disrupts it. A dose after an afternoon session fits the study; one after a late-night session may cost more than it gives. See <a href="Sleep%20and%20the%20Brain.dc.html">Sleep Rinses the Brain</a>.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Who it applies to</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Light caffeine users only</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">Participants were chosen because they rarely consumed caffeine. Regular coffee drinkers build tolerance, and the study did not test whether the effect survives it.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Evidence since</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Promising, not settled</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">This is one lab's well-controlled result on one task. It has not been widely replicated, and it showed no benefit for ordinary recognition. Treat it as a reason to pay attention to timing, not as a study aid.</p>
+        </div>
+      </div>
+      <p style="font-size: 16px; line-height: 1.7; margin: 28px 0 0; max-width: 62ch; color: var(--color-neutral-800);">For what happens while you are still learning, see <a href="Thinking%20by%20Hand.dc.html">Thinking by Hand</a>.</p>
+    </section>
+
+      </div>
+    </div>
+
+    <footer style="margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--color-divider); display: grid; gap: 12px;">
+      <p style="font-size: 15px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); max-width: 70ch;">Borota, D., Murray, E., Keceli, G., et al. <em>Post-study caffeine administration enhances memory consolidation in humans.</em> Nature Neuroscience <span style="font-variant-numeric: tabular-nums;">2014, 17, 201–203</span>.</p>
+      <p style="font-size: 15px; line-height: 1.65; margin: 0;"><a href="https://doi.org/10.1038/nn.3623" target="_blank" rel="noopener">Read the full paper &rarr;</a></p>
+      <p style="font-size: 14px; line-height: 1.65; margin: 0; color: var(--color-neutral-600); max-width: 70ch;">The simulations are simplified illustrations of each result, not the paper's data.</p>
+      <div style="margin-top: 36px;"><dc-import name="Series Nav" current="caffeine" layout="footer" hint-size="100%,320px"></dc-import></div>
+    </footer>
+  </article>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { progress: 0, activeSec: 'core', timing: 'after', phase: 'idle', idx: 0, answers: [], dose: 200 };
+
+  componentDidMount() {
+    this.pos = 0.2;
+    this.onScroll();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.last = performance.now();
+    const loop = (t) => { this.tick(t); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); clearTimeout(this.timer); window.removeEventListener('scroll', this.onScroll); }
+
+  sectionList() {
+    return [
+      { id: 'core', label: 'The core idea', mins: '2 min' },
+      { id: 'f1', label: 'Timing', mins: '2 min' },
+      { id: 'f2', label: 'The test', mins: '3 min' },
+      { id: 'f3', label: 'Dose', mins: '2 min' },
+      { id: 'conclusion', label: 'What follows', mins: '2 min' }
+    ];
+  }
+  onScroll = () => {
+    const d = document.documentElement;
+    const max = (d.scrollHeight - window.innerHeight) || 1;
+    const p = Math.max(0, Math.min(1, (window.scrollY || 0) / max));
+    let active = this.state.activeSec;
+    this.sectionList().forEach(s => { const el = document.getElementById(s.id); if (el && el.getBoundingClientRect().top < 160) active = s.id; });
+    if (Math.abs(p - this.state.progress) > 0.004 || active !== this.state.activeSec) this.setState({ progress: p, activeSec: active });
+  };
+
+  prep(cv) {
+    const w = cv.clientWidth || 520, h = cv.clientHeight || 240, dpr = window.devicePixelRatio || 1;
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+    const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h);
+    return { g, w, h };
+  }
+
+  newGame() {
+    const rnd = Math.random;
+    const key = it => it.shape + '-' + it.stripes + '-' + it.rot;
+    const used = new Set(), study = [];
+    while (study.length < 6) {
+      const it = { shape: Math.floor(rnd() * 4), stripes: 2 + Math.floor(rnd() * 4), rot: Math.floor(rnd() * 6) * 30 };
+      if ([...study].some(s => s.shape === it.shape && s.stripes === it.stripes)) continue;
+      study.push(it); used.add(key(it));
+    }
+    const order = [0, 1, 2, 3, 4, 5].sort(() => rnd() - 0.5);
+    const test = [];
+    order.slice(0, 2).forEach(i => test.push(Object.assign({ kind: 'old' }, study[i])));
+    order.slice(2, 4).forEach((i, k) => {
+      const s = study[i];
+      const lure = k === 0 ? { shape: s.shape, stripes: s.stripes + (s.stripes > 2 ? -1 : 1), rot: s.rot } : { shape: s.shape, stripes: s.stripes, rot: (s.rot + 30) % 180 };
+      test.push(Object.assign({ kind: 'sim' }, lure));
+    });
+    while (test.length < 6) {
+      const it = { shape: Math.floor(rnd() * 4), stripes: 2 + Math.floor(rnd() * 4), rot: Math.floor(rnd() * 6) * 30 };
+      if (study.some(s => s.shape === it.shape && Math.abs(s.stripes - it.stripes) < 2) || test.some(t => key(t) === key(it))) continue;
+      test.push(Object.assign({ kind: 'new' }, it));
+    }
+    this.study = study; this.test = test.sort(() => rnd() - 0.5);
+  }
+
+  runStudy(i) {
+    this.setState({ phase: 'study', idx: i });
+    this.timer = setTimeout(() => {
+      if (i + 1 < this.study.length) this.runStudy(i + 1);
+      else { this.setState({ phase: 'gap', idx: 0 }); this.timer = setTimeout(() => this.setState({ phase: 'test', idx: 0, answers: [] }), 1600); }
+    }, 1700);
+  }
+
+  glyph(g, cx, cy, R, it) {
+    g.save();
+    g.beginPath();
+    if (it.shape === 0) g.arc(cx, cy, R, 0, 6.2832);
+    else if (it.shape === 1) g.rect(cx - R * 0.86, cy - R * 0.86, R * 1.72, R * 1.72);
+    else {
+      const n = it.shape === 2 ? 3 : 6;
+      for (let k = 0; k < n; k++) { const a = -Math.PI / 2 + k / n * 6.2832; const x = cx + Math.cos(a) * R, y = cy + Math.sin(a) * R * (n === 3 ? 1.05 : 1) + (n === 3 ? R * 0.15 : 0); k ? g.lineTo(x, y) : g.moveTo(x, y); }
+      g.closePath();
+    }
+    g.strokeStyle = '#201f1d'; g.lineWidth = 2; g.stroke();
+    g.clip();
+    g.translate(cx, cy); g.rotate(it.rot * Math.PI / 180);
+    g.strokeStyle = '#a06f24'; g.lineWidth = 6;
+    const gap = (2 * R) / (it.stripes + 1);
+    for (let k = 1; k <= it.stripes; k++) { const y = -R + k * gap; g.beginPath(); g.moveTo(-R * 1.5, y); g.lineTo(R * 1.5, y); g.stroke(); }
+    g.restore();
+  }
+
+  tick(t) {
+    const dt = Math.min(0.05, (t - this.last) / 1000); this.last = t;
+    const target = { before: 0.06, after: 0.2, test: 0.76 }[this.state.timing];
+    this.pos += (target - this.pos) * Math.min(1, dt * 4);
+    this.draw1(); this.draw2(); this.draw3();
+  }
+
+  draw1() {
+    const cv = this.cv1; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const L = 16, R = 16, y = h * 0.52, X = f => L + f * (w - L - R);
+    g.fillStyle = 'rgba(32,31,29,0.06)'; g.fillRect(X(0.38), y - 40, X(0.62) - X(0.38), 80);
+    g.strokeStyle = 'rgba(32,31,29,0.5)'; g.lineWidth = 1; g.beginPath(); g.moveTo(L, y); g.lineTo(w - R, y); g.stroke();
+    const ev = [[0.12, 'Study'], [0.5, 'Sleep'], [0.88, 'Test']];
+    g.font = '15px "Cormorant Garamond", serif'; g.textAlign = 'center';
+    ev.forEach(([f, l]) => { g.fillStyle = '#201f1d'; g.beginPath(); g.arc(X(f), y, 4, 0, 6.2832); g.fill(); g.fillText(l, X(f), y + 26); });
+    g.fillStyle = '#605d5d'; g.font = 'italic 12px Lora, serif';
+    g.fillText('Day 1', X(0.12), h - 6); g.fillText('Day 2', X(0.88), h - 6);
+    const px = X(this.pos), win = (w - L - R) * 0.26;
+    const grad = g.createLinearGradient(px, 0, px + win, 0); grad.addColorStop(0, 'rgba(182,130,53,0.35)'); grad.addColorStop(1, 'rgba(182,130,53,0)');
+    g.fillStyle = grad; g.fillRect(px, y - 14, win, 10);
+    g.fillStyle = '#a06f24'; g.beginPath(); g.moveTo(px, y - 20); g.lineTo(px - 6, y - 32); g.lineTo(px + 6, y - 32); g.closePath(); g.fill();
+    g.fillStyle = '#7d5411'; g.font = '14px "Cormorant Garamond", serif'; g.fillText('caffeine', px, y - 38);
+  }
+
+  draw2() {
+    const cv = this.cv2; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const s = this.state;
+    const item = s.phase === 'study' ? this.study[s.idx] : s.phase === 'test' ? this.test[s.idx] : null;
+    if (item) { this.glyph(g, w / 2, h / 2, Math.min(w, h) * 0.36, item); return; }
+    g.fillStyle = '#605d5d'; g.font = 'italic 15px Lora, serif'; g.textAlign = 'center';
+    const msg = s.phase === 'gap' ? 'Now the test…' : s.phase === 'done' ? 'Test complete' : 'Six shapes, then six questions';
+    g.fillText(msg, w / 2, h / 2);
+  }
+
+  draw3() {
+    const cv = this.cv3; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const L = 40, R = 14, T = 14, B = 34, pw = w - L - R, ph = h - T - B;
+    g.strokeStyle = 'rgba(32,31,29,0.5)'; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(L, T); g.lineTo(L, T + ph); g.lineTo(L + pw, T + ph); g.stroke();
+    g.fillStyle = '#605d5d'; g.font = 'italic 12px Lora, serif'; g.textAlign = 'center';
+    g.save(); g.translate(12, T + ph / 2); g.rotate(-Math.PI / 2); g.fillText('lures correctly called "similar" \u2192', 0, 0); g.restore();
+    const vals = [0.42, 0.43, 0.64, 0.65], labels = ['Placebo', '100 mg', '200 mg', '300 mg'];
+    const bw = Math.min(70, pw / 4 * 0.5);
+    vals.forEach((v, i) => {
+      const cx = L + (i + 0.5) * pw / 4, on = i * 100 === this.state.dose, bh = v * ph;
+      g.fillStyle = on ? 'rgba(182,130,53,0.22)' : 'transparent';
+      g.fillRect(cx - bw / 2, T + ph - bh, bw, bh);
+      g.strokeStyle = on ? '#a06f24' : 'rgba(32,31,29,0.4)'; g.lineWidth = on ? 2 : 1;
+      g.strokeRect(cx - bw / 2, T + ph - bh, bw, bh);
+      g.fillStyle = on ? '#7d5411' : '#605d5d'; g.font = '15px "Cormorant Garamond", serif';
+      g.fillText(labels[i], cx, T + ph + 20);
+    });
+    g.strokeStyle = 'rgba(32,31,29,0.35)'; g.setLineDash([4, 4]);
+    g.beginPath(); g.moveTo(L, T + ph - vals[0] * ph); g.lineTo(L + pw, T + ph - vals[0] * ph); g.stroke(); g.setLineDash([]);
+  }
+
+  btn(active) {
+    return {
+      fontFamily: 'var(--font-heading)', fontSize: '14px', letterSpacing: '.04em', padding: '10px 18px',
+      borderRadius: '4px', cursor: 'pointer', transition: 'all 160ms ease', borderWidth: '1px', borderStyle: 'solid',
+      borderColor: active ? 'var(--color-accent-600)' : 'var(--color-divider)',
+      backgroundColor: active ? 'var(--color-accent-100)' : 'transparent',
+      color: active ? 'var(--color-accent-900)' : 'var(--color-neutral-800)'
+    };
+  }
+
+  answer(a) {
+    const s = this.state; if (s.phase !== 'test') return;
+    const answers = s.answers.concat([{ kind: this.test[s.idx].kind, a }]);
+    if (s.idx + 1 < this.test.length) this.setState({ answers, idx: s.idx + 1 });
+    else this.setState({ answers, phase: 'done' });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const tm = s.timing, d = s.dose, ph = s.phase;
+    const score = k => { const r = s.answers.filter(x => x.kind === k); return r.filter(x => x.a === k).length + ' / ' + r.length; };
+    const simRight = s.answers.filter(x => x.kind === 'sim' && x.a === 'sim').length;
+    const simAsOld = s.answers.filter(x => x.kind === 'sim' && x.a === 'old').length;
+    return {
+      progressStyle: { height: '2px', width: (s.progress * 100).toFixed(2) + '%', backgroundColor: 'var(--color-accent)', transition: 'width 120ms linear' },
+      navItems: this.sectionList().map(sec => {
+        const on = sec.id === s.activeSec;
+        return {
+          key: sec.id, href: '#' + sec.id, label: sec.label, mins: sec.mins,
+          style: { display: 'flex', gap: '10px', alignItems: 'baseline', justifyContent: 'space-between', padding: '9px 12px', textDecoration: 'none', borderRadius: '4px', borderLeftWidth: '2px', borderLeftStyle: 'solid', marginLeft: '-1px', borderLeftColor: on ? 'var(--color-accent)' : 'transparent', backgroundColor: on ? 'var(--color-accent-100)' : 'transparent', color: on ? 'var(--color-accent-900)' : 'var(--color-neutral-700)', transition: 'all 160ms ease' },
+          labelStyle: { fontFamily: 'var(--font-heading)', fontSize: '15px', lineHeight: '1.25' },
+          minStyle: { fontFamily: 'var(--font-heading)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: on ? 'var(--color-accent-700)' : 'var(--color-neutral-500)', whiteSpace: 'nowrap' }
+        };
+      }),
+      cv1Ref: el => { this.cv1 = el; }, cv2Ref: el => { this.cv2 = el; }, cv3Ref: el => { this.cv3 = el; },
+
+      tBefore: () => this.setState({ timing: 'before' }), tAfter: () => this.setState({ timing: 'after' }), tTest: () => this.setState({ timing: 'test' }),
+      beforeBtn: this.btn(tm === 'before'), afterBtn: this.btn(tm === 'after'), testBtn: this.btn(tm === 'test'),
+      timingLabel: tm === 'after' ? 'Better at similar items' : tm === 'test' ? 'No benefit' : 'Cannot be separated',
+      f1Note: tm === 'after' ? 'Caffeine was active during the hours when the new memories were being stabilised, and the next day the caffeine group was better at distinguishing lures.'
+        : tm === 'test' ? 'Caffeine taken an hour before the test arrived too late to affect consolidation. Its effect on alertness alone did not improve scores.'
+        : 'Taken before studying, caffeine overlaps with learning itself. Any benefit could be due to attention or mood rather than memory, which is the problem this study was designed to avoid.',
+
+      gameHint: ph === 'idle' ? 'Press start and watch six shapes.' : ph === 'study' ? 'Remember each shape.' : ph === 'gap' ? 'Get ready.' : ph === 'test' ? 'Have you seen this exact shape?' : 'Your results.',
+      gameStep: ph === 'study' ? 'Study ' + (s.idx + 1) + ' of 6' : ph === 'test' ? 'Test ' + (s.idx + 1) + ' of 6' : ph === 'done' ? 'Results' : '\u00a0',
+      showStart: ph === 'idle' || ph === 'done', startLabel: ph === 'done' ? 'Try again' : 'Start',
+      startBtn: this.btn(true),
+      startGame: () => { clearTimeout(this.timer); this.newGame(); this.runStudy(0); },
+      showAnswers: ph === 'test', ansBtn: this.btn(false),
+      ansOld: () => this.answer('old'), ansSim: () => this.answer('sim'), ansNew: () => this.answer('new'),
+      showResults: ph === 'done',
+      results: [{ key: 'o', label: 'Old', score: score('old') }, { key: 's', label: 'Similar', score: score('sim') }, { key: 'n', label: 'New', score: score('new') }],
+      f2Note: ph !== 'done' ? 'Two of the test shapes are exact repeats, two are new and two are lures: a repeat with one detail changed.'
+        : simRight === 2 ? 'You caught both lures. Most people find these the hardest, and they are the only items on which caffeine made a difference.'
+        : simAsOld > 0 ? 'You took ' + (simAsOld === 1 ? 'a lure' : 'both lures') + ' for an original. This is the most common mistake, and the one the caffeine group made less often.'
+        : 'Lures are the hardest items to judge. They are the only ones on which caffeine made a difference.',
+
+      dose: d, setDose: e => this.setState({ dose: +e.target.value }),
+      doseLabel: d === 0 ? 'placebo' : d + ' mg  ·  about ' + (Math.round(d / 95 * 2) / 2) + ' cups of coffee',
+      f3Note: d === 0 ? 'The placebo group sets the baseline: how often people correctly spotted a lure without caffeine.'
+        : d === 100 ? 'At 100 mg, roughly one cup, scores were no different from placebo.'
+        : d === 200 ? 'At 200 mg, the dose used in the main experiment, the caffeine group was better at identifying lures.'
+        : 'At 300 mg the benefit was about the same as at 200 mg. Beyond a point, extra caffeine added nothing.'
+    };
+  }
+}
+</script>
+</body>
+</html>

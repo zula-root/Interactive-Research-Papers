@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/styles.css">
+<script src="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-600); }
+  * :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  input[type=range] { accent-color: var(--color-accent-600); height: 28px; }
+  [data-sidebar] { display: block; }
+  @media (max-width: 780px) { [data-sidebar] { display: none; } }
+</style>
+</helmet>
+
+<div style="width: 100%; background: var(--color-bg);">
+
+  <div style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--color-divider);">
+    <div style="max-width: 1020px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+      <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .04em;">Moving Clocks</span>
+      <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600);">Einstein &nbsp;·&nbsp; a 10-minute read</span>
+    </div>
+    <div style="height: 2px;"><div style="{{ progressStyle }}"></div></div>
+  </div>
+
+  <article style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px;">
+
+    <header style="padding: 76px 24px 40px; margin: 0 -24px; background-image: radial-gradient(ellipse 60% 80% at 85% 20%, rgba(250,203,141,0.35), transparent 70%), linear-gradient(rgba(32,31,29,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(32,31,29,0.05) 1px, transparent 1px); background-size: auto, 28px 28px, 28px 28px;">
+      <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px; font-variant-numeric: tabular-nums;">Annalen der Physik 17, 891 &nbsp;·&nbsp; Albert Einstein, Bern</p>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(44px, 8.5vw, 88px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 18px;">Einstein's slow clocks</h1>
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 2.7vw, 26px); line-height: 1.3; font-style: italic; color: var(--color-neutral-800); margin: 0 0 32px; max-width: 32ch;">If light always travels at the same speed, what has to give?</p>
+      <p style="font-size: 18px; line-height: 1.7; margin: 0 0 12px; max-width: 58ch; text-wrap: pretty;">In 1905 a 26-year-old patent clerk published "On the Electrodynamics of Moving Bodies." Starting from two simple assumptions, Einstein showed that time and length are not fixed quantities: they depend on how fast you are moving relative to what you measure. This is special relativity. This page condenses the paper into a 10-minute read.</p>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 32px; max-width: 58ch; color: var(--color-neutral-700); text-wrap: pretty;">No physics background is assumed. The paper itself reasons with trains, clocks and light signals, and so does this page.</p>
+      <div style="border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 8px 0 0; margin: 0 0 22px;">
+        <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-accent-700); margin: 14px 0 6px;">The whole paper in three lines</p>
+        <a href="#f1" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">01</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Two events that are simultaneous for one observer are not simultaneous for another moving past.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Flash a lamp &rarr;</span>
+        </a>
+        <a href="#f2" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">02</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">A moving clock runs slow, by an amount that depends only on its speed.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Speed it up &rarr;</span>
+        </a>
+        <a href="#f3" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">03</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">A moving object is shorter along its direction of travel. Particles from space reach the ground because of it.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Launch a muon &rarr;</span>
+        </a>
+      </div>
+    </header>
+
+    <div style="display: flex; gap: 32px; align-items: flex-start;">
+
+      <aside data-sidebar="1" style="position: sticky; top: 64px; flex: 0 1 200px; min-width: 164px; padding: 8px 0; max-height: calc(100vh - 110px); overflow-y: auto;">
+        <p style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 10px 12px;">Contents</p>
+        <nav style="display: grid; gap: 2px; border-left: 1px solid var(--color-divider);">
+          <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+            <a href="{{ item.href }}" style="{{ item.style }}">
+              <span style="{{ item.labelStyle }}">{{ item.label }}</span>
+              <span style="{{ item.minStyle }}">{{ item.mins }}</span>
+            </a>
+          </sc-for>
+        </nav>
+        <dc-import name="Series Nav" current="einstein" layout="sidebar" hint-size="100%,360px"></dc-import>
+      </aside>
+
+      <div style="flex: 1 1 0; min-width: 0; max-width: 1020px;">
+
+    <div id="core" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Start here</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the core idea</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 28ch;">Two rules that seem to contradict each other</h2>
+      <div style="display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+        <div style="display: grid; gap: 18px;">
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Einstein took two principles as given. First, the laws of physics are the same for everyone moving at a steady speed; no experiment inside a smoothly moving train can tell you whether it is moving. Second, light in a vacuum always travels at the same speed, about 300,000 km per second, however fast its source is moving.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Together these break common sense. If you chase a beam of light, the second rule says it still recedes from you at full speed. The only way both rules hold is if your measurements of distance and time change with your motion. Speed is distance divided by time; if the speed of light is fixed, distance and time must adjust.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">The paper works out exactly how they adjust. The effects are tiny at everyday speeds and large near the speed of light.</p>
+        </div>
+        <div style="display: grid; gap: 16px; border: 1px solid var(--color-divider); border-radius: 4px; padding: 22px; background: var(--color-neutral-100);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Try this right now</span>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">Remember the last time you sat on a train in a station and the train beside you pulled away. For a moment you could not tell which one was moving.</p>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">That confusion is the first rule. Neither train has a privileged claim to being at rest. Einstein's insight was to take that literally, and then add light.</p>
+          <p style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .02em; margin: 0; color: var(--color-accent-800); border-top: 1px solid var(--color-divider); padding-top: 14px;">There is no universal clock. Each observer carries their own.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="f1" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 01</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; simultaneity</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">&ldquo;At the same time&rdquo; depends on who is watching</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">A lamp flashes in the exact middle of a moving carriage. For a passenger, the light travels equal distances at equal speed and reaches both ends together. For someone on the platform, the rear wall moves towards the light and the front wall moves away from it, so the light reaches the rear first. Both accounts are correct. Section 1 of the paper builds on this point. Flash the lamp, then switch viewpoints.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">{{ f1Hint }}</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ setPassenger }}" style="{{ passengerBtn }}">Passenger's view</button>
+            <button type="button" onClick="{{ setPlatform }}" style="{{ platformBtn }}">Platform view</button>
+            <button type="button" onClick="{{ flash }}" style="{{ flashBtn }}" style-hover="background: var(--color-accent-100);">Flash the lamp</button>
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv1Ref }}" style="width: 100%; height: 200px; display: block;"></canvas>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--color-divider); padding-top: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Light reaches the walls</span>
+                <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1.05; color: var(--color-accent-700);">{{ f1Result }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f1Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">The carriage moves at half the speed of light. Einstein's own example in &sect;1&ndash;2 uses a rod and clocks; the train version comes from his 1916 popular book.</p>
+    </section>
+
+    <div id="f2" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 02</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; time dilation</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">A moving clock ticks slower</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">Imagine a clock that ticks each time a pulse of light bounces between two mirrors. Set one clock moving. Seen from outside, its light follows a longer, diagonal path. Since light cannot go faster to compensate, each tick takes longer. The slowdown factor, written &gamma; (gamma), depends only on speed. Drag the slider and count the ticks.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Increase the speed of the right-hand clock.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: grid; gap: 6px; max-width: 420px;">
+            <label for="vSlider" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Speed &nbsp;<span style="color: var(--color-accent-800); font-variant-numeric: tabular-nums;">{{ vLabel }}</span></label>
+            <input id="vSlider" type="range" min="0" max="95" step="1" value="{{ v2 }}" onChange="{{ setV2 }}" onInput="{{ setV2 }}" style="width: 100%;">
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv2Ref }}" style="width: 100%; height: 240px; display: block;"></canvas>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--color-divider); padding-top: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Slowdown &gamma;</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums;">{{ gammaLabel }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">One hour on the moving clock</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">{{ hourLabel }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f2Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">&gamma; = 1 / &radic;(1 &minus; v&sup2;/c&sup2;), derived in &sect;4. The light-clock picture is a later teaching device; the paper derives the result from its coordinate transformations.</p>
+    </section>
+
+    <div id="f3" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 03</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; length contraction</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Moving things shrink, and particles from space prove it</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">The same factor &gamma; shortens a moving object along its direction of travel. A real test arrived decades later. Cosmic rays create muons about 15 km up. A muon lives on average 2.2 millionths of a second, long enough to travel only about 660 m, yet large numbers reach the ground. From our view, the muon's clock runs slow. From the muon's view, the atmosphere is contracted. Set the muon's speed.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">{{ f3Hint }}</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: grid; gap: 6px; max-width: 420px;">
+            <label for="mSlider" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Muon speed &nbsp;<span style="color: var(--color-accent-800); font-variant-numeric: tabular-nums;">{{ muLabel }}</span></label>
+            <input id="mSlider" type="range" min="0" max="100" step="1" value="{{ mu }}" onChange="{{ setMu }}" onInput="{{ setMu }}" style="width: 100%;">
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv3Ref }}" style="width: 100%; height: 230px; display: block;"></canvas>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--color-divider); padding-top: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Without relativity</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums;">{{ muNaive }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">With relativity</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">{{ muReal }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Atmosphere, to the muon</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums;">{{ muAtmos }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">Both descriptions give the same answer about whether the muon arrives. That is the paper's central claim in action: observers disagree about times and lengths, but never about what physically happens.</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Distances are average travel before decay. First measured by Rossi and Hall in 1941; refined by Frisch and Smith in 1963.</p>
+    </section>
+
+    <div id="conclusion" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">In conclusion</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; where it shows up today</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 30ch;">You use relativity every day</h2>
+      <p style="font-size: 18px; line-height: 1.75; margin: 0 0 30px; max-width: 62ch;">Special relativity is among the most thoroughly tested ideas in science. Its consequences are built into ordinary technology.</p>
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Navigation</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">GPS corrects for it</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">GPS satellites move fast enough that their clocks lose about 7 microseconds a day to time dilation. Gravity, from Einstein's later general theory, speeds them up by about 45. Uncorrected, positions would drift by kilometres each day.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Energy</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">E = mc&sup2; followed months later</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">A three-page follow-up in the same year showed that mass and energy are equivalent. It explains why the Sun shines and how nuclear reactors work.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Method</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Taking simple rules seriously</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">The paper has no references and almost no experimental data. It accepts two principles and follows them to their conclusions, however strange. That approach became a model for theoretical physics.</p>
+        </div>
+      </div>
+    </section>
+
+      </div>
+    </div>
+
+    <footer style="margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--color-divider); display: grid; gap: 12px;">
+      <p style="font-size: 15px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); max-width: 70ch;">Einstein, A. <em>Zur Elektrodynamik bewegter K&ouml;rper</em> (On the Electrodynamics of Moving Bodies). Annalen der Physik <span style="font-variant-numeric: tabular-nums;">1905, 17(10), 891&ndash;921</span>.</p>
+      <p style="font-size: 15px; line-height: 1.65; margin: 0;"><a href="https://doi.org/10.1002/andp.19053221004" target="_blank" rel="noopener">Read the original paper &rarr;</a></p>
+      <p style="font-size: 14px; line-height: 1.65; margin: 0; color: var(--color-neutral-600); max-width: 70ch;">The simulations are simplified illustrations; calculated values use the paper's formulas.</p>
+      <div style="margin-top: 36px;"><dc-import name="Series Nav" current="einstein" layout="footer" hint-size="100%,320px"></dc-import></div>
+    </footer>
+  </article>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { progress: 0, activeSec: 'core', frame: 'platform', fired: false, v2: 60, mu: 70 };
+
+  componentDidMount() {
+    this.onScroll();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.last = performance.now(); this.ph = 0; this.ph2 = 0; this.ticks = [0, 0];
+    const loop = (t) => { this.tick(t); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); window.removeEventListener('scroll', this.onScroll); }
+
+  sectionList() {
+    return [
+      { id: 'core', label: 'The core idea', mins: '2 min' },
+      { id: 'f1', label: 'Simultaneity', mins: '2 min' },
+      { id: 'f2', label: 'Moving clocks', mins: '2 min' },
+      { id: 'f3', label: 'Shrinking lengths', mins: '2 min' },
+      { id: 'conclusion', label: 'Why it matters', mins: '2 min' }
+    ];
+  }
+  onScroll = () => {
+    const d = document.documentElement;
+    const max = (d.scrollHeight - window.innerHeight) || 1;
+    const p = Math.max(0, Math.min(1, (window.scrollY || 0) / max));
+    let active = this.state.activeSec;
+    this.sectionList().forEach(s => { const el = document.getElementById(s.id); if (el && el.getBoundingClientRect().top < 160) active = s.id; });
+    if (Math.abs(p - this.state.progress) > 0.004 || active !== this.state.activeSec) this.setState({ progress: p, activeSec: active });
+  };
+
+  prep(cv) {
+    const w = cv.clientWidth || 520, h = cv.clientHeight || 240, dpr = window.devicePixelRatio || 1;
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+    const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h);
+    return { g, w, h };
+  }
+  kick(g, t, x, y) { g.fillStyle = '#605d5d'; g.textAlign = 'left'; g.font = '12px "Cormorant Garamond", serif'; g.fillText(t.toUpperCase().split('').join('\u2009'), x, y); }
+
+  gamma(b) { return 1 / Math.sqrt(1 - b * b); }
+  muBeta(mu) { return 1 - 0.5 * Math.pow(10, -3.3 * mu / 100); }
+
+  tick(t) {
+    const dt = Math.min(0.05, (t - this.last) / 1000); this.last = t;
+    this.draw1(t); this.draw2(dt); this.draw3(dt);
+  }
+
+  draw1(t) {
+    const cv = this.cv1; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const beta = 0.5, L = w * 0.36, c = w * 0.22, v = beta * c;
+    const plat = this.state.frame === 'platform';
+    const tL0 = plat ? (L / 2) / (c + v) : (L / 2) / c, tR0 = plat ? (L / 2) / (c - v) : (L / 2) / c;
+    const el = this.state.fired ? Math.min((t - this.t0) / 1000, Math.max(tL0, tR0) + 0.4) : 0;
+    const startX = plat ? w * 0.18 : w * 0.5 - L / 2;
+    const carX = startX + (plat ? v * el : 0);
+    const groundOff = plat ? 0 : -v * el;
+    const y = 70, ch = 70;
+    g.strokeStyle = 'rgba(32,31,29,0.35)'; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(0, y + ch + 22); g.lineTo(w, y + ch + 22); g.stroke();
+    for (let x = ((groundOff % 40) + 40) % 40 - 40; x < w; x += 40) { g.beginPath(); g.moveTo(x, y + ch + 22); g.lineTo(x - 8, y + ch + 32); g.stroke(); }
+    this.kick(g, plat ? 'platform frame \u00b7 carriage moving at 0.5c \u2192' : 'passenger frame \u00b7 platform moving \u2190', 0, 16);
+    g.fillStyle = 'rgba(32,31,29,0.05)'; g.fillRect(carX, y, L, ch);
+    g.strokeStyle = '#201f1d'; g.lineWidth = 1.2; g.strokeRect(carX, y, L, ch);
+    [carX + L * 0.22, carX + L * 0.78].forEach(wx => { g.beginPath(); g.arc(wx, y + ch + 10, 9, 0, 6.2832); g.stroke(); });
+    const tL = plat ? (L / 2) / (c + v) : (L / 2) / c, tR = plat ? (L / 2) / (c - v) : (L / 2) / c;
+    const src = startX + L / 2;
+    const hitL = this.state.fired && el >= tL, hitR = this.state.fired && el >= tR;
+    if (this.state.fired) {
+      const seg = 26, lf = src - c * el, rf = src + c * el;
+      g.strokeStyle = '#a06f24'; g.lineWidth = 3;
+      if (el < tL0) { g.beginPath(); g.moveTo(Math.max(lf, carX), y + ch / 2); g.lineTo(Math.min(lf + seg, carX + L), y + ch / 2); g.stroke(); }
+      if (el < tR0) { g.beginPath(); g.moveTo(Math.min(rf, carX + L), y + ch / 2); g.lineTo(Math.max(rf - seg, carX), y + ch / 2); g.stroke(); }
+    }
+    g.beginPath(); g.arc(carX + L / 2, y + 14, 6, 0, 6.2832); g.fillStyle = this.state.fired && el < 0.3 ? '#e1ad66' : 'rgba(32,31,29,0.2)'; g.fill();
+    const wall = (x, hit, tt) => {
+      g.fillStyle = hit ? '#a06f24' : 'rgba(32,31,29,0.25)'; g.fillRect(x - 3, y, 6, ch);
+      if (hit) { g.fillStyle = '#7d5411'; g.font = 'italic 13px Lora, serif'; g.textAlign = 'center'; g.fillText('hit at ' + tt.toFixed(2), x, y - 10); }
+    };
+    wall(carX, hitL, tL); wall(carX + L, hitR, tR);
+    if (this.state.fired && el >= Math.max(tL, tR) + 0.1 && !this.reported) { this.reported = true; this.setState({ result: plat ? 'Rear wall first' : 'Both at once' }); }
+  }
+
+  draw2(dt) {
+    const cv = this.cv2; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const beta = this.state.v2 / 100, gm = this.gamma(beta);
+    const H = h - 60, top = 30, period = 1.1;
+    this.ph += dt / period; this.ph2 += dt / (period * gm);
+    const drawClock = (x0, phase, label, count) => {
+      const mw = 50;
+      g.strokeStyle = '#201f1d'; g.lineWidth = 2;
+      g.beginPath(); g.moveTo(x0 - mw / 2, top); g.lineTo(x0 + mw / 2, top); g.stroke();
+      g.beginPath(); g.moveTo(x0 - mw / 2, top + H); g.lineTo(x0 + mw / 2, top + H); g.stroke();
+      const f = phase % 1, yy = f < 0.5 ? top + H - f * 2 * H : top + (f - 0.5) * 2 * H;
+      g.beginPath(); g.arc(x0, yy, 5, 0, 6.2832); g.fillStyle = '#a06f24'; g.fill();
+      this.kick(g, label, x0 - mw / 2, 14);
+      g.fillStyle = '#201f1d'; g.font = '15px "Cormorant Garamond", serif'; g.textAlign = 'left';
+      g.fillText('ticks: ' + Math.floor(phase), x0 - mw / 2, h - 6);
+    };
+    drawClock(60, this.ph, 'at rest');
+    const span = w - 220, travel = (this.ph2 * beta * 160) % span;
+    const mx = 190 + travel;
+    g.strokeStyle = 'rgba(182,130,53,0.35)'; g.lineWidth = 1; g.setLineDash([3, 4]);
+    g.beginPath();
+    const f0 = this.ph2 % 1, steps = 40;
+    for (let i = 0; i <= steps; i++) {
+      const f = f0 - i / steps * 1; if (f < 0 && travel < (i / steps) * beta * 160) break;
+      const ff = ((f % 1) + 1) % 1, yy = ff < 0.5 ? top + H - ff * 2 * H : top + (ff - 0.5) * 2 * H;
+      const xx = mx - (i / steps) * beta * 160;
+      if (i === 0) g.moveTo(xx, yy); else g.lineTo(xx, yy);
+    }
+    g.stroke(); g.setLineDash([]);
+    drawClock(mx, this.ph2, 'moving');
+  }
+
+  draw3(dt) {
+    const cv = this.cv3; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const b = this.muBeta(this.state.mu), gm = this.gamma(b);
+    const naive = 0.66 * b, real = naive * gm;
+    const top = 30, bot = h - 30, H = bot - top, scale = H / 15;
+    g.fillStyle = 'rgba(182,130,53,0.08)'; g.fillRect(0, top, w, H);
+    g.strokeStyle = '#201f1d'; g.lineWidth = 1.2; g.beginPath(); g.moveTo(0, bot); g.lineTo(w, bot); g.stroke();
+    g.fillStyle = '#605d5d'; g.font = 'italic 13px Lora, serif'; g.textAlign = 'right';
+    g.fillText('15 km up', w - 4, top - 8); g.fillText('ground', w - 4, bot + 18);
+    const col = (x, dist, label, strong) => {
+      const d = Math.min(dist, 15), y1 = top + d * scale;
+      g.strokeStyle = strong ? '#a06f24' : 'rgba(32,31,29,0.5)'; g.lineWidth = strong ? 3 : 2;
+      g.beginPath(); g.moveTo(x, top); g.lineTo(x, y1); g.stroke();
+      g.beginPath(); g.arc(x, y1, 5, 0, 6.2832); g.fillStyle = strong ? '#a06f24' : '#605d5d'; g.fill();
+      g.fillStyle = '#201f1d'; g.font = '13px "Cormorant Garamond", serif'; g.textAlign = 'left';
+      g.fillText(label, x + 12, top + 14);
+      g.fillStyle = '#605d5d'; g.font = 'italic 12px Lora, serif';
+      g.fillText(dist >= 15 ? 'reaches the ground' : 'decays at ' + dist.toFixed(1) + ' km', x + 12, Math.min(y1 + 4, bot - 6));
+    };
+    col(w * 0.12, naive, 'Without relativity', false);
+    col(w * 0.48, real, 'With relativity', true);
+  }
+
+  btn(active) {
+    return {
+      fontFamily: 'var(--font-heading)', fontSize: '14px', letterSpacing: '.04em', padding: '10px 18px',
+      borderRadius: '4px', cursor: 'pointer', transition: 'all 160ms ease', borderWidth: '1px', borderStyle: 'solid',
+      borderColor: active ? 'var(--color-accent-600)' : 'var(--color-divider)',
+      backgroundColor: active ? 'var(--color-accent-100)' : 'transparent',
+      color: active ? 'var(--color-accent-900)' : 'var(--color-neutral-800)'
+    };
+  }
+  fmtKm(km) { return km < 1 ? Math.round(km * 1000) + ' m' : (km >= 100 ? Math.round(km) : km.toFixed(1)) + ' km'; }
+
+  renderVals() {
+    const s = this.state;
+    const plat = s.frame === 'platform';
+    const b2 = s.v2 / 100, gm2 = this.gamma(b2);
+    const bm = this.muBeta(s.mu), gmm = this.gamma(bm);
+    const naive = 0.66 * bm, real = naive * gmm;
+    const fire = () => { this.t0 = performance.now(); this.reported = false; this.setState({ fired: true, result: null }); };
+    const hrs = gm2;
+    return {
+      progressStyle: { height: '2px', width: (s.progress * 100).toFixed(2) + '%', backgroundColor: 'var(--color-accent)', transition: 'width 120ms linear' },
+      navItems: this.sectionList().map(sec => {
+        const on = sec.id === s.activeSec;
+        return {
+          key: sec.id, href: '#' + sec.id, label: sec.label, mins: sec.mins,
+          style: { display: 'flex', gap: '10px', alignItems: 'baseline', justifyContent: 'space-between', padding: '9px 12px', textDecoration: 'none', borderRadius: '4px', borderLeftWidth: '2px', borderLeftStyle: 'solid', marginLeft: '-1px', borderLeftColor: on ? 'var(--color-accent)' : 'transparent', backgroundColor: on ? 'var(--color-accent-100)' : 'transparent', color: on ? 'var(--color-accent-900)' : 'var(--color-neutral-700)', transition: 'all 160ms ease' },
+          labelStyle: { fontFamily: 'var(--font-heading)', fontSize: '15px', lineHeight: '1.25' },
+          minStyle: { fontFamily: 'var(--font-heading)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: on ? 'var(--color-accent-700)' : 'var(--color-neutral-500)', whiteSpace: 'nowrap' }
+        };
+      }),
+      cv1Ref: el => { this.cv1 = el; }, cv2Ref: el => { this.cv2 = el; }, cv3Ref: el => { this.cv3 = el; },
+
+      setPassenger: () => { this.setState({ frame: 'passenger' }); fire(); },
+      setPlatform: () => { this.setState({ frame: 'platform' }); fire(); },
+      passengerBtn: this.btn(!plat), platformBtn: this.btn(plat),
+      flash: fire,
+      flashBtn: Object.assign(this.btn(false), { borderColor: 'var(--color-accent-600)', color: 'var(--color-accent-900)' }),
+      f1Hint: s.fired ? 'Now switch to the other viewpoint.' : 'Flash the lamp in the middle of the carriage.',
+      f1Result: s.result || '\u2014',
+      f1Note: !s.result ? 'Watch where the light meets each wall.'
+        : (plat ? 'From the platform, the rear wall runs into the light while the front wall runs away from it. The rear is lit first.'
+                : 'From inside, the carriage is at rest. The light covers equal distances and lights both walls together. Neither view is wrong; simultaneity is relative.'),
+
+      v2: s.v2, setV2: (e) => this.setState({ v2: +e.target.value }),
+      vLabel: b2 === 0 ? 'at rest' : b2.toFixed(2) + ' \u00d7 light',
+      gammaLabel: gm2.toFixed(2),
+      hourLabel: (hrs < 10 ? hrs.toFixed(2) : hrs.toFixed(1)) + ' h at rest',
+      f2Note: b2 < 0.3 ? 'At everyday speeds, even a jet\u2019s, the difference is billionths of a second. That is why nobody noticed before 1905.'
+        : (b2 < 0.8 ? 'The moving clock\u2019s light travels a longer diagonal path, so it ticks less often. Every process on board, including ageing, slows by the same factor.'
+                    : 'Near light speed the effect grows without limit. A traveller here would return younger than a twin who stayed home: the twin paradox.'),
+
+      mu: s.mu, setMu: (e) => this.setState({ mu: +e.target.value }),
+      muLabel: (bm * 100).toFixed(bm > 0.999 ? 3 : 1) + '% of light',
+      muNaive: this.fmtKm(naive), muReal: this.fmtKm(real), muAtmos: this.fmtKm(15 / gmm),
+      f3Hint: real >= 15 ? 'The muon now reaches the ground on average.' : 'Push the speed towards that of light.'
+    };
+  }
+}
+</script>
+</body>
+</html>

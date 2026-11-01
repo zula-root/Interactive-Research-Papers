@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/styles.css">
+<script src="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-600); }
+  * :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  input[type=range] { accent-color: var(--color-accent-600); height: 28px; }
+  [data-sidebar] { display: block; }
+  @media (max-width: 780px) { [data-sidebar] { display: none; } }
+</style>
+</helmet>
+
+<div style="width: 100%; background: var(--color-bg);">
+
+  <div style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--color-divider);">
+    <div style="max-width: 1020px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+      <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .04em;">Catching a Yawn</span>
+      <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600);">Gallup &amp; Eldakar &nbsp;·&nbsp; an 8-minute read</span>
+    </div>
+    <div style="height: 2px;"><div style="{{ progressStyle }}"></div></div>
+  </div>
+
+  <article style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px;">
+
+    <header style="padding: 76px 24px 40px; margin: 0 -24px; background-image: radial-gradient(ellipse 60% 80% at 85% 20%, rgba(250,203,141,0.35), transparent 70%), linear-gradient(rgba(32,31,29,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(32,31,29,0.05) 1px, transparent 1px); background-size: auto, 28px 28px, 28px 28px;">
+      <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px; font-variant-numeric: tabular-nums;">Front. Evol. Neurosci. 3, 3 &nbsp;·&nbsp; Andrew Gallup &amp; Omar Eldakar, Princeton &amp; Arizona</p>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(44px, 8.5vw, 88px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 18px;">Are yawns contagious?</h1>
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 2.7vw, 26px); line-height: 1.3; font-style: italic; color: var(--color-neutral-800); margin: 0 0 32px; max-width: 32ch;">Why does the weather change how often we catch each other's yawns?</p>
+      <p style="font-size: 18px; line-height: 1.7; margin: 0 0 12px; max-width: 58ch; text-wrap: pretty;">Yawning is usually read as a sign of boredom or tiredness. A competing idea holds that it cools the brain: the deep breath and wide stretch of the jaw draw in air and increase blood flow, exchanging warm blood for cooler. If so, yawning should only help when the air is cooler than the body. Andrew Gallup and Omar Eldakar tested this on the streets of Tucson, Arizona, in winter and in summer. This page condenses the paper into an 8-minute read.</p>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 32px; max-width: 58ch; color: var(--color-neutral-700); text-wrap: pretty;">No background is assumed. You may yawn while reading; that is expected.</p>
+      <div style="border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 8px 0 0; margin: 0 0 22px;">
+        <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-accent-700); margin: 14px 0 6px;">The whole paper in three lines</p>
+        <a href="#f1" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">01</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Shown photos of yawning people, 45% of pedestrians yawned in winter, but only 24% in summer.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Change the season &rarr;</span>
+        </a>
+        <a href="#f2" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">02</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">The longer people had been out in the summer heat, the less they yawned.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Stay outside &rarr;</span>
+        </a>
+        <a href="#f3" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">03</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Yawning seems to work within a thermal window: useful in mild air, pointless in heat or extreme cold.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Turn the dial &rarr;</span>
+        </a>
+      </div>
+    </header>
+
+    <div style="display: flex; gap: 32px; align-items: flex-start;">
+
+      <aside data-sidebar="1" style="position: sticky; top: 64px; flex: 0 1 200px; min-width: 164px; padding: 8px 0; max-height: calc(100vh - 110px); overflow-y: auto;">
+        <p style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 10px 12px;">Contents</p>
+        <nav style="display: grid; gap: 2px; border-left: 1px solid var(--color-divider);">
+          <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+            <a href="{{ item.href }}" style="{{ item.style }}">
+              <span style="{{ item.labelStyle }}">{{ item.label }}</span>
+              <span style="{{ item.minStyle }}">{{ item.mins }}</span>
+            </a>
+          </sc-for>
+        </nav>
+        <dc-import name="Series Nav" current="yawning" layout="sidebar" hint-size="100%,360px"></dc-import>
+      </aside>
+
+      <div style="flex: 1 1 0; min-width: 0; max-width: 1020px;">
+
+    <div id="core" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Start here</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the core idea</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 28ch;">A radiator for the brain</h2>
+      <div style="display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+        <div style="display: grid; gap: 18px;">
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">The brain works best within a narrow temperature range, and it generates a lot of heat. Earlier studies by Gallup and others found that brain temperature rises slightly before a yawn and falls after it. The proposed mechanism is simple: a yawn pulls in a large breath of air and pumps blood through the skull, carrying heat away.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">That idea makes a testable prediction. Cooling by air only works if the air is cooler than you. When it is as hot as the body, around 37&deg;C, a yawn would bring in no relief, so people should yawn less.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Tucson, Arizona offers both conditions within one year: mild winters and early summers at or above body temperature.</p>
+        </div>
+        <div style="display: grid; gap: 16px; border: 1px solid var(--color-divider); border-radius: 4px; padding: 22px; background: var(--color-neutral-100);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Try this right now</span>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">Have you yawned since you started reading? Reading about yawns, or even thinking about them, is enough to trigger one in many people.</p>
+          <button type="button" onClick="{{ iYawned }}" style="{{ yawnBtn }}" style-hover="background: var(--color-accent-100);">{{ yawnBtnLabel }}</button>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">{{ yawnReply }}</p>
+          <p style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .02em; margin: 0; color: var(--color-accent-800); border-top: 1px solid var(--color-divider); padding-top: 14px;">If yawning cools the brain, it should depend on the temperature of the air.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="f1" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 01</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; winter and summer</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Almost twice as many yawns in winter</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">The researchers approached pedestrians outdoors in winter, at around 22&deg;C, and again in early summer, at around 37&deg;C. Each looked at pictures of people yawning and reported whether they yawned themselves. In winter 45% did; in summer, 24%. Choose a season and show the photos.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">{{ f1Hint }}</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ setWinter }}" style="{{ winterBtn }}">February &middot; 22&deg;C</button>
+            <button type="button" onClick="{{ setSummer }}" style="{{ summerBtn }}">June &middot; 37&deg;C</button>
+            <button type="button" onClick="{{ showPhotos }}" style="{{ photoBtn }}" style-hover="background: var(--color-accent-100);">Show the yawning photos</button>
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv1Ref }}" style="width: 100%; height: 230px; display: block;"></canvas>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--color-divider); padding-top: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Pedestrians who yawned</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">{{ yawnPct }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Each face is a schematic participant; the proportions match the paper's reported percentages.</p>
+    </section>
+
+    <div id="f2" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 02</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; time outside</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Minutes in the heat switch yawning off</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">Participants also said how long they had been outdoors before being tested. In summer, prolonged exposure to air at or above body temperature was linked to less yawning. In winter the pattern reversed: people who had spent longer in the mild air were more likely to yawn. Drag the slider and switch season.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Spend longer outside and watch the chance of a yawn.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: end;">
+            <div style="display: grid; gap: 6px; flex: 1 1 260px; max-width: 420px;">
+              <label for="tSlider" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Time outside &nbsp;<span style="color: var(--color-accent-800); font-variant-numeric: tabular-nums;">{{ minsLabel }}</span></label>
+              <input id="tSlider" type="range" min="0" max="30" step="1" value="{{ mins }}" onChange="{{ setMins }}" onInput="{{ setMins }}" style="width: 100%;">
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <button type="button" onClick="{{ s2Winter }}" style="{{ w2Btn }}">Winter</button>
+              <button type="button" onClick="{{ s2Summer }}" style="{{ su2Btn }}">Summer</button>
+            </div>
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv2Ref }}" style="width: 100%; height: 230px; display: block;"></canvas>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f2Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Schematic of the paper's within-season analysis. The curves show the reported direction of each effect, not exact values.</p>
+    </section>
+
+    <div id="f3" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 03</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the thermal window</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Yawning has a sweet spot</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">The Tucson results raised a follow-up question: does yawning also fall off when it is very cold, when the brain needs no extra cooling? A 2014 study in Vienna by the same group found that it does. Contagious yawning peaked at moderate temperatures around 20&deg;C and dropped in both heat and cold. Notably, Vienna's yawning peak fell in summer, the opposite season to Tucson's, because Vienna's summers are mild. Turn the thermostat.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Find the temperature where yawning helps most.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: grid; gap: 6px; max-width: 420px;">
+            <label for="cSlider" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Air temperature &nbsp;<span style="color: var(--color-accent-800); font-variant-numeric: tabular-nums;">{{ tempLabel }}</span></label>
+            <input id="cSlider" type="range" min="-5" max="40" step="1" value="{{ temp }}" onChange="{{ setTemp }}" onInput="{{ setTemp }}" style="width: 100%;">
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ cv3Ref }}" style="width: 100%; height: 230px; display: block;"></canvas>
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--color-divider); padding-top: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Would a yawn cool you?</span>
+                <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1.05; color: var(--color-accent-700);">{{ coolLabel }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f3Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Curve is schematic, after Massen, Dusch, Eldakar &amp; Gallup, &ldquo;A thermal window for yawning in humans,&rdquo; <em>Physiology &amp; Behavior</em>, 2014.</p>
+    </section>
+
+    <div id="conclusion" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">In conclusion</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">1 min &nbsp;·&nbsp; what follows from it</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 30ch;">A yawn may be more than boredom</h2>
+      <p style="font-size: 18px; line-height: 1.75; margin: 0 0 30px; max-width: 62ch;">This was a small field study, but it was the first to show that human yawning varies with season, as the cooling hypothesis predicts.</p>
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Try it yourself</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Cool your forehead</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">An earlier lab study by Gallup and Gallup (2007) found that people holding a cold pack to their forehead, or breathing only through the nose, caught far fewer yawns from a video than people who did neither.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Why contagious?</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Cooling, shared</h3>
+          <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.65; margin: 0;">The authors speculate that catching yawns may synchronise alertness in a group: if one person's brain is warming, others in the same conditions probably are too.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Limits</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Self-reported, and still debated</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">Participants reported their own yawns, and season can affect other things such as sleep and mood. Other researchers link contagious yawning mainly to social closeness and empathy. The two explanations may both be partly right.</p>
+        </div>
+      </div>
+    </section>
+
+      </div>
+    </div>
+
+    <footer style="margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--color-divider); display: grid; gap: 12px;">
+      <p style="font-size: 15px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); max-width: 70ch;">Gallup, A.C., Eldakar, O.T. <em>Contagious yawning and seasonal climate variation.</em> Frontiers in Evolutionary Neuroscience <span style="font-variant-numeric: tabular-nums;">2011, 3, 3</span>. Open access.</p>
+      <p style="font-size: 15px; line-height: 1.65; margin: 0;"><a href="https://doi.org/10.3389/fnevo.2011.00003" target="_blank" rel="noopener">Read the full paper &rarr;</a></p>
+      <p style="font-size: 14px; line-height: 1.65; margin: 0; color: var(--color-neutral-600); max-width: 70ch;">The simulations are simplified illustrations; percentages shown are the paper's reported values.</p>
+      <div style="margin-top: 36px;"><dc-import name="Series Nav" current="yawning" layout="footer" hint-size="100%,320px"></dc-import></div>
+    </footer>
+  </article>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { progress: 0, activeSec: 'core', season: 'winter', shown: false, yawned: false, mins: 3, s2: 'summer', temp: 20 };
+
+  componentDidMount() {
+    let r = 41; const rnd = () => { r = (r * 16807) % 2147483647; return r / 2147483647; };
+    this.order = []; for (let i = 0; i < 40; i++) this.order.push(i);
+    for (let i = 39; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); const t = this.order[i]; this.order[i] = this.order[j]; this.order[j] = t; }
+    this.onScroll();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.last = performance.now(); this.reveal = 0;
+    const loop = (t) => { this.tick(t); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); window.removeEventListener('scroll', this.onScroll); }
+
+  sectionList() {
+    return [
+      { id: 'core', label: 'The core idea', mins: '2 min' },
+      { id: 'f1', label: 'Winter and summer', mins: '2 min' },
+      { id: 'f2', label: 'Time outside', mins: '2 min' },
+      { id: 'f3', label: 'The thermal window', mins: '2 min' },
+      { id: 'conclusion', label: 'Why it matters', mins: '1 min' }
+    ];
+  }
+  onScroll = () => {
+    const d = document.documentElement;
+    const max = (d.scrollHeight - window.innerHeight) || 1;
+    const p = Math.max(0, Math.min(1, (window.scrollY || 0) / max));
+    let active = this.state.activeSec;
+    this.sectionList().forEach(s => { const el = document.getElementById(s.id); if (el && el.getBoundingClientRect().top < 160) active = s.id; });
+    if (Math.abs(p - this.state.progress) > 0.004 || active !== this.state.activeSec) this.setState({ progress: p, activeSec: active });
+  };
+
+  prep(cv) {
+    const w = cv.clientWidth || 520, h = cv.clientHeight || 240, dpr = window.devicePixelRatio || 1;
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+    const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h);
+    return { g, w, h };
+  }
+
+  tick(t) {
+    const dt = Math.min(0.05, (t - this.last) / 1000); this.last = t; this.t = t;
+    this.reveal = this.state.shown ? Math.min(1, this.reveal + dt / 1.6) : 0;
+    this.draw1(); this.draw2(); this.draw3();
+  }
+
+  face(g, x, y, r, yawn, open) {
+    g.beginPath(); g.arc(x, y, r, 0, 6.2832);
+    g.fillStyle = yawn ? 'rgba(225,173,102,0.35)' : 'rgba(32,31,29,0.05)'; g.fill();
+    g.strokeStyle = yawn ? '#a06f24' : 'rgba(32,31,29,0.5)'; g.lineWidth = 1.2; g.stroke();
+    g.fillStyle = '#201f1d';
+    if (yawn) {
+      g.lineWidth = 1.2; g.strokeStyle = '#201f1d';
+      g.beginPath(); g.moveTo(x - r * 0.45, y - r * 0.2); g.lineTo(x - r * 0.15, y - r * 0.2); g.stroke();
+      g.beginPath(); g.moveTo(x + r * 0.15, y - r * 0.2); g.lineTo(x + r * 0.45, y - r * 0.2); g.stroke();
+      g.beginPath(); g.ellipse(x, y + r * 0.32, r * 0.22, r * 0.12 + r * 0.22 * open, 0, 0, 6.2832); g.fill();
+    } else {
+      g.beginPath(); g.arc(x - r * 0.3, y - r * 0.18, r * 0.09, 0, 6.2832); g.fill();
+      g.beginPath(); g.arc(x + r * 0.3, y - r * 0.18, r * 0.09, 0, 6.2832); g.fill();
+      g.beginPath(); g.moveTo(x - r * 0.25, y + r * 0.35); g.lineTo(x + r * 0.25, y + r * 0.35); g.strokeStyle = '#201f1d'; g.stroke();
+    }
+  }
+
+  draw1() {
+    const cv = this.cv1; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const cols = 10, rows = 4, cw = w / cols, ch = h / rows, r = Math.min(cw, ch) * 0.34;
+    const n = this.state.season === 'winter' ? 18 : 10;
+    for (let i = 0; i < 40; i++) {
+      const c = i % cols, ro = Math.floor(i / cols);
+      const rank = this.order[i];
+      const yawn = rank < n && this.reveal > rank / n * 0.9;
+      const open = 0.6 + 0.4 * Math.sin((this.t || 0) / 300 + i);
+      this.face(g, (c + 0.5) * cw, (ro + 0.5) * ch, r, yawn, open);
+    }
+  }
+
+  summerP(m) { return m <= 5 ? 0.4 - m * 0.01 : 0.08 + 0.27 * Math.exp(-(m - 5) / 2); }
+  winterP(m) { return 0.36 + 0.2 * (1 - Math.exp(-m / 10)); }
+
+  draw2() {
+    const cv = this.cv2; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const L = 44, R = 14, T = 14, B = 30, pw = w - L - R, ph = h - T - B;
+    g.strokeStyle = 'rgba(32,31,29,0.5)'; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(L, T); g.lineTo(L, T + ph); g.lineTo(L + pw, T + ph); g.stroke();
+    g.fillStyle = '#605d5d'; g.font = 'italic 12px Lora, serif'; g.textAlign = 'center';
+    g.fillText('minutes outside before testing \u2192', L + pw / 2, h - 6);
+    g.textAlign = 'right'; [0, 0.2, 0.4, 0.6].forEach(v => { g.fillText(Math.round(v * 100) + '%', L - 6, T + ph - v / 0.6 * ph + 4); });
+    const plot = (f, on) => {
+      g.strokeStyle = on ? '#a06f24' : 'rgba(32,31,29,0.3)'; g.lineWidth = on ? 2.5 : 1.5; g.setLineDash(on ? [] : [5, 4]);
+      g.beginPath(); for (let i = 0; i <= 60; i++) { const m = i / 2, px = L + m / 30 * pw, py = T + ph - f(m) / 0.6 * ph; if (i === 0) g.moveTo(px, py); else g.lineTo(px, py); } g.stroke(); g.setLineDash([]);
+    };
+    const summer = this.state.s2 === 'summer';
+    plot(this.winterP.bind(this), !summer); plot(this.summerP.bind(this), summer);
+    const f = summer ? this.summerP(this.state.mins) : this.winterP(this.state.mins);
+    const cx = L + this.state.mins / 30 * pw, cy = T + ph - f / 0.6 * ph;
+    g.beginPath(); g.arc(cx, cy, 6, 0, 6.2832); g.fillStyle = '#a06f24'; g.fill();
+    g.fillStyle = '#7d5411'; g.font = '15px "Cormorant Garamond", serif'; g.textAlign = cx > w - 120 ? 'right' : 'left';
+    g.fillText(Math.round(f * 100) + '% yawn', cx + (cx > w - 120 ? -12 : 12), cy - 10);
+  }
+
+  windowP(t) { return 0.08 + 0.34 * Math.exp(-Math.pow((t - 20) / 9, 2)); }
+
+  draw3() {
+    const cv = this.cv3; if (!cv) return;
+    const { g, w, h } = this.prep(cv);
+    const L = 44, R = 14, T = 14, B = 30, pw = w - L - R, ph = h - T - B;
+    const tx = (t) => L + (t + 5) / 45 * pw;
+    g.fillStyle = 'rgba(182,130,53,0.1)'; g.fillRect(tx(13), T, tx(27) - tx(13), ph);
+    g.fillStyle = '#7d5411'; g.font = 'italic 12px Lora, serif'; g.textAlign = 'center'; g.fillText('thermal window', tx(20), T + 14);
+    g.strokeStyle = 'rgba(32,31,29,0.5)'; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(L, T); g.lineTo(L, T + ph); g.lineTo(L + pw, T + ph); g.stroke();
+    g.setLineDash([3, 4]); g.beginPath(); g.moveTo(tx(37), T); g.lineTo(tx(37), T + ph); g.stroke(); g.setLineDash([]);
+    g.fillStyle = '#605d5d'; g.textAlign = 'right'; g.fillText('body temp.', tx(37) - 4, T + ph - 8);
+    g.textAlign = 'center';
+    [0, 10, 20, 30, 40].forEach(t => g.fillText(t + '\u00b0', tx(t), h - 10));
+    g.strokeStyle = '#a06f24'; g.lineWidth = 2.5;
+    g.beginPath(); for (let i = 0; i <= 90; i++) { const t = -5 + i / 2, py = T + ph - this.windowP(t) / 0.5 * ph; if (i === 0) g.moveTo(tx(t), py); else g.lineTo(tx(t), py); } g.stroke();
+    const cx = tx(this.state.temp), cy = T + ph - this.windowP(this.state.temp) / 0.5 * ph;
+    g.strokeStyle = 'rgba(160,111,36,0.5)'; g.lineWidth = 1; g.beginPath(); g.moveTo(cx, T + ph); g.lineTo(cx, cy); g.stroke();
+    g.beginPath(); g.arc(cx, cy, 6, 0, 6.2832); g.fillStyle = '#a06f24'; g.fill();
+  }
+
+  btn(active) {
+    return {
+      fontFamily: 'var(--font-heading)', fontSize: '14px', letterSpacing: '.04em', padding: '10px 18px',
+      borderRadius: '4px', cursor: 'pointer', transition: 'all 160ms ease', borderWidth: '1px', borderStyle: 'solid',
+      borderColor: active ? 'var(--color-accent-600)' : 'var(--color-divider)',
+      backgroundColor: active ? 'var(--color-accent-100)' : 'transparent',
+      color: active ? 'var(--color-accent-900)' : 'var(--color-neutral-800)'
+    };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const winter = s.season === 'winter', summer2 = s.s2 === 'summer';
+    const t = s.temp;
+    const accent = Object.assign(this.btn(false), { borderColor: 'var(--color-accent-600)', color: 'var(--color-accent-900)' });
+    return {
+      progressStyle: { height: '2px', width: (s.progress * 100).toFixed(2) + '%', backgroundColor: 'var(--color-accent)', transition: 'width 120ms linear' },
+      navItems: this.sectionList().map(sec => {
+        const on = sec.id === s.activeSec;
+        return {
+          key: sec.id, href: '#' + sec.id, label: sec.label, mins: sec.mins,
+          style: { display: 'flex', gap: '10px', alignItems: 'baseline', justifyContent: 'space-between', padding: '9px 12px', textDecoration: 'none', borderRadius: '4px', borderLeftWidth: '2px', borderLeftStyle: 'solid', marginLeft: '-1px', borderLeftColor: on ? 'var(--color-accent)' : 'transparent', backgroundColor: on ? 'var(--color-accent-100)' : 'transparent', color: on ? 'var(--color-accent-900)' : 'var(--color-neutral-700)', transition: 'all 160ms ease' },
+          labelStyle: { fontFamily: 'var(--font-heading)', fontSize: '15px', lineHeight: '1.25' },
+          minStyle: { fontFamily: 'var(--font-heading)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: on ? 'var(--color-accent-700)' : 'var(--color-neutral-500)', whiteSpace: 'nowrap' }
+        };
+      }),
+      cv1Ref: el => { this.cv1 = el; }, cv2Ref: el => { this.cv2 = el; }, cv3Ref: el => { this.cv3 = el; },
+
+      iYawned: () => this.setState({ yawned: !s.yawned }),
+      yawnBtn: Object.assign(accent, { justifySelf: 'start' }),
+      yawnBtnLabel: s.yawned ? 'Yes, I yawned \u2713' : 'I just yawned',
+      yawnReply: s.yawned ? 'You are in good company. Across both seasons in this study, about a third of participants yawned while looking at yawns.' : 'Many people do. Press the button if you have.',
+
+      setWinter: () => { this.reveal = 0; this.setState({ season: 'winter', shown: false }); },
+      setSummer: () => { this.reveal = 0; this.setState({ season: 'summer', shown: false }); },
+      winterBtn: this.btn(winter), summerBtn: this.btn(!winter),
+      showPhotos: () => { this.reveal = 0; this.setState({ shown: true }); },
+      photoBtn: accent,
+      f1Hint: s.shown ? 'Now try the other season.' : 'Pick a season, then show the yawning photos.',
+      yawnPct: s.shown ? (winter ? '45%' : '24%') : '\u2014',
+
+      mins: s.mins, setMins: (e) => this.setState({ mins: +e.target.value }),
+      minsLabel: s.mins + ' min',
+      s2Winter: () => this.setState({ s2: 'winter' }), s2Summer: () => this.setState({ s2: 'summer' }),
+      w2Btn: this.btn(!summer2), su2Btn: this.btn(summer2),
+      f2Note: summer2
+        ? (s.mins <= 5 ? 'Just out of an air-conditioned building, people still yawned at a normal rate.' : 'After more than a few minutes at body temperature, yawning nearly stopped. The air had nothing to cool the brain with.')
+        : 'In mild winter air, time outside made yawning slightly more likely, not less.',
+
+      temp: s.temp, setTemp: (e) => this.setState({ temp: +e.target.value }),
+      tempLabel: t + '\u00b0C',
+      coolLabel: t >= 35 ? 'No: air as warm as you' : t >= 27 ? 'A little' : t >= 13 ? 'Yes: most effective' : t >= 4 ? 'Not much needed' : 'No: already cold',
+      f3Note: t >= 35 ? 'When the air matches body temperature, a yawn exchanges warm for warm. This is the Tucson summer.'
+        : t >= 13 && t < 27 ? 'Mild air is cool enough to carry heat away. This is the range where contagious yawning was most common in both cities.'
+        : t < 13 ? 'In cold air the brain is not at risk of overheating, so there is less reason to yawn. Vienna\u2019s winter produced fewer yawns than its summer.'
+        : 'Warm air offers some cooling, but less with every degree.'
+    };
+  }
+}
+</script>
+</body>
+</html>

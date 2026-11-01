@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/styles.css">
+<script src="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-600); }
+  * :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  [data-sidebar] { display: block; }
+  @media (max-width: 780px) { [data-sidebar] { display: none; } }
+</style>
+</helmet>
+
+<div style="width: 100%; background: var(--color-bg);">
+
+  <div style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--color-divider);">
+    <div style="max-width: 1020px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+      <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .04em;">Thinking by Hand</span>
+      <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600);">Mueller &amp; Oppenheimer &nbsp;·&nbsp; a 12-minute read</span>
+    </div>
+    <div style="height: 2px;"><div style="{{ progressStyle }}"></div></div>
+  </div>
+
+  <article style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px;">
+
+    <header style="padding: 76px 24px 40px; margin: 0 -24px; background-image: radial-gradient(ellipse 60% 80% at 85% 20%, rgba(250,203,141,0.35), transparent 70%), linear-gradient(rgba(32,31,29,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(32,31,29,0.05) 1px, transparent 1px); background-size: auto, 28px 28px, 28px 28px;">
+      <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px; font-variant-numeric: tabular-nums;">Psychological Science 25(6) &nbsp;·&nbsp; Mueller &amp; Oppenheimer, Princeton &amp; UCLA</p>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(44px, 8.5vw, 88px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 18px;">Why handwriting still wins</h1>
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 2.7vw, 26px); line-height: 1.3; font-style: italic; color: var(--color-neutral-800); margin: 0 0 32px; max-width: 32ch;">Does the way you write change what you understand?</p>
+      <p style="font-size: 18px; line-height: 1.7; margin: 0 0 12px; max-width: 58ch; text-wrap: pretty;">Students who took lecture notes on laptops wrote more, but understood less, than students who wrote by hand. Mueller and Oppenheimer traced the difference to a habit: typists copied the lecture word for word, while handwriters had to decide what mattered. This page covers their 2014 paper and two newer studies that ask the same question about AI writing tools and about the brain itself.</p>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 32px; max-width: 58ch; color: var(--color-neutral-700); text-wrap: pretty;">No background in psychology is assumed. Each section stands alone.</p>
+      <div style="border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 8px 0 0; margin: 0 0 22px;">
+        <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-accent-700); margin: 14px 0 6px;">The whole page in three lines</p>
+        <a href="#f1" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">01</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Laptop note-takers transcribed; handwriters summarised, and did better on conceptual questions.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Take notes &rarr;</span>
+        </a>
+        <a href="#f2" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">02</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">People who wrote essays with ChatGPT showed the least brain engagement and remembered least of what they wrote.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Compare tools &rarr;</span>
+        </a>
+        <a href="#f3" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">03</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Forming letters by hand engages more of the brain at once than pressing keys.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Write a word &rarr;</span>
+        </a>
+      </div>
+    </header>
+
+    <div style="display: flex; gap: 32px; align-items: flex-start;">
+
+      <aside data-sidebar="1" style="position: sticky; top: 64px; flex: 0 1 200px; min-width: 164px; padding: 8px 0; max-height: calc(100vh - 110px); overflow-y: auto;">
+        <p style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 10px 12px;">Contents</p>
+        <nav style="display: grid; gap: 2px; border-left: 1px solid var(--color-divider);">
+          <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+            <a href="{{ item.href }}" style="{{ item.style }}">
+              <span style="{{ item.labelStyle }}">{{ item.label }}</span>
+              <span style="{{ item.minStyle }}">{{ item.mins }}</span>
+            </a>
+          </sc-for>
+        </nav>
+        <dc-import name="Series Nav" current="handwriting" layout="sidebar" hint-size="100%,360px"></dc-import>
+      </aside>
+
+      <div style="flex: 1 1 0; min-width: 0; max-width: 1020px;">
+
+    <div id="core" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Start here</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the core idea</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 28ch;">Understanding comes from the effort of rewording</h2>
+      <div style="display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+        <div style="display: grid; gap: 18px;">
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Psychologists have long distinguished two ways of handling new information. You can store it as it arrives, or you can process it: compare it with what you know, pick out the main point and put it in your own words. Processing is slower and harder, and it is what produces lasting understanding.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Most people type faster than they can listen, so a keyboard lets you store a lecture without processing it. Handwriting is too slow for that. A handwriter has to condense, and condensing is processing.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">The same logic applies to tools that write for you. If the effort of choosing words is where the thinking happens, removing the effort may remove the thinking too.</p>
+        </div>
+        <div style="display: grid; gap: 16px; border: 1px solid var(--color-divider); border-radius: 4px; padding: 22px; background: var(--color-neutral-100);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Try this right now</span>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">Without scrolling up, write the opening paragraph of this page in one sentence, by hand if you have paper nearby.</p>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">You could not copy it, so you had to decide what it said. That decision is the step the researchers think laptop note-takers skipped.</p>
+          <p style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .02em; margin: 0; color: var(--color-accent-800); border-top: 1px solid var(--color-divider); padding-top: 14px;">What you remember is what you had to work out.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="f1" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 01</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">3 min &nbsp;·&nbsp; Mueller &amp; Oppenheimer, 2014</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">More notes, less understanding</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px; max-width: 62ch;">Students watched short recorded talks and took notes either on a laptop or by hand. Laptop notes were longer and repeated more of the speaker's exact phrasing. On factual questions both groups scored about the same. On conceptual questions, which asked students to apply or explain ideas, the handwriters did better.</p>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">In a second study, laptop users were told not to copy word for word. They copied anyway. In a third, students were tested a week later after a chance to review their notes, and handwritten notes still produced better results. Take notes on the passage below and see how much you copy.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Read the passage once, then type notes as you would in a lecture.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 10px;">
+            <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Lecture excerpt</span>
+            <p style="font-size: 17px; line-height: 1.7; margin: 0; max-width: 66ch;">{{ passage }}</p>
+          </div>
+          <div style="display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); align-items: start;">
+            <div style="display: grid; gap: 10px;">
+              <label for="notes" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Your notes</label>
+              <textarea id="notes" class="input" rows="6" value="{{ notes }}" onChange="{{ setNotes }}" placeholder="Type here…" style="width: 100%; box-sizing: border-box; font-family: var(--font-body); font-size: 16px; line-height: 1.6; padding: 12px 14px; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); color: var(--color-text); resize: vertical;"></textarea>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button type="button" onClick="{{ exLaptop }}" style="{{ exLaptopBtn }}">Typical laptop notes</button>
+                <button type="button" onClick="{{ exHand }}" style="{{ exHandBtn }}">Typical handwritten notes</button>
+                <button type="button" onClick="{{ clearNotes }}" style="{{ clearBtn }}">Clear</button>
+              </div>
+            </div>
+            <div style="display: grid; gap: 16px; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Words</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums;">{{ wordCount }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Copied word for word</span>
+                <span style="font-family: var(--font-heading); font-size: 34px; line-height: 1; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">{{ overlapLabel }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f1Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">"Copied" counts the share of your three-word phrases that appear in the passage, a simplified version of the paper's verbatim-overlap measure. The passage is written for this page.</p>
+    </section>
+
+    <div id="f2" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 02</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">3 min &nbsp;·&nbsp; Kosmyna et al., 2025</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Essays written with AI left less behind</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">A team at the MIT Media Lab asked 54 adults to write short essays over several sessions while wearing EEG caps, which record electrical activity across the scalp. One group used ChatGPT, one used a search engine and one used nothing. Connectivity between brain regions was strongest in the unaided group and weakest in the ChatGPT group. Shortly after finishing, most ChatGPT users could not accurately quote a sentence from their own essay. Choose a group.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Switch tools, then try the fourth session.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ gBrain }}" style="{{ brainBtn }}">No tools</button>
+            <button type="button" onClick="{{ gSearch }}" style="{{ searchBtn }}">Search engine</button>
+            <button type="button" onClick="{{ gLlm }}" style="{{ llmBtn }}">ChatGPT</button>
+            <span style="width: 1px; height: 28px; background: var(--color-divider);"></span>
+            <button type="button" onClick="{{ tSwap }}" style="{{ swapBtn }}">Session 4: swap tools</button>
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); align-items: center;">
+            <canvas ref="{{ cv2Ref }}" style="width: 100%; height: 260px; display: block;"></canvas>
+            <div style="display: grid; gap: 16px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Brain connectivity</span>
+                <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1;">{{ connLabel }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Could quote own essay</span>
+                <span style="font-family: var(--font-heading); font-size: 30px; line-height: 1.05; color: var(--color-accent-700);">{{ quoteLabel }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f2Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Schematic network, not the study's EEG data. The paper is a preprint that has not been peer reviewed, and only 18 participants took part in the fourth session.</p>
+    </section>
+
+    <div id="f3" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 03</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; Van der Weel &amp; Van der Meer, 2024</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">The hand recruits more of the brain</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">Researchers in Norway recorded 36 university students with 256-electrode EEG nets while they wrote words with a digital pen or typed them. Handwriting produced widespread, coordinated activity across regions linked to memory and to encoding new information. Typing the same words did not. The authors attribute the difference to the fine, varied movements needed to form each letter, compared with pressing one key the same way every time. Write a word, then type it.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">{{ f3Hint }}</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ mHand }}" style="{{ handBtn }}">Write by hand</button>
+            <button type="button" onClick="{{ mKey }}" style="{{ keyBtn }}">Type</button>
+          </div>
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); align-items: center;">
+            <div style="display: grid; gap: 10px;">
+              <sc-if value="{{ isHand }}" hint-placeholder-val="{{ true }}">
+                <canvas ref="{{ padRef }}" onPointerDown="{{ padDown }}" onPointerMove="{{ padMove }}" onPointerUp="{{ padUp }}" onPointerLeave="{{ padUp }}" style="width: 100%; height: 200px; display: block; border: 1px solid var(--color-divider); border-radius: 4px; touch-action: none; cursor: crosshair; background: var(--color-neutral-100);"></canvas>
+                <button type="button" onClick="{{ clearPad }}" style="{{ clearBtn }}">Clear</button>
+              </sc-if>
+              <sc-if value="{{ isKey }}" hint-placeholder-val="{{ false }}">
+                <input class="input" type="text" value="{{ typed }}" onChange="{{ setTyped }}" onKeyDown="{{ keyHit }}" placeholder="Type a word…" style="width: 100%; box-sizing: border-box; font-family: var(--font-body); font-size: 18px; padding: 12px 14px; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); color: var(--color-text);">
+              </sc-if>
+            </div>
+            <canvas ref="{{ cv3Ref }}" style="width: 100%; height: 240px; display: block;"></canvas>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ f3Note }}</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--color-neutral-700); margin: 14px 0 0; max-width: 78ch;">Schematic. The study measured brain activity during writing, not how well participants learned or remembered afterwards.</p>
+    </section>
+
+    <div id="conclusion" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">In conclusion</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; what follows from it</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 30ch;">The pen helps because it slows you down</h2>
+      <p style="font-size: 18px; line-height: 1.75; margin: 0 0 30px; max-width: 62ch;">The three studies point the same way: tools that make writing effortless can also make it thoughtless. The strength of that evidence varies, and the original result has been harder to repeat than its fame suggests.</p>
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Evidence since</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Replications found a smaller gap</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">Morehead, Dunlosky and Rawson (2019) and Urry and colleagues (2021) repeated the experiment. Laptop users again wrote more and copied more, but the difference in test scores was small or absent. How you take notes may matter more than what you take them with.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">A practice</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Draft first, then ask</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">Summarise in your own words before you consult anything else. A notebook makes that hard to avoid. In the MIT study, people who wrote unaided first and used ChatGPT afterwards stayed engaged; the reverse order did not recover it.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Limits</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Small studies, early days</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">The AI study had 54 participants and has not been peer reviewed. The EEG handwriting study had 36 and measured brain activity, not learning. Both suggest where to look rather than settling the question.</p>
+        </div>
+      </div>
+      <p style="font-size: 16px; line-height: 1.7; margin: 28px 0 0; max-width: 62ch; color: var(--color-neutral-800);">Memory is also consolidated after you stop writing. See <a href="Sleep%20and%20the%20Brain.dc.html">Sleep Rinses the Brain</a> and <a href="Caffeine%20After%20Study.dc.html">Caffeine After Studying</a>.</p>
+    </section>
+
+      </div>
+    </div>
+
+    <footer style="margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--color-divider); display: grid; gap: 12px;">
+      <p style="font-size: 15px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); max-width: 70ch;">Mueller, P.A., &amp; Oppenheimer, D.M. <em>The pen is mightier than the keyboard: Advantages of longhand over laptop note taking.</em> Psychological Science <span style="font-variant-numeric: tabular-nums;">2014, 25(6), 1159–1168</span>.</p>
+      <p style="font-size: 15px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); max-width: 70ch;">Kosmyna, N., et al. <em>Your brain on ChatGPT: Accumulation of cognitive debt when using an AI assistant for essay writing task.</em> arXiv preprint, <span style="font-variant-numeric: tabular-nums;">2025</span>. Van der Weel, F.R., &amp; Van der Meer, A.L.H. <em>Handwriting but not typewriting leads to widespread brain connectivity.</em> Frontiers in Psychology, <span style="font-variant-numeric: tabular-nums;">2024</span>.</p>
+      <p style="font-size: 15px; line-height: 1.65; margin: 0;"><a href="https://doi.org/10.1177/0956797614524581" target="_blank" rel="noopener">Read the full paper &rarr;</a></p>
+      <p style="font-size: 14px; line-height: 1.65; margin: 0; color: var(--color-neutral-600); max-width: 70ch;">The simulations are simplified illustrations of each result, not the papers' data.</p>
+      <div style="margin-top: 36px;"><dc-import name="Series Nav" current="handwriting" layout="footer" hint-size="100%,320px"></dc-import></div>
+    </footer>
+  </article>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { progress: 0, activeSec: 'core', notes: '', group: 'brain', swap: false, mode: 'hand', typed: '' };
+
+  PASSAGE = 'Honeybees tell each other where food is by dancing. A forager returning to the hive runs in a straight line while waggling her body, then loops back and repeats the run. The angle of the run relative to vertical matches the angle between the food and the sun. The length of the waggle tells the distance, roughly a second for each kilometre, though the scale varies between colonies. Other bees follow the dancer in the dark hive and then fly off in the direction she encoded.';
+  EX_LAPTOP = 'Honeybees tell each other where food is by dancing. forager returning to the hive runs in a straight line while waggling her body, then loops back and repeats. angle of the run relative to vertical matches the angle between the food and the sun. length of the waggle tells the distance, roughly a second for each kilometre. Other bees follow the dancer in the dark';
+  EX_HAND = 'bee dance = directions. waggle run angle from vertical = food angle from sun. longer waggle = farther (~1 s per km, varies). others follow in dark, then fly';
+
+  componentDidMount() {
+    let r = 41; const rnd = () => { r = (r * 16807) % 2147483647; return r / 2147483647; };
+    this.nodes = [];
+    for (let i = 0; i < 12; i++) { const a = i / 12 * 6.2832; this.nodes.push({ x: 0.5 + Math.cos(a) * 0.44, y: 0.5 + Math.sin(a) * 0.46 }); }
+    for (let i = 0; i < 7; i++) { const a = i / 7 * 6.2832 + 0.3; this.nodes.push({ x: 0.5 + Math.cos(a) * 0.22, y: 0.5 + Math.sin(a) * 0.24 }); }
+    this.nodes.push({ x: 0.5, y: 0.5 });
+    const all = [];
+    for (let i = 0; i < this.nodes.length; i++) for (let j = i + 1; j < this.nodes.length; j++) {
+      const a = this.nodes[i], b = this.nodes[j]; all.push({ a: i, b: j, d: Math.hypot(a.x - b.x, a.y - b.y), r: rnd() });
+    }
+    this.edgesRand = all.slice().sort((p, q) => p.r - q.r);
+    this.edgesLocal = all.slice().sort((p, q) => p.d - q.d);
+    this.shown2 = 0; this.act = 0; this.strokes = []; this.drawing = false;
+    this.onScroll();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.last = performance.now();
+    const loop = (t) => { this.tick(t); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); window.removeEventListener('scroll', this.onScroll); }
+
+  sectionList() {
+    return [
+      { id: 'core', label: 'The core idea', mins: '2 min' },
+      { id: 'f1', label: 'Laptop vs pen', mins: '3 min' },
+      { id: 'f2', label: 'Writing with AI', mins: '3 min' },
+      { id: 'f3', label: 'The hand and the brain', mins: '2 min' },
+      { id: 'conclusion', label: 'What follows', mins: '2 min' }
+    ];
+  }
+  onScroll = () => {
+    const d = document.documentElement;
+    const max = (d.scrollHeight - window.innerHeight) || 1;
+    const p = Math.max(0, Math.min(1, (window.scrollY || 0) / max));
+    let active = this.state.activeSec;
+    this.sectionList().forEach(s => { const el = document.getElementById(s.id); if (el && el.getBoundingClientRect().top < 160) active = s.id; });
+    if (Math.abs(p - this.state.progress) > 0.004 || active !== this.state.activeSec) this.setState({ progress: p, activeSec: active });
+  };
+
+  prep(cv) {
+    const w = cv.clientWidth || 520, h = cv.clientHeight || 240, dpr = window.devicePixelRatio || 1;
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+    const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, w, h);
+    return { g, w, h };
+  }
+
+  overlap(text) {
+    const norm = s => s.toLowerCase().split(/\s+/).map(x => x.replace(/[^a-z0-9]/g, '')).filter(Boolean);
+    if (!this.tri) { const p = norm(this.PASSAGE); this.tri = new Set(); for (let i = 0; i + 2 < p.length; i++) this.tri.add(p[i] + ' ' + p[i + 1] + ' ' + p[i + 2]); }
+    const u = norm(text); let n = 0, m = 0;
+    for (let i = 0; i + 2 < u.length; i++) { n++; if (this.tri.has(u[i] + ' ' + u[i + 1] + ' ' + u[i + 2])) m++; }
+    return { words: u.length, pct: n ? m / n : 0 };
+  }
+
+  target2() {
+    const s = this.state;
+    let k = s.group === 'brain' ? 46 : s.group === 'search' ? 30 : 14;
+    if (s.swap && s.group === 'llm') k = 22;
+    if (s.swap && s.group === 'brain') k = 54;
+    return k;
+  }
+
+  network(g, w, h, edges, n, alpha, col) {
+    const s = Math.min(w, h) - 16, ox = (w - s) / 2, oy = (h - s) / 2;
+    const P = p => [ox + p.x * s, oy + p.y * s];
+    g.lineWidth = 1.3;
+    const whole = Math.floor(n), frac = n - whole;
+    for (let i = 0; i < Math.min(edges.length, Math.ceil(n)); i++) {
+      const e = edges[i], a = P(this.nodes[e.a]), b = P(this.nodes[e.b]);
+      g.strokeStyle = col.replace('A', String((i < whole ? 1 : frac) * alpha));
+      g.beginPath(); g.moveTo(a[0], a[1]); g.lineTo(b[0], b[1]); g.stroke();
+    }
+    this.nodes.forEach(p => { const q = P(p); g.beginPath(); g.arc(q[0], q[1], 4, 0, 6.2832); g.fillStyle = '#f3f2f2'; g.fill(); g.strokeStyle = '#201f1d'; g.lineWidth = 1.2; g.stroke(); });
+  }
+
+  tick(t) {
+    const dt = Math.min(0.05, (t - this.last) / 1000); this.last = t;
+    this.shown2 += (this.target2() - this.shown2) * Math.min(1, dt * 3);
+    this.act = Math.max(0, this.act - dt * 0.22);
+    if (this.cv2) { const { g, w, h } = this.prep(this.cv2); this.network(g, w, h, this.edgesRand, this.shown2, 0.75, 'rgba(160,111,36,A)'); }
+    if (this.cv3) {
+      const { g, w, h } = this.prep(this.cv3);
+      const hand = this.state.mode === 'hand';
+      this.network(g, w, h, hand ? this.edgesRand : this.edgesLocal, (hand ? 44 : 10) * this.act, 0.85, 'rgba(160,111,36,A)');
+    }
+    if (this.pad) {
+      const { g } = this.prep(this.pad);
+      g.strokeStyle = '#201f1d'; g.lineWidth = 2.4; g.lineCap = 'round'; g.lineJoin = 'round';
+      this.strokes.forEach(st => { g.beginPath(); st.forEach((p, i) => i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1])); g.stroke(); });
+    }
+  }
+
+  padPt(e) { const r = this.pad.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; }
+
+  btn(active) {
+    return {
+      fontFamily: 'var(--font-heading)', fontSize: '14px', letterSpacing: '.04em', padding: '10px 18px',
+      borderRadius: '4px', cursor: 'pointer', transition: 'all 160ms ease', borderWidth: '1px', borderStyle: 'solid',
+      borderColor: active ? 'var(--color-accent-600)' : 'var(--color-divider)',
+      backgroundColor: active ? 'var(--color-accent-100)' : 'transparent',
+      color: active ? 'var(--color-accent-900)' : 'var(--color-neutral-800)'
+    };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const o = this.overlap(s.notes);
+    const pct = Math.round(o.pct * 100);
+    const g = s.group;
+    let connLabel = g === 'brain' ? 'Strongest' : g === 'search' ? 'Intermediate' : 'Weakest';
+    let quoteLabel = g === 'llm' ? 'Most could not' : 'Most could';
+    let f2Note = g === 'brain' ? 'Writing unaided produced the most extensive connectivity between brain regions. These participants also felt the strongest sense that the essay was their own.'
+      : g === 'search' ? 'The search-engine group fell in between. They still had to read, choose and phrase the material themselves.'
+      : 'With ChatGPT drafting, connectivity was lowest. Participants reported the weakest sense of ownership, and most could not quote their own essay minutes after writing it.';
+    if (s.swap) {
+      if (g === 'llm') { connLabel = 'Still low'; quoteLabel = 'Still struggled'; f2Note = 'In session 4, former ChatGPT users wrote without help. Their connectivity stayed below that of people who had written unaided all along. The authors call this "cognitive debt".'; }
+      else if (g === 'brain') { connLabel = 'Rose further'; quoteLabel = 'Most could'; f2Note = 'In session 4, people who had written unaided were given ChatGPT. Their connectivity rose rather than fell, which suggests that using AI after you have done your own thinking costs less.'; }
+      else { f2Note = 'The search-engine group was not part of the session 4 swap. Choose one of the other two groups.'; }
+    }
+    const hand = s.mode === 'hand';
+    return {
+      progressStyle: { height: '2px', width: (s.progress * 100).toFixed(2) + '%', backgroundColor: 'var(--color-accent)', transition: 'width 120ms linear' },
+      navItems: this.sectionList().map(sec => {
+        const on = sec.id === s.activeSec;
+        return {
+          key: sec.id, href: '#' + sec.id, label: sec.label, mins: sec.mins,
+          style: { display: 'flex', gap: '10px', alignItems: 'baseline', justifyContent: 'space-between', padding: '9px 12px', textDecoration: 'none', borderRadius: '4px', borderLeftWidth: '2px', borderLeftStyle: 'solid', marginLeft: '-1px', borderLeftColor: on ? 'var(--color-accent)' : 'transparent', backgroundColor: on ? 'var(--color-accent-100)' : 'transparent', color: on ? 'var(--color-accent-900)' : 'var(--color-neutral-700)', transition: 'all 160ms ease' },
+          labelStyle: { fontFamily: 'var(--font-heading)', fontSize: '15px', lineHeight: '1.25' },
+          minStyle: { fontFamily: 'var(--font-heading)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: on ? 'var(--color-accent-700)' : 'var(--color-neutral-500)', whiteSpace: 'nowrap' }
+        };
+      }),
+      passage: this.PASSAGE,
+      notes: s.notes, setNotes: e => this.setState({ notes: e.target.value }),
+      exLaptop: () => this.setState({ notes: this.EX_LAPTOP }), exHand: () => this.setState({ notes: this.EX_HAND }), clearNotes: () => this.setState({ notes: '' }),
+      exLaptopBtn: this.btn(s.notes === this.EX_LAPTOP), exHandBtn: this.btn(s.notes === this.EX_HAND), clearBtn: this.btn(false),
+      wordCount: o.words, overlapLabel: o.words < 3 ? '—' : pct + '%',
+      f1Note: o.words < 5 ? 'Start typing, or load one of the examples. The passage has ' + this.overlap(this.PASSAGE).words + ' words.'
+        : pct >= 45 ? 'Mostly copied. This is what laptop note-takers tended to do: the notes are complete, but the work of deciding what they mean is still ahead of you.'
+        : pct >= 15 ? 'A mix of copied phrases and your own wording. The paper found that the more verbatim the notes, the worse students did on conceptual questions.'
+        : 'Mostly your own words. To write this you had to understand the passage first, which is the advantage handwriters had.',
+
+      cv2Ref: el => { this.cv2 = el; }, cv3Ref: el => { this.cv3 = el; },
+      gBrain: () => this.setState({ group: 'brain' }), gSearch: () => this.setState({ group: 'search' }), gLlm: () => this.setState({ group: 'llm' }),
+      tSwap: () => this.setState({ swap: !s.swap }),
+      brainBtn: this.btn(g === 'brain'), searchBtn: this.btn(g === 'search'), llmBtn: this.btn(g === 'llm'), swapBtn: this.btn(s.swap),
+      connLabel, quoteLabel, f2Note,
+
+      isHand: hand, isKey: !hand,
+      mHand: () => { this.act = 0; this.setState({ mode: 'hand' }); }, mKey: () => { this.act = 0; this.setState({ mode: 'key' }); },
+      handBtn: this.btn(hand), keyBtn: this.btn(!hand),
+      f3Hint: hand ? 'Write a word in the box with your mouse, finger or stylus.' : 'Type a word in the box.',
+      padRef: el => { this.pad = el; },
+      padDown: e => { if (!this.pad) return; this.drawing = true; this.strokes.push([this.padPt(e)]); try { this.pad.setPointerCapture(e.pointerId); } catch (x) {} },
+      padMove: e => { if (!this.drawing || !this.pad) return; const st = this.strokes[this.strokes.length - 1], p = this.padPt(e), q = st[st.length - 1]; st.push(p); this.act = Math.min(1, this.act + Math.hypot(p[0] - q[0], p[1] - q[1]) * 0.0016); },
+      padUp: () => { this.drawing = false; },
+      clearPad: () => { this.strokes = []; },
+      typed: s.typed, setTyped: e => this.setState({ typed: e.target.value }),
+      keyHit: () => { this.act = Math.min(1, this.act + 0.12); },
+      f3Note: hand ? 'Each letter needs a different, precisely controlled movement, and the network spreads across distant regions as you write.'
+        : 'Each keystroke is the same small movement wherever the letter is. Activity stays limited and local however fast you type.'
+    };
+  }
+}
+</script>
+</body>
+</html>

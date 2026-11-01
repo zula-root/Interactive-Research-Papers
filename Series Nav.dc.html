@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/styles.css">
+<script src="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/_ds_bundle.js"></script>
+</helmet>
+<sc-if value="{{ isSidebar }}" hint-placeholder-val="{{ true }}">
+  <div style="margin-top: 28px;">
+    <p style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 10px 12px;">The series</p>
+    <nav style="display: grid; gap: 2px; border-left: 1px solid var(--color-divider);">
+      <sc-for list="{{ items }}" as="item" hint-placeholder-count="6">
+        <a href="{{ item.href }}" style="{{ item.sideStyle }}" style-hover="background: var(--color-neutral-200);">
+          <span style="font-family: var(--font-heading); font-size: 14px; line-height: 1.25;">{{ item.title }}</span>
+          <span style="font-family: var(--font-heading); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--color-neutral-500);">{{ item.topic }}</span>
+        </a>
+      </sc-for>
+    </nav>
+  </div>
+</sc-if>
+<sc-if value="{{ isFooter }}" hint-placeholder-val="{{ false }}">
+  <div style="display: grid; gap: 16px;">
+    <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-accent-700); margin: 0;">More in this series</p>
+    <div style="display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
+      <sc-for list="{{ others }}" as="item" hint-placeholder-count="5">
+        <a href="{{ item.href }}" style="display: grid; gap: 8px; align-content: start; padding: 18px 20px; border: 1px solid var(--color-divider); border-radius: 4px; text-decoration: none; color: var(--color-text);" style-hover="border-color: var(--color-accent-600); background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">{{ item.topic }}</span>
+          <span style="font-family: var(--font-heading); font-size: 22px; line-height: 1.15;">{{ item.title }}</span>
+          <span style="font-size: 14px; line-height: 1.5; color: var(--color-neutral-700);">{{ item.cite }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;240px&quot;,&quot;height&quot;:&quot;420px&quot;},&quot;current&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;levin&quot;,&quot;sleep&quot;,&quot;einstein&quot;,&quot;handwriting&quot;,&quot;caffeine&quot;,&quot;yawning&quot;],&quot;default&quot;:&quot;levin&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;layout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;sidebar&quot;,&quot;footer&quot;],&quot;default&quot;:&quot;sidebar&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const list = [
+      { id: 'levin', title: 'Ingressing Minds', topic: 'Biology & mind', file: 'Ingressing Minds.dc.html', cite: 'Levin, Philosophies, 2026' },
+      { id: 'sleep', title: 'Does sleep clean the brain?', topic: 'Sleep & health', file: 'Sleep and the Brain.dc.html', cite: 'Xie et al., Science, 2013' },
+      { id: 'einstein', title: "Einstein's slow clocks", topic: 'Physics', file: 'Moving Clocks.dc.html', cite: 'Einstein, Annalen der Physik, 1905' },
+      { id: 'handwriting', title: 'Why handwriting still wins', topic: 'Learning', file: 'Thinking by Hand.dc.html', cite: 'Mueller & Oppenheimer, Psych. Science, 2014' },
+      { id: 'caffeine', title: 'Timing of caffeine matters when studying', topic: 'Learning', file: 'Caffeine After Study.dc.html', cite: 'Borota et al., Nature Neuroscience, 2014' },
+      { id: 'yawning', title: 'Are yawns contagious?', topic: 'Just for fun', file: 'Contagious Yawning.dc.html', cite: 'Gallup & Eldakar, Front. Evol. Neurosci., 2011' }
+    ];
+    const cur = this.props.current;
+    const items = list.map(it => {
+      const on = it.id === cur;
+      return Object.assign({}, it, {
+        key: it.id, href: encodeURI(it.file),
+        sideStyle: {
+          display: 'grid', gap: '2px', padding: '8px 12px', textDecoration: 'none', borderRadius: '4px',
+          borderLeftWidth: '2px', borderLeftStyle: 'solid', marginLeft: '-1px',
+          borderLeftColor: on ? 'var(--color-accent)' : 'transparent',
+          backgroundColor: on ? 'var(--color-accent-100)' : 'transparent',
+          color: on ? 'var(--color-accent-900)' : 'var(--color-neutral-700)'
+        }
+      });
+    });
+    const layout = this.props.layout || 'sidebar';
+    return { items, others: items.filter(i => i.id !== cur), isSidebar: layout === 'sidebar', isFooter: layout === 'footer' };
+  }
+}
+</script>
+</body>
+</html>

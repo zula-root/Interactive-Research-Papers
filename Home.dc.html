@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/styles.css">
+<script src="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/_ds_bundle.js"></script>
+<title>Interactive Research Summaries</title>
+<style>body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);} a{color:var(--color-accent-700);} a:hover{color:var(--color-accent-900);}</style>
+</helmet>
+<main style="max-width: 1020px; margin: 0 auto; padding: 88px 24px 96px;">
+  <header style="padding-bottom: 48px; border-bottom: 1px solid var(--color-divider);">
+    <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px;">A series</p>
+    <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(44px, 8vw, 84px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 20px; max-width: 14ch;">Interactive Research Summaries</h1>
+    <p style="font-family: var(--font-heading); font-style: italic; font-size: clamp(19px, 2.7vw, 26px); line-height: 1.3; color: var(--color-neutral-800); margin: 0; max-width: 34ch; text-wrap: pretty;">Six papers, each explained in one page you can read and play with.</p>
+  </header>
+  <div style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); padding-top: 48px;">
+    <sc-for list="{{ items }}" as="item" hint-placeholder-count="6">
+      <a href="{{ item.href }}" style="display: grid; gap: 10px; align-content: start; padding: 24px; border: 1px solid var(--color-divider); border-radius: 4px; text-decoration: none; color: var(--color-text);" style-hover="border-color: var(--color-accent-600); background: var(--color-accent-100);">
+        <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">{{ item.topic }}</span>
+        <span style="font-family: var(--font-heading); font-size: 26px; line-height: 1.15;">{{ item.title }}</span>
+        <span style="font-size: 14px; line-height: 1.5; color: var(--color-neutral-700);">{{ item.cite }}</span>
+      </a>
+    </sc-for>
+  </div>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const list = [
+      { title: 'Ingressing Minds', topic: 'Biology & mind', file: 'Ingressing Minds.dc.html', cite: 'Levin, Philosophies, 2026' },
+      { title: 'Does sleep clean the brain?', topic: 'Sleep & health', file: 'Sleep and the Brain.dc.html', cite: 'Xie et al., Science, 2013' },
+      { title: "Einstein's slow clocks", topic: 'Physics', file: 'Moving Clocks.dc.html', cite: 'Einstein, Annalen der Physik, 1905' },
+      { title: 'Why handwriting still wins', topic: 'Learning', file: 'Thinking by Hand.dc.html', cite: 'Mueller & Oppenheimer, Psych. Science, 2014' },
+      { title: 'Timing of caffeine matters when studying', topic: 'Learning', file: 'Caffeine After Study.dc.html', cite: 'Borota et al., Nature Neuroscience, 2014' },
+      { title: 'Are yawns contagious?', topic: 'Just for fun', file: 'Contagious Yawning.dc.html', cite: 'Gallup & Eldakar, Front. Evol. Neurosci., 2011' }
+    ];
+    return { items: list.map(it => Object.assign({ key: it.file, href: encodeURI(it.file) }, it)) };
+  }
+}
+</script>
+</body>
+</html>

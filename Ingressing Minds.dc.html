@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/styles.css">
+<script src="ds/classical-9ae98c5e-663c-4e80-9f77-0429b4de3027/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-600); }
+  * :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  input[type=range] { accent-color: var(--color-accent-600); height: 28px; }
+  @keyframes im-pulse { 0%,100% { opacity: .4; } 50% { opacity: .95; } }
+  @keyframes im-nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+  [data-sidebar] { display: block; }
+  @media (max-width: 780px) { [data-sidebar] { display: none; } }
+</style>
+</helmet>
+
+<div style="width: 100%; background: var(--color-bg);">
+
+  <div style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--color-divider);">
+    <div style="max-width: 1020px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+      <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .04em;">Ingressing Minds</span>
+      <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600); font-variant-numeric: tabular-nums;">Levin &nbsp;·&nbsp; a 12-minute read</span>
+    </div>
+    <div style="height: 2px;"><div style="{{ progressStyle }}"></div></div>
+  </div>
+
+  <article style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px;">
+
+    <header style="padding: 76px 0 40px; margin: 0 -24px; padding-left: 24px; padding-right: 24px; background-image: radial-gradient(ellipse 60% 80% at 85% 20%, rgba(250,203,141,0.35), transparent 70%), linear-gradient(rgba(32,31,29,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(32,31,29,0.05) 1px, transparent 1px); background-size: auto, 28px 28px, 28px 28px;">
+      <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 24px; font-variant-numeric: tabular-nums;">Philosophies 11(5), 161 &nbsp;·&nbsp; Michael Levin, Tufts</p>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(44px, 8.5vw, 88px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 18px;">Ingressing Minds</h1>
+      <p style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 2.7vw, 26px); line-height: 1.3; font-style: italic; color: var(--color-neutral-800); margin: 0 0 32px; max-width: 32ch;">Where do the shape and the behaviour of a living thing actually come from?</p>
+      <p style="font-size: 18px; line-height: 1.7; margin: 0 0 12px; max-width: 58ch; text-wrap: pretty;">Michael Levin argues that the forms bodies take, and the competencies minds display, are not fully specified by genes or by physics. Living systems, he proposes, act as interfaces that draw on a structured space of patterns, which he calls a Platonic space. This page condenses the paper into a 12-minute read: the central thesis, five experiments that support it, and the practical consequences.</p>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 32px; max-width: 58ch; color: var(--color-neutral-700); text-wrap: pretty;">No background in biology is assumed. Each section stands alone, so you can read in order or jump to what interests you.</p>
+      <div style="border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 8px 0 0; margin: 0 0 22px;">
+        <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-accent-700); margin: 14px 0 6px;">The whole paper in five lines</p>
+        <a href="#f1" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">01</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">How many heads a flatworm builds is stored in voltage, not genes &mdash; and can be overwritten without touching DNA.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Cut one &rarr;</span>
+        </a>
+        <a href="#f2" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">02</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Give a newt the wrong number of cells and it builds the right organ anyway, switching mechanism to do it.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Drag a slider &rarr;</span>
+        </a>
+        <a href="#f3" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">03</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">A sixty-year-old sorting algorithm gives up ground on purpose to get around broken data. Nothing in the code says to.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Break it &rarr;</span>
+        </a>
+        <a href="#f4" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">04</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Some patterns have no history at all, yet shape physical things. Levin thinks bodies reach into that same space.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Turn a dial &rarr;</span>
+        </a>
+        <a href="#f5" style="display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 16px 8px; border-top: 1px solid var(--color-divider); text-decoration: none; color: var(--color-text);" style-hover="background: var(--color-accent-100);">
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; color: var(--color-accent-700); font-variant-numeric: tabular-nums; flex: 0 0 26px;">05</span>
+          <span style="font-family: var(--font-heading); font-size: clamp(18px, 2.3vw, 23px); line-height: 1.3; flex: 1 1 260px; min-width: 0;">Minds come in sizes, measured by how far away and how far ahead a system can hold a goal. Cells and people sit on one axis.</span>
+          <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700); flex: 0 0 auto; margin-left: auto;">Compare &rarr;</span>
+        </a>
+      </div>
+      </header>
+
+    <div style="display: flex; gap: 32px; align-items: flex-start;">
+
+      <aside data-sidebar="1" style="position: sticky; top: 64px; flex: 0 1 200px; min-width: 164px; padding: 8px 0; max-height: calc(100vh - 110px); overflow-y: auto;">
+        <p style="font-family: var(--font-heading); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--color-neutral-600); margin: 0 0 10px 12px;">Contents</p>
+        <nav style="display: grid; gap: 2px; border-left: 1px solid var(--color-divider);">
+          <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="10">
+            <a href="{{ item.href }}" style="{{ item.style }}">
+              <span style="{{ item.labelStyle }}">{{ item.label }}</span>
+              <span style="{{ item.minStyle }}">{{ item.mins }}</span>
+            </a>
+          </sc-for>
+        </nav>
+        <dc-import name="Series Nav" current="levin" layout="sidebar" hint-size="100%,360px"></dc-import>
+      </aside>
+
+      <div style="flex: 1 1 0; min-width: 0; max-width: 1020px;">
+
+    <div id="eli5" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Start here</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; the whole idea, explained like you're five</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 28ch;">A radio does not make the music</h2>
+      <div style="display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start;">
+        <div style="display: grid; gap: 18px;">
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Disassemble a radio and you will not find the music inside it. You find components tuned to receive a signal that originates elsewhere. Explaining the radio completely still leaves the song unexplained.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">Levin's thesis is that organisms relate to form and behaviour in a similar way. The genome specifies the hardware: which proteins a cell can build. It does not specify the anatomy those cells collectively produce, or the problem-solving they show when conditions change. Those patterns, he argues, are accessed rather than encoded, much as the theorems of geometry are discovered rather than invented.</p>
+          <p style="font-size: 18px; line-height: 1.75; margin: 0;">The experiments below are the evidence for that claim, and they explain why a working developmental biologist arrived at a position usually associated with philosophy.</p>
+        </div>
+        <div style="display: grid; gap: 16px; border: 1px solid var(--color-divider); border-radius: 4px; padding: 22px; background: var(--color-neutral-100);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Try this right now</span>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">Reach for something on your desk. Now do it again with your elbow locked, or with the back of your wrist. Same reach, different muscles, no thought required.</p>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0;">You did not plan a second route. You have a <em>destination</em>, and your body improvises a way there. Hold onto that feeling &mdash; it is exactly what the newt's kidney does when you take away most of its cells, and exactly what the worm does when you cut it in three.</p>
+          <p style="font-family: var(--font-heading); font-size: 15px; letter-spacing: .02em; margin: 0; color: var(--color-accent-800); border-top: 1px solid var(--color-divider); padding-top: 14px;">A goal you can reach by many routes is the single idea this whole paper turns on.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="f1" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 01</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; flatworm</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">The number of heads a worm builds is stored in voltage, not in its genes &mdash; and you can overwrite it</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">A brief exposure to a drug that alters the voltage gradients between cells rewrites the worm's stored bioelectric pattern. Its genome is unchanged and its anatomy looks normal. The change only becomes visible after amputation, when the fragments regenerate according to the new pattern. Watch the bottom row.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">{{ wormHint }}</span>
+        </div>
+
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ toggleTreat }}" style="{{ treatBtnStyle }}" style-hover="background: var(--color-accent-100);">{{ treatLabel }}</button>
+            <button type="button" onClick="{{ doCut }}" style="{{ cutBtnStyle }}" style-hover="background: var(--color-accent-100);">{{ cutLabel }}</button>
+            <button type="button" onClick="{{ resetWorm }}" style="{{ ghostBtn }}" style-hover="background: var(--color-neutral-200);">Reset</button>
+            <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600); margin-left: auto; font-variant-numeric: tabular-nums;">{{ wormPhaseLabel }}</span>
+          </div>
+
+          <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 22px; display: grid; gap: 18px;">
+            <canvas ref="{{ wormRef }}" style="width: 100%; height: 340px; display: block;"></canvas>
+            <div style="display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 20px; align-items: baseline; border-top: 1px solid var(--color-divider); padding-top: 18px;">
+              <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Genome &nbsp;/&nbsp; gene expression</span>
+              <span style="font-family: var(--font-heading); font-size: 16px; letter-spacing: .04em; color: var(--color-neutral-700);">Unchanged &mdash; in every worm, in every generation</span>
+            </div>
+          </div>
+
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; color: var(--color-text); border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ wormNote }}</p>
+        </div>
+      </div>
+      <p style="{{ sourceStyle }}">Schematic after Figure 4 &nbsp;·&nbsp; §3.2. Two-headed worms stay two-headed through later cuts, with no further treatment. Block cell-to-cell electrical coupling instead and a triangular-headed worm builds flat or round heads &mdash; shapes belonging to other species.</p>
+    </section>
+
+    <div id="f2" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 02</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; newt kidney</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Give a newt the wrong number of cells and it builds the right organ anyway &mdash; by a different mechanism</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">A newt's kidney tubule normally forms from 8 to 10 cells in cross-section. When cells carry extra copies of the genome they grow larger, yet the tubule still reaches its correct diameter. At the extreme, a single enlarged cell wraps around itself to form the tube, a solution no part of the genome describes. Drag the slider to the far right.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Drag the ploidy slider to the far right. Watch the cell count fall while the tube stays the same size.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
+            <label for="ploidy" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Genome copies per cell</label>
+            <input id="ploidy" type="range" min="0" max="5" step="1" value="{{ ploidy }}" onChange="{{ setPloidy }}" onInput="{{ setPloidy }}" style="flex: 1 1 220px; min-width: 180px;">
+            <span style="font-family: var(--font-heading); font-size: 24px; font-variant-numeric: tabular-nums; min-width: 3em;">{{ ploidyLabel }}</span>
+          </div>
+          <div style="display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); align-items: center;">
+            <canvas ref="{{ tubuleRef }}" style="width: 100%; height: 230px; display: block; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg);"></canvas>
+            <div style="display: grid; gap: 14px;">
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-600);">Cells around the tube</span>
+                <span style="font-family: var(--font-heading); font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums;">{{ tubuleCells }}</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-600);">Tube diameter</span>
+                <span style="font-family: var(--font-heading); font-size: 22px; line-height: 1;">Correct, at every setting</span>
+              </div>
+              <div style="display: grid; gap: 4px;">
+                <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-600);">Mechanism in use</span>
+                <span style="font-family: var(--font-heading); font-size: 22px; line-height: 1.2; color: var(--color-accent-800);">{{ tubuleMech }}</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ tubuleNote }}</p>
+        </div>
+      </div>
+      <p style="{{ sourceStyle }}">Schematic after Figure 3E &nbsp;·&nbsp; §3.1. The specification being met is anatomical, not molecular: the collective keeps the target and swaps the method when its parts change underneath it.</p>
+    </section>
+
+    <div id="f3" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 03</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">3 min &nbsp;·&nbsp; a sorting algorithm</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">A sixty-year-old sorting algorithm gives up ground on purpose to get around broken data</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">Bubble sort is a fully deterministic algorithm: a few lines of code with nothing hidden. When some elements are made unable to move, the list temporarily becomes <em>less</em> sorted in order to route around them, then completes. In biology this is called delayed gratification. Nothing in the code specifies it.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Run it clean first &mdash; it just sorts. Then add broken numbers and watch for gold dots, where the array went backward.</span>
+        </div>
+
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <div style="display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 18px 20px;">
+            <div style="display: grid; gap: 8px;">
+              <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-600);">The entire algorithm</span>
+              <pre style="margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13.5px; line-height: 1.7; color: var(--color-text); white-space: pre-wrap;">repeat until nothing swaps:
+  for each neighbouring pair (a, b):
+    if a &gt; b:
+      swap a and b</pre>
+            </div>
+            <div style="display: grid; gap: 8px;">
+              <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-600);">The only change made to it</span>
+              <p style="font-size: 16px; line-height: 1.65; margin: 0;">Some numbers are marked broken: a swap involving one simply does not happen. The code is not told this and never checks. There is no error handling, no retry, no plan.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+            <button type="button" onClick="{{ toggleRun }}" style="{{ runStyle }}" style-hover="background: var(--color-accent-100);">{{ runLabel }}</button>
+            <button type="button" onClick="{{ stepOnce }}" style="{{ ghostBtn }}" style-hover="background: var(--color-neutral-200);">One round</button>
+            <button type="button" onClick="{{ resetSort }}" style="{{ ghostBtn }}" style-hover="background: var(--color-neutral-200);">Shuffle</button>
+            <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--color-neutral-600); margin-left: auto; font-variant-numeric: tabular-nums;">{{ sortStat }}</span>
+          </div>
+
+          <div style="display: grid; gap: 6px; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 18px 0; max-width: 420px;">
+              <label for="bslider" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Broken numbers &nbsp;<span style="font-variant-numeric: tabular-nums; color: var(--color-accent-800);">{{ brokenCount }}</span></label>
+              <input id="bslider" type="range" min="0" max="6" step="1" value="{{ brokenCount }}" onChange="{{ setBroken }}" onInput="{{ setBroken }}" style="width: 100%;">
+            </div>
+
+          <div style="display: grid; gap: 4px;">
+            <div style="display: flex; align-items: flex-end; gap: 2px; height: 130px; padding: 0 2px; border-bottom: 1px solid var(--color-neutral-500);">
+              <sc-for list="{{ cells }}" as="c" hint-placeholder-count="16">
+                <div style="{{ c.style }}" title="{{ c.title }}"></div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ showValues }}" hint-placeholder-val="{{ true }}">
+              <div style="display: flex; gap: 2px; padding: 0 2px;">
+                <sc-for list="{{ valueRow }}" as="v" hint-placeholder-count="16">
+                  <span style="{{ v.style }}">{{ v.label }}</span>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+
+          <div style="display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-heading); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--color-neutral-700);">
+            <span style="display: flex; align-items: center; gap: 7px;"><span style="width: 11px; height: 11px; border: 1px solid var(--color-neutral-700); background: var(--color-neutral-400);"></span>Ordinary number</span>
+            <span style="display: flex; align-items: center; gap: 7px;"><span style="width: 11px; height: 11px; border: 1px solid var(--color-accent-700); background: repeating-linear-gradient(45deg, var(--color-accent-300) 0 2px, transparent 2px 4px);"></span>Broken &mdash; will not move</span>
+            <sc-if value="{{ chimeric }}" hint-placeholder-val="{{ false }}">
+              <span style="display: flex; align-items: center; gap: 7px;"><span style="width: 11px; height: 11px; border: 1px solid var(--color-accent-800); background: var(--color-accent-500);"></span>Second algotype</span>
+            </sc-if>
+          </div>
+
+          <div style="display: grid; gap: 8px;">
+            <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-600);">Sortedness, round by round</span>
+            <canvas ref="{{ chartRef }}" style="width: 100%; height: 190px; display: block; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg);"></canvas>
+          </div>
+
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">{{ sortNote }}</p>
+        </div>
+      </div>
+      <p style="{{ sourceStyle }}">Rebuilt in the spirit of Figure 14 &nbsp;·&nbsp; §6.3 &mdash; a small live model, not the published run. In the published chimeric version, numbers sharing an algotype clustered together more than chance and stayed clustered for a while. No line of code looks at a neighbour's algotype.</p>
+    </section>
+
+    <div id="f4" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 04</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; patterns with no history</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">One dial, one equation, and an endless structure nobody put there</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">The logistic map is one line of arithmetic. As its single parameter increases, the behaviour doubles in period at intervals governed by the Feigenbaum constant, a number that appears in dripping taps, heart rhythms and electrical circuits alike. It is a fact of mathematics with no physical or evolutionary history, yet it constrains real systems. Turn the dial.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Sweep r slowly from left to right, or hit the presets. One number settles, then two, then four, then chaos &mdash; then order again.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 20px;">
+          <p style="font-family: var(--font-heading); font-size: clamp(19px, 2.6vw, 25px); margin: 0; font-variant-numeric: tabular-nums;">x<sub style="font-size: .6em;">n+1</sub> &nbsp;=&nbsp; r &nbsp;&middot;&nbsp; x<sub style="font-size: .6em;">n</sub> &nbsp;&middot;&nbsp; (1 &minus; x<sub style="font-size: .6em;">n</sub>)</p>
+          <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
+            <label for="rslider" style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-700);">Growth rate r</label>
+            <input id="rslider" type="range" min="2.4" max="4" step="0.001" value="{{ r }}" onChange="{{ setR }}" onInput="{{ setR }}" style="flex: 1 1 240px; min-width: 200px;">
+            <span style="font-family: var(--font-heading); font-size: 24px; font-variant-numeric: tabular-nums; min-width: 3.6em;">{{ rLabel }}</span>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <sc-for list="{{ rPresets }}" as="p" hint-placeholder-count="5">
+              <button type="button" onClick="{{ p.onClick }}" style="{{ p.style }}" style-hover="background: var(--color-accent-100);">{{ p.label }}</button>
+            </sc-for>
+          </div>
+          <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));">
+            <div style="display: grid; gap: 8px;">
+              <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-600);">Where it settles</span>
+              <canvas ref="{{ orbitRef }}" style="width: 100%; height: 150px; display: block; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg);"></canvas>
+              <span style="font-family: var(--font-heading); font-size: 17px; color: var(--color-accent-800);">{{ periodLabel }}</span>
+            </div>
+            <div style="display: grid; gap: 8px;">
+              <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-600);">Every r at once &nbsp;·&nbsp; gold line is yours</span>
+              <canvas ref="{{ bifRef }}" style="width: 100%; height: 150px; display: block; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg);"></canvas>
+              <span style="font-size: 15px; color: var(--color-neutral-700);">Each fork is a doubling. The gaps shrink by the same ratio every time: <span style="font-family: var(--font-heading); font-variant-numeric: tabular-nums; font-size: 1.1em;">&delta; = 4.669&hellip;</span></span>
+            </div>
+          </div>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 16px;">Feigenbaum's constant turns up in dripping taps, heart rhythms and circuits. No experiment set its value and no lineage evolved it. Levin's proposal is that bodies reach into the same kind of space for their shapes and their goals &mdash; and that some of what is in there is closer to a mind than to a number.</p>
+        </div>
+      </div>
+      <p style="{{ sourceStyle }}">After Figure 5 &nbsp;·&nbsp; §4.1, Some patterns have no physical or historical explanation.</p>
+    </section>
+
+    <div id="f5" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700); font-variant-numeric: tabular-nums;">Finding 05</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">2 min &nbsp;·&nbsp; how to measure a mind</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 18px; max-width: 30ch;">Minds come in sizes, and the size is measurable: how far and how long can it care?</h2>
+      <p style="font-size: 17px; line-height: 1.7; margin: 0 0 26px; max-width: 62ch;">Levin measures intelligence by the largest goal a system can pursue in space and time: its cognitive light cone. A bacterium tracks local sugar concentration over seconds; a person can work toward outcomes across continents and decades. On this framework cognition is continuous, with no threshold at which a real mind begins.</p>
+
+      <div style="border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-neutral-100); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 22px; border-bottom: 1px solid var(--color-divider); background: var(--color-bg);">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">Try it &nbsp;&rarr;</span>
+          <span style="font-size: 15px; color: var(--color-neutral-800);">Pick a system to see how far away, and how far ahead, it can pursue a goal.</span>
+        </div>
+        <div style="padding: 22px; display: grid; gap: 26px;">
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <sc-for list="{{ coneOpts }}" as="o" hint-placeholder-count="5">
+              <button type="button" onClick="{{ o.onClick }}" style="{{ o.style }}" style-hover="background: var(--color-accent-100);">{{ o.label }}</button>
+            </sc-for>
+          </div>
+          <div style="display: grid; gap: 20px;">
+            <div style="display: grid; gap: 14px; border: 1px solid var(--color-divider); border-radius: 4px; background: var(--color-bg); padding: 20px;">
+              <sc-for list="{{ reachRows }}" as="row" hint-placeholder-count="5">
+                <div style="display: grid; grid-template-columns: minmax(120px, 190px) minmax(0, 1fr); gap: 18px; align-items: center;">
+                  <span style="{{ row.nameStyle }}">{{ row.name }}</span>
+                  <div style="display: grid; gap: 6px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <div style="{{ row.spaceTrack }}"><div style="{{ row.spaceBar }}"></div></div>
+                      <span style="{{ row.valStyle }}">{{ row.space }}</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <div style="{{ row.timeTrack }}"><div style="{{ row.timeBar }}"></div></div>
+                      <span style="{{ row.valStyle }}">{{ row.time }}</span>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+              <div style="display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--font-heading); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--color-neutral-700); border-top: 1px solid var(--color-divider); padding-top: 12px;">
+                <span style="display: flex; align-items: center; gap: 7px;"><span style="width: 18px; height: 8px; background: var(--color-accent-500); border: 1px solid var(--color-accent-800);"></span>How far away it can care</span>
+                <span style="display: flex; align-items: center; gap: 7px;"><span style="width: 18px; height: 8px; background: var(--color-neutral-400); border: 1px solid var(--color-neutral-700);"></span>How far ahead</span>
+              </div>
+            </div>
+            <div style="display: grid; gap: 8px; max-width: 70ch;">
+              <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0;">{{ coneTitle }}</h3>
+              <p style="font-size: 16px; line-height: 1.65; margin: 0;">{{ coneNote }}</p>
+            </div>
+          </div>
+
+          </div>
+      </div>
+      <p style="{{ sourceStyle }}">Schematic after Figures 12 and 13 &nbsp;·&nbsp; §6.1. Ranges are qualitative illustrations of the paper's argument, not measured values.</p>
+    </section>
+
+    <div id="conclusion" style="height: 1px; background: var(--color-divider); margin: 56px 0 0; scroll-margin-top: 80px;"></div>
+
+    <section style="padding: 44px 0 0;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px;">
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent-700);">In conclusion</span>
+        <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-neutral-600);">1 min &nbsp;·&nbsp; what follows from it now</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; margin: 0 0 20px; max-width: 30ch;">We are already building the interfaces</h2>
+      <p style="font-size: 18px; line-height: 1.75; margin: 0 0 30px; max-width: 62ch;">The metaphysical claim remains contested. The experimental results do not depend on it, and they already point in three practical directions.</p>
+      <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Medicine</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Persuading tissue instead of micromanaging it</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">If the target shape is stored and rewritable, regenerative medicine becomes a matter of addressing the setpoint rather than specifying every cell. Birth defects, regeneration and cancer all become questions about what a collective currently thinks it is building.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Engineering and AI</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">Surplus behaviour is the signal, not the noise</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">The sorting result says a system can do things its specification does not contain. Read that way, unexpected competence in an engineered or trained system is worth studying rather than patching out &mdash; and the design task becomes choosing which architecture lets which capabilities in.</p>
+        </div>
+        <div style="border: 1px solid var(--color-divider); border-radius: 4px; padding: 24px; display: grid; gap: 12px; align-content: start;">
+          <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700);">Ethics</span>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0;">The part that will not wait</h3>
+          <p style="font-size: 16px; line-height: 1.65; margin: 0;">Organoids, chimeras, biobots and AI systems are arriving faster than our intuitions about who deserves consideration, and none of them fit the categories those intuitions were built on. The paper's position is that we should not assume we know what we have made, and should extend care while we work out where on the spectrum each thing falls.</p>
+        </div>
+      </div>
+    </section>
+
+      </div>
+    </div>
+
+    <footer style="margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--color-divider); display: grid; gap: 12px;">
+      <p style="font-size: 15px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); max-width: 70ch;">Levin, M. <em>Ingressing Minds: Causal, Non-Physical Patterns In-Form Natural, Synthetic, and Hybrid Embodiments.</em> Philosophies <span style="font-variant-numeric: tabular-nums;">2026, 11(5), 161</span>. Open access under CC BY.</p>
+      <p style="font-size: 15px; line-height: 1.65; margin: 0;"><a href="https://www.mdpi.com/2409-9287/11/5/161" target="_blank" rel="noopener">Read the full paper &rarr;</a></p>
+      <p style="font-size: 14px; line-height: 1.65; margin: 0; color: var(--color-neutral-600); max-width: 70ch;">The simulations here are small live reconstructions built to show the shape of each result, not the paper's original runs; the diagrams are schematics rather than reproductions of its figures.</p>
+      <div style="margin-top: 36px;"><dc-import name="Series Nav" current="levin" layout="footer" hint-size="100%,320px"></dc-import></div>
+    </footer>
+
+  </article>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCitations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Document&quot;}}">
+class Component extends DCLogic {
+  state = {
+    progress: 0,
+    treated: false, phase: 'intact', gen: 1,
+    ploidy: 0,
+    n: 16, brokenCount: 0, chimeric: false, running: false,
+    cells: [], hist: [], clust: [], ctrl: [], rounds: 0, dips: 0, settled: false,
+    r: 3.2,
+    cone: 0, agency: 0, liar: false, liarTrace: [],
+    open: -1, thenNow: 'then', phil: 0,
+    detours: {}, activeSec: 'eli5',
+    quiz: {}
+  };
+
+  componentDidMount() {
+    this.initSort(this.state.n, this.state.brokenCount, this.state.chimeric);
+    this.buildBif();
+    this.onScroll();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onResize);
+    requestAnimationFrame(() => this.drawAll());
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer); clearInterval(this.liarTimer);
+    clearTimeout(this.morphSafety); cancelAnimationFrame(this.morphRaf);
+    clearTimeout(this.t1); clearTimeout(this.t2);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResize);
+  }
+  componentDidUpdate() { this.drawAll(); }
+
+  onResize = () => this.drawAll();
+  onScroll = () => {
+    const d = document.documentElement;
+    const max = (d.scrollHeight - window.innerHeight) || 1;
+    const p = Math.max(0, Math.min(1, (window.scrollY || 0) / max));
+    let active = this.state.activeSec;
+    const list = this.sectionList();
+    for (let i = 0; i < list.length; i++) {
+      const el = document.getElementById(list[i].id);
+      if (el && el.getBoundingClientRect().top < 160) active = list[i].id;
+    }
+    if (Math.abs(p - this.state.progress) > 0.004 || active !== this.state.activeSec) {
+      this.setState({ progress: p, activeSec: active });
+    }
+  };
+
+  /* ---------- nav + detours ---------- */
+  sectionList() {
+    return [
+      { id: 'eli5', label: 'The core idea', mins: '2 min' },
+      { id: 'f1', label: 'The flatworm', mins: '2 min' },
+      { id: 'f2', label: 'The newt kidney', mins: '2 min' },
+      { id: 'f3', label: 'The sorting algorithm', mins: '3 min' },
+      { id: 'f4', label: 'Patterns with no history', mins: '2 min' },
+      { id: 'f5', label: 'The size of a mind', mins: '2 min' },
+      { id: 'conclusion', label: 'Why it matters', mins: '1 min' }
+    ];
+  }
+  toggleDetour = (k) => () => {
+    const d = Object.assign({}, this.state.detours);
+    d[k] = !d[k];
+    this.setState({ detours: d });
+  };
+  detour(k, label, cost) {
+    const open = !!this.state.detours[k];
+    return {
+      label: label, cost: cost, sign: open ? 'Close \u2212' : 'Open +',
+      onClick: this.toggleDetour(k),
+      btnStyle: {
+        display: 'flex', flexWrap: 'wrap', gap: '10px 16px', alignItems: 'baseline', width: '100%',
+        textAlign: 'left', padding: '16px 18px', cursor: 'pointer', borderRadius: '4px',
+        borderWidth: '1px', borderStyle: 'dashed',
+        borderColor: open ? 'var(--color-accent-600)' : 'var(--color-neutral-500)',
+        backgroundColor: open ? 'var(--color-accent-100)' : 'transparent', transition: 'all 160ms ease'
+      },
+      labelStyle: { fontFamily: 'var(--font-heading)', fontSize: '18px', lineHeight: '1.3', flex: '1 1 200px', color: 'var(--color-text)' },
+      costStyle: { fontFamily: 'var(--font-heading)', fontSize: '12px', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--color-accent-700)' },
+      signStyle: { fontFamily: 'var(--font-heading)', fontSize: '12px', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--color-neutral-600)', marginLeft: 'auto' },
+      panelStyle: {
+        display: 'grid', gap: '16px', maxWidth: '68ch',
+        maxHeight: open ? '1400px' : '0', opacity: open ? 1 : 0, overflow: 'hidden',
+        padding: open ? '20px 18px 4px' : '0 18px', transition: 'all 320ms ease'
+      }
+    };
+  }
+
+  /* ---------- shared styles ---------- */
+  btn(active) {
+    return {
+      fontFamily: 'var(--font-heading)', fontSize: '14px', letterSpacing: '.04em', padding: '10px 18px',
+      borderRadius: '4px', cursor: 'pointer', transition: 'all 160ms ease',
+      borderWidth: '1px', borderStyle: 'solid',
+      borderColor: active ? 'var(--color-accent-600)' : 'var(--color-divider)',
+      backgroundColor: active ? 'var(--color-accent-100)' : 'transparent',
+      color: active ? 'var(--color-accent-900)' : 'var(--color-neutral-800)'
+    };
+  }
+
+  /* ---------- planarian ---------- */
+  toggleTreat = () => { if (this.state.phase === 'intact') this.setState({ treated: !this.state.treated }); };
+  resetWorm = () => { clearTimeout(this.t1); clearTimeout(this.t2); this.setState({ treated: false, phase: 'intact', gen: 1 }); };
+  doCut = () => {
+    if (this.state.phase === 'regen') return;
+    const gen = this.state.phase === 'grown' ? this.state.gen + 1 : this.state.gen;
+    clearTimeout(this.t1); clearTimeout(this.t2);
+    this.setState({ phase: 'cut', gen: gen });
+    this.t1 = setTimeout(() => this.setState({ phase: 'regen' }), 700);
+    this.t2 = setTimeout(() => this.setState({ phase: 'grown' }), 2000);
+  };
+  wormRef = (el) => { this.wormCv = el; };
+  drawWorms() {
+    const cv = this.wormCv; if (!cv) return;
+    const o = this.prep(cv, 340); const g = o.g, w = o.w;
+    const s = this.state;
+    const ink = '#201f1d', soft = 'rgba(32,31,29,0.65)', gold = '#a06f24';
+    const frags = this.wormShape().map(f => parseFloat(f.w) / 100);
+    const heads = this.wormShape().map(f => f.heads);
+    const gap = frags.length > 1 ? 26 : 0;
+    const usable = w - 80 - gap * (frags.length - 1);
+    const total = frags.reduce((a, b) => a + b, 0);
+    const widths = frags.map(f => f / total * usable);
+    const bodyY = 108, bodyH = 46, voltY = 236, voltH = 34;
+
+    const txt = (t, x, y, size, color, align, italic, heading) => {
+      g.fillStyle = color; g.textAlign = align || 'center';
+      g.font = (italic ? 'italic ' : '') + (size || 13) + 'px ' + (heading ? '"Cormorant Garamond", serif' : 'Lora, serif');
+      g.fillText(t, x, y);
+    };
+    const kick = (t, x, y, color) => {
+      g.fillStyle = color; g.textAlign = 'left';
+      g.font = '12px "Cormorant Garamond", serif';
+      g.fillText(t.toUpperCase().split('').join('\u2009'), x, y);
+    };
+    const rr = (x, y, bw, bh, r) => {
+      g.beginPath();
+      g.moveTo(x + r, y); g.lineTo(x + bw - r, y);
+      g.quadraticCurveTo(x + bw, y, x + bw, y + r); g.lineTo(x + bw, y + bh - r);
+      g.quadraticCurveTo(x + bw, y + bh, x + bw - r, y + bh); g.lineTo(x + r, y + bh);
+      g.quadraticCurveTo(x, y + bh, x, y + bh - r); g.lineTo(x, y + r);
+      g.quadraticCurveTo(x, y, x + r, y); g.closePath();
+    };
+
+    kick('the animal', 30, bodyY - 42, soft);
+    kick('its bioelectric map \u2014 voltage along the body', 30, voltY - 42, gold);
+
+    let x = 40;
+    frags.forEach((f, i) => {
+      const bw = widths[i], h = heads[i];
+      /* body */
+      g.save();
+      rr(x, bodyY, bw, bodyH, bodyH / 2);
+      g.fillStyle = 'rgba(32,31,29,0.06)'; g.fill();
+      g.strokeStyle = ink; g.lineWidth = 1.2; g.stroke();
+      g.restore();
+
+      const drawHead = (hx, dir) => {
+        g.save();
+        g.beginPath();
+        g.arc(hx, bodyY + bodyH / 2, bodyH / 2 - 3, 0, 6.2832);
+        g.fillStyle = 'rgba(32,31,29,0.82)'; g.fill();
+        g.fillStyle = '#f3f2f2';
+        g.beginPath(); g.arc(hx + dir * 5, bodyY + bodyH / 2 - 6, 2.6, 0, 6.2832); g.fill();
+        g.beginPath(); g.arc(hx + dir * 5, bodyY + bodyH / 2 + 6, 2.6, 0, 6.2832); g.fill();
+        g.restore();
+      };
+      const drawTail = (tx, dir) => {
+        g.save();
+        g.strokeStyle = soft; g.lineWidth = 1.2;
+        g.beginPath();
+        g.moveTo(tx, bodyY + bodyH / 2 - 7);
+        g.quadraticCurveTo(tx + dir * 12, bodyY + bodyH / 2, tx, bodyY + bodyH / 2 + 7);
+        g.stroke(); g.restore();
+      };
+
+      if (s.phase === 'cut' || s.phase === 'regen') {
+        txt(s.phase === 'cut' ? 'no head yet' : 'rebuilding\u2026', x + bw / 2, bodyY + bodyH / 2 + 5, 13, soft, 'center', true);
+      } else {
+        drawHead(x + bodyH / 2, 1);
+        txt('head', x + bodyH / 2, bodyY - 14, 13, ink);
+        if (h >= 2) { drawHead(x + bw - bodyH / 2, -1); txt('head', x + bw - bodyH / 2, bodyY - 14, 13, ink); }
+        else { drawTail(x + bw - 6, 1); txt('tail', x + bw - 14, bodyY - 14, 13, soft); }
+      }
+
+      /* voltage strip: gradient, strong where a head is specified */
+      g.save();
+      const vh = 14, vy = voltY + (voltH - vh) / 2;
+      const gr = g.createLinearGradient(x, 0, x + bw, 0);
+      const hi = 'rgba(160,111,36,0.95)', lo = 'rgba(182,130,53,0.08)';
+      gr.addColorStop(0, hi); gr.addColorStop(0.35, lo);
+      gr.addColorStop(0.65, lo); gr.addColorStop(1, s.treated ? hi : lo);
+      rr(x, vy, bw, vh, vh / 2); g.fillStyle = gr; g.fill();
+      g.strokeStyle = 'rgba(182,130,53,0.5)'; g.lineWidth = 1; g.stroke();
+      g.restore();
+      txt('↑ head signal', x + 6, vy - 8, 12, gold, 'left', true);
+      if (s.treated) txt('head signal ↑', x + bw - 6, vy - 8, 12, gold, 'right', true);
+      txt(s.treated ? 'says: two heads' : 'says: one head', x + bw / 2, voltY + voltH + 22, 13, gold, 'center', true);
+
+      /* cut marks */
+      if (i < frags.length - 1 && (s.phase === 'cut' || s.phase === 'regen')) {
+        const cx = x + bw + gap / 2;
+        g.save(); g.setLineDash([5, 4]); g.strokeStyle = gold; g.lineWidth = 1.2;
+        g.beginPath(); g.moveTo(cx, bodyY - 24); g.lineTo(cx, voltY + voltH + 8); g.stroke();
+        g.restore();
+        txt('cut', cx, bodyY - 30, 12, gold, 'center', true);
+      }
+      x += bw + gap;
+    });
+
+    txt(s.phase === 'grown' && s.treated ? 'Three fragments, six heads, one unchanged genome.' :
+        (s.phase === 'intact' ? (s.treated ? 'The map has changed. The animal has not.' : 'Map and animal agree.') :
+        (s.phase === 'grown' ? 'Each fragment restored the ordinary plan.' : 'Each fragment consults the map it inherited.')),
+      40, 318, 14, soft, 'left', true);
+  }
+
+  body(w, faint) {
+    return {
+      position: 'relative', width: w, height: '26px', borderRadius: '999px',
+      borderWidth: '1px', borderStyle: 'solid',
+      borderColor: faint ? 'var(--color-accent-400)' : 'var(--color-neutral-700)',
+      backgroundColor: 'transparent',
+      backgroundImage: faint ? 'none' : 'linear-gradient(180deg, var(--color-neutral-200), var(--color-neutral-300))',
+      transition: 'width 900ms ease', flex: '0 0 auto'
+    };
+  }
+  head(side, on) {
+    const s = { position: 'absolute', top: '3px', width: '18px', height: '18px', borderRadius: '999px', backgroundColor: 'var(--color-neutral-800)', opacity: on ? 1 : 0, transition: 'opacity 800ms ease' };
+    s[side] = '4px'; return s;
+  }
+  blob(side, on) {
+    const s = {
+      position: 'absolute', top: '1px', width: '32%', height: '22px', borderRadius: '999px',
+      borderWidth: '1px', borderStyle: 'dashed', borderColor: 'var(--color-accent-600)',
+      backgroundColor: 'var(--color-accent-200)',
+      opacity: on ? 1 : 0, transition: 'opacity 600ms ease', animation: on ? 'im-pulse 2.6s ease-in-out infinite' : 'none'
+    };
+    s[side] = '3px'; return s;
+  }
+  wormShape() {
+    const p = this.state.phase;
+    if (p === 'intact') return [{ w: '78%', heads: 1 }];
+    if (p === 'cut') return [{ w: '22%', heads: 0 }, { w: '30%', heads: 0 }, { w: '22%', heads: 0 }];
+    if (p === 'regen') return [{ w: '26%', heads: 0 }, { w: '34%', heads: 0 }, { w: '26%', heads: 0 }];
+    const h = this.state.treated ? 2 : 1;
+    return [{ w: '28%', heads: h }, { w: '34%', heads: h }, { w: '28%', heads: h }];
+  }
+
+  /* ---------- tubule ---------- */
+  setPloidy = (e) => this.setState({ ploidy: parseInt(e.target.value, 10) });
+  tubuleSteps() {
+    return [
+      { ploidy: '2n', cells: 9, mech: 'Cell-to-cell coordination', note: 'The normal case. Eight to ten cells arrange themselves into a tube of the correct bore.' },
+      { ploidy: '3n', cells: 7, mech: 'Cell-to-cell coordination', note: 'Bigger cells, so fewer of them. The collective simply recruits the number it needs.' },
+      { ploidy: '4n', cells: 5, mech: 'Cell-to-cell coordination', note: 'Half as many cells as normal, and the tube is still the right size. Nothing counted the cells.' },
+      { ploidy: '5n', cells: 3, mech: 'Cell-to-cell coordination', note: 'Three cells doing the work of nine. The target has not moved.' },
+      { ploidy: '6n', cells: 2, mech: 'Coordination, barely', note: 'Two cells left. The usual mechanism is running out of parts to coordinate.' },
+      { ploidy: '8n', cells: 1, mech: 'Cytoskeletal bending', note: 'One cell is now as wide as the whole tubule \u2014 so it wraps around itself to make the same structure. It has switched from talking to neighbours to bending its own skeleton. The anatomical goal held; the mechanism was improvised.' }
+    ];
+  }
+
+  /* ---------- logistic map ---------- */
+  setR = (e) => this.setState({ r: parseFloat(e.target.value) });
+  buildBif() {
+    const W = 760, H = 260;
+    const off = document.createElement('canvas'); off.width = W; off.height = H;
+    const g = off.getContext('2d'); g.fillStyle = 'rgba(32,31,29,0.55)';
+    for (let px = 0; px < W; px++) {
+      const r = 2.4 + (4.0 - 2.4) * px / W;
+      let x = 0.5;
+      for (let i = 0; i < 200; i++) x = r * x * (1 - x);
+      for (let i = 0; i < 150; i++) { x = r * x * (1 - x); g.fillRect(px, H - x * H, 1, 1); }
+    }
+    this.bifCache = off;
+  }
+  orbitOf(r, keep) {
+    let x = 0.5;
+    for (let i = 0; i < 300; i++) x = r * x * (1 - x);
+    const out = [];
+    for (let i = 0; i < keep; i++) { x = r * x * (1 - x); out.push(x); }
+    return out;
+  }
+  period(r) {
+    const v = this.orbitOf(r, 96);
+    for (let p = 1; p <= 16; p++) {
+      let ok = true;
+      for (let i = v.length - 20; i < v.length; i++) if (Math.abs(v[i] - v[i - p]) > 1e-4) { ok = false; break; }
+      if (ok) return p;
+    }
+    return 0;
+  }
+
+  /* ---------- cognitive light cone ---------- */
+  setCone = (i) => () => this.setState({ cone: i });
+  coneData() {
+    return [
+      { label: 'Single cell', sp: 1e-5, tm: 10, space: 'about its own diameter', time: 'seconds', note: 'Its goals are chemical and local: keep this gradient, hold this voltage. Small, but goals nonetheless.' },
+      { label: 'Regenerating tissue', sp: 1e-2, tm: 8.6e4, space: 'the whole organ', time: 'days', note: 'A planarian fragment holds a target shape it cannot see and will not reach for days, and corrects error the whole way there.' },
+      { label: 'Dog', sp: 1e3, tm: 8.6e4, space: 'the neighbourhood', time: 'a day or so', note: 'Goals about places and people, held across hours. Recognisably behavioural, and continuous with the tissue below it.' },
+      { label: 'Human', sp: 1e7, tm: 3e9, space: 'the planet', time: 'decades, or centuries', note: 'You can want something for a continent, a century out. Same axis as the cell, reaching much further.' },
+      { label: 'Synthetic or hybrid', sp: 3e5, tm: 3e7, space: 'unknown \u2014 that is the problem', time: 'unknown', note: 'Anthrobots, chimeras, AIs. Nothing tells us in advance where on this chart they land, which is exactly why Levin thinks we should measure rather than assume.' }
+    ];
+  }
+
+  /* ---------- agency spectrum + liar ---------- */
+  setAgency = (e) => {
+    const v = parseInt(e.target.value, 10);
+    clearInterval(this.liarTimer);
+    if (v === 1) {
+      this.liarTimer = setInterval(() => {
+        const t = this.state.liarTrace.concat([this.state.liar ? 1 : 0]).slice(-18);
+        this.setState({ liar: !this.state.liar, liarTrace: t });
+      }, 800);
+    }
+    this.setState({ agency: v });
+  };
+  agencyStops() {
+    return [
+      { t: 'A fixed truth', d: 'The digits of Feigenbaum\u2019s constant. Nothing to persuade, nothing that wants anything. It simply holds \u2014 and physical systems that wander near it get shaped by it.', g: 'Studied by mathematicians' },
+      { t: 'A simple oscillator', d: '\u201CThis sentence is false\u201D, allowed to take time. The truth value flips forever instead of breaking. The paradox was only ever an artefact of insisting a dynamic pattern hold still.', g: 'Studied by logicians' },
+      { t: 'A goal state', d: 'The worm\u2019s one-headed body plan: a target a cell collective steers toward, correcting error on the way. Not a description of the worm, but something the worm is trying to reach.', g: 'Studied by developmental biologists' },
+      { t: 'A problem-solving traversal', d: 'A sorting process that gives up ground to get around a broken part. A path through a space that copes with obstacles nobody wrote handling for.', g: 'Studied by computer scientists, reluctantly' },
+      { t: 'A behavioural policy', d: 'Something a behaviour scientist would recognise as a kind of mind: preferences, memory, anticipation. On this view a brain is not its author but its interface \u2014 and so, possibly, is an AI.', g: 'Studied by behavioural scientists' }
+    ];
+  }
+
+  /* ---------- sorting ---------- */
+  initSort(n, broken, chimeric) {
+    const vals = [];
+    for (let i = 1; i <= n; i++) vals.push(i);
+    for (let i = vals.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = vals[i]; vals[i] = vals[j]; vals[j] = t; }
+    const brokenVals = new Set();
+    while (brokenVals.size < Math.min(broken, n)) brokenVals.add(1 + Math.floor(Math.random() * n));
+    const cells = vals.map(v => ({ v: v, broken: brokenVals.has(v), algo: chimeric ? (Math.random() < 0.5 ? 0 : 1) : 0 }));
+    const st = { cells: cells, hist: [this.sortedness(cells)], clust: [this.clustering(cells)], ctrl: [this.chanceClustering(cells)], rounds: 0, dips: 0, settled: false, running: false };
+    clearInterval(this.timer);
+    if (this.state.cells.length) this.setState(st); else Object.assign(this.state, st);
+  }
+  sortedness(cells) {
+    if (cells.length < 2) return 100;
+    let ok = 0;
+    for (let i = 0; i < cells.length - 1; i++) if (cells[i].v <= cells[i + 1].v) ok++;
+    return 100 * ok / (cells.length - 1);
+  }
+  clustering(cells) {
+    if (cells.length < 2) return 0;
+    let same = 0;
+    for (let i = 0; i < cells.length - 1; i++) if (cells[i].algo === cells[i + 1].algo) same++;
+    return 100 * same / (cells.length - 1);
+  }
+  chanceClustering(cells) {
+    const n = cells.length || 1;
+    const a = cells.filter(c => c.algo === 0).length / n;
+    return 100 * (a * a + (1 - a) * (1 - a));
+  }
+  round() {
+    const cells = this.state.cells.slice();
+    const n = cells.length;
+    const order = [];
+    for (let i = 0; i < n; i++) order.push(i);
+    for (let i = n - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = order[i]; order[i] = order[j]; order[j] = t; }
+    for (let k = 0; k < order.length; k++) {
+      const i = order[k];
+      const c = cells[i];
+      if (!c || c.broken) continue;
+      const lookRight = this.state.chimeric ? c.algo === 0 : true;
+      if (lookRight) {
+        const j = i + 1;
+        if (j < n && !cells[j].broken && cells[i].v > cells[j].v) { const t = cells[i]; cells[i] = cells[j]; cells[j] = t; }
+      } else {
+        const j = i - 1;
+        if (j >= 0 && !cells[j].broken && cells[j].v > cells[i].v) { const t = cells[i]; cells[i] = cells[j]; cells[j] = t; }
+      }
+    }
+    const s = this.sortedness(cells);
+    const prev = this.state.hist[this.state.hist.length - 1];
+    const hist = this.state.hist.concat([s]);
+    const clust = this.state.clust.concat([this.clustering(cells)]);
+    const ctrl = this.state.ctrl.concat([this.chanceClustering(cells)]);
+    const dips = this.state.dips + (s < prev - 0.0001 ? 1 : 0);
+    const tail = hist.slice(-18);
+    const flat = tail.length === 18 && Math.max.apply(null, tail) - Math.min.apply(null, tail) < 0.0001;
+    const settled = flat || hist.length > 500;
+    if (settled) clearInterval(this.timer);
+    this.setState({ cells: cells, hist: hist, clust: clust, ctrl: ctrl, rounds: this.state.rounds + 1, dips: dips, settled: settled, running: settled ? false : this.state.running });
+  }
+  toggleRun = () => {
+    clearInterval(this.timer);
+    if (this.state.running) { this.setState({ running: false }); return; }
+    if (this.state.settled) this.initSort(this.state.n, this.state.brokenCount, this.state.chimeric);
+    this.setState({ running: true });
+    this.timer = setInterval(() => this.round(), 130);
+  };
+  stepOnce = () => { clearInterval(this.timer); this.setState({ running: false }); if (!this.state.settled) this.round(); };
+  resetSort = () => this.initSort(this.state.n, this.state.brokenCount, this.state.chimeric);
+  setN = (e) => { const n = parseInt(e.target.value, 10); this.setState({ n: n }); this.initSort(n, this.state.brokenCount, this.state.chimeric); };
+  setBroken = (e) => { const b = parseInt(e.target.value, 10); this.setState({ brokenCount: b }); this.initSort(this.state.n, b, this.state.chimeric); };
+  setPlain = () => { this.setState({ chimeric: false }); this.initSort(this.state.n, this.state.brokenCount, false); };
+  setChimeric = () => { this.setState({ chimeric: true }); this.initSort(this.state.n, this.state.brokenCount, true); };
+
+  /* ---------- canvases ---------- */
+  chartRef = (el) => { this.chart = el; };
+  orbitRef = (el) => { this.orbitCv = el; };
+  bifRef = (el) => { this.bifCv = el; };
+  tubuleRef = (el) => { this.tubCv = el; };
+  coneRef = (el) => { this.coneCv = el; };
+
+  prep(cv, h) {
+    const w = cv.clientWidth || 520;
+    const dpr = window.devicePixelRatio || 1;
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+    const g = cv.getContext('2d');
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    g.clearRect(0, 0, w, h);
+    return { g: g, w: w, h: h };
+  }
+  drawAll() { this.drawChart(); this.drawOrbit(); this.drawBif(); this.drawTubule(); this.drawWorms(); this.drawCellView(); }
+
+  drawChart() {
+    const cv = this.chart; if (!cv) return;
+    const o = this.prep(cv, 190); const g = o.g, w = o.w, h = o.h;
+    const L = 38, R = 10, T = 16, B = 26;
+    const hist = this.state.hist;
+    const span = Math.max(60, hist.length);
+    const X = i => L + (w - L - R) * (span > 1 ? i / (span - 1) : 0);
+    const Y = v => T + (h - T - B) * (1 - v / 100);
+    g.strokeStyle = 'rgba(32,31,29,0.12)'; g.lineWidth = 1;
+    for (let v = 0; v <= 100; v += 25) { g.beginPath(); g.moveTo(L, Y(v)); g.lineTo(w - R, Y(v)); g.stroke(); }
+    g.fillStyle = '#7d7979'; g.font = '11px Lora, serif'; g.textAlign = 'right';
+    for (let v = 0; v <= 100; v += 25) g.fillText(v + '%', L - 7, Y(v) + 4);
+    g.textAlign = 'center'; g.fillText('rounds', L + (w - L - R) / 2, h - 7);
+    if (this.state.chimeric) {
+      const draw = (arr, color, dash) => {
+        g.setLineDash(dash); g.strokeStyle = color; g.lineWidth = 1.4; g.beginPath();
+        arr.forEach((v, i) => { const x = X(i), y = Y(v); i ? g.lineTo(x, y) : g.moveTo(x, y); });
+        g.stroke(); g.setLineDash([]);
+      };
+      draw(this.state.ctrl, 'rgba(125,121,121,0.8)', [3, 3]);
+      draw(this.state.clust, '#a06f24', []);
+    }
+    g.strokeStyle = '#201f1d'; g.lineWidth = 1.8; g.beginPath();
+    hist.forEach((v, i) => { const x = X(i), y = Y(v); i ? g.lineTo(x, y) : g.moveTo(x, y); });
+    g.stroke();
+    g.fillStyle = '#b68235';
+    for (let i = 1; i < hist.length; i++) if (hist[i] < hist[i - 1] - 0.0001) { g.beginPath(); g.arc(X(i), Y(hist[i]), 3.4, 0, 6.2832); g.fill(); }
+    g.textAlign = 'left'; g.fillStyle = '#605d5d';
+    g.fillText('gold dot = the array got worse this round', L + 4, T + 2);
+    if (this.state.chimeric) { g.fillStyle = '#a06f24'; g.fillText('gold line = neighbours sharing a rule (dashed = chance)', L + 4, T + 16); }
+  }
+  drawOrbit() {
+    const cv = this.orbitCv; if (!cv) return;
+    const o = this.prep(cv, 150); const g = o.g, w = o.w, h = o.h;
+    const L = 30, R = 8, T = 12, B = 18;
+    const v = this.orbitOf(this.state.r, 70);
+    g.strokeStyle = 'rgba(32,31,29,0.12)';
+    [0, 0.5, 1].forEach(t => { const y = T + (h - T - B) * (1 - t); g.beginPath(); g.moveTo(L, y); g.lineTo(w - R, y); g.stroke(); });
+    g.fillStyle = '#7d7979'; g.font = '11px Lora, serif'; g.textAlign = 'right';
+    [0, 0.5, 1].forEach(t => g.fillText(t.toFixed(1), L - 6, T + (h - T - B) * (1 - t) + 4));
+    const X = i => L + (w - L - R) * i / (v.length - 1);
+    const Y = t => T + (h - T - B) * (1 - t);
+    g.strokeStyle = '#201f1d'; g.lineWidth = 1.3; g.beginPath();
+    v.forEach((t, i) => { const x = X(i), y = Y(t); i ? g.lineTo(x, y) : g.moveTo(x, y); });
+    g.stroke();
+    g.fillStyle = '#b68235';
+    v.forEach((t, i) => { g.beginPath(); g.arc(X(i), Y(t), 1.8, 0, 6.2832); g.fill(); });
+  }
+  drawBif() {
+    const cv = this.bifCv; if (!cv || !this.bifCache) return;
+    const o = this.prep(cv, 150); const g = o.g, w = o.w, h = o.h;
+    g.drawImage(this.bifCache, 0, 0, w, h);
+    const x = (this.state.r - 2.4) / 1.6 * w;
+    g.strokeStyle = '#b68235'; g.lineWidth = 1.5;
+    g.beginPath(); g.moveTo(x, 0); g.lineTo(x, h); g.stroke();
+    g.fillStyle = '#605d5d'; g.font = '11px Lora, serif';
+    g.textAlign = 'left'; g.fillText('r = 2.4', 4, h - 5);
+    g.textAlign = 'right'; g.fillText('4.0', w - 4, h - 5);
+  }
+  drawTubule() {
+    const cv = this.tubCv; if (!cv) return;
+    const o = this.prep(cv, 230); const g = o.g, w = o.w, h = o.h;
+    const st = this.tubuleSteps()[this.state.ploidy] || this.tubuleSteps()[0];
+    const cx = w / 2, cy = h / 2 - 6, lumen = 34;
+    g.strokeStyle = 'rgba(32,31,29,0.25)'; g.setLineDash([4, 4]); g.lineWidth = 1;
+    g.beginPath(); g.arc(cx, cy, lumen, 0, 6.2832); g.stroke(); g.setLineDash([]);
+    g.fillStyle = '#605d5d'; g.font = '11px Lora, serif'; g.textAlign = 'center';
+    g.fillText('correct bore', cx, cy + 4);
+    const n = st.cells;
+    if (n === 1) {
+      g.strokeStyle = '#7d5411'; g.lineWidth = 26;
+      g.beginPath(); g.arc(cx, cy, lumen + 15, 0.5, 0.5 + 5.9); g.stroke();
+      g.strokeStyle = '#201f1d'; g.lineWidth = 1;
+      g.beginPath(); g.arc(cx, cy, lumen + 2, 0, 6.2832); g.stroke();
+      g.beginPath(); g.arc(cx, cy, lumen + 28, 0, 6.2832); g.stroke();
+      g.fillStyle = '#201f1d'; g.font = 'italic 12px Lora, serif';
+      g.fillText('one cell, wrapped around itself', cx, h - 10);
+    } else {
+      const rr = lumen + 16;
+      const cellR = Math.min(26, Math.PI * rr / n);
+      for (let i = 0; i < n; i++) {
+        const a = -Math.PI / 2 + i * 6.2832 / n;
+        const x = cx + rr * Math.cos(a), y = cy + rr * Math.sin(a);
+        g.beginPath(); g.arc(x, y, cellR, 0, 6.2832);
+        g.fillStyle = 'rgba(226,201,158,0.55)'; g.fill();
+        g.strokeStyle = '#7d5411'; g.lineWidth = 1.2; g.stroke();
+      }
+      g.fillStyle = '#201f1d'; g.font = 'italic 12px Lora, serif'; g.textAlign = 'center';
+      g.fillText(n + ' cells around the tube', cx, h - 10);
+    }
+  }
+  drawCone() {
+    const cv = this.coneCv; if (!cv) return;
+    const o = this.prep(cv, 240); const g = o.g, w = o.w, h = o.h;
+    const L = 46, R = 14, T = 18, B = 34;
+    const data = this.coneData();
+    const lx = v => L + (w - L - R) * (Math.log10(v) + 6) / 14;
+    const ly = v => T + (h - T - B) * (1 - (Math.log10(v) + 1) / 11);
+    g.strokeStyle = 'rgba(32,31,29,0.12)'; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(L, T); g.lineTo(L, h - B); g.lineTo(w - R, h - B); g.stroke();
+    g.fillStyle = '#7d7979'; g.font = '11px Lora, serif';
+    g.textAlign = 'center'; g.fillText('how far away  \u2192', L + (w - L - R) / 2, h - 8);
+    g.save(); g.translate(12, T + (h - T - B) / 2); g.rotate(-Math.PI / 2);
+    g.fillText('how far ahead  \u2192', 0, 0); g.restore();
+    data.forEach((d, i) => {
+      const on = i === this.state.cone;
+      const x = lx(d.sp), y = ly(d.tm);
+      g.beginPath();
+      g.moveTo(L, h - B); g.lineTo(x, y); g.lineTo(L, y); g.closePath();
+      g.fillStyle = on ? 'rgba(182,130,53,0.22)' : 'rgba(32,31,29,0.05)';
+      g.fill();
+      g.strokeStyle = on ? '#a06f24' : 'rgba(32,31,29,0.18)';
+      g.lineWidth = on ? 1.6 : 1; g.stroke();
+      g.beginPath(); g.arc(x, y, on ? 5 : 3, 0, 6.2832);
+      g.fillStyle = on ? '#7d5411' : 'rgba(32,31,29,0.3)'; g.fill();
+      if (on) {
+        g.fillStyle = '#201f1d'; g.font = '12px Lora, serif';
+        g.textAlign = x > w - 120 ? 'right' : 'left';
+        g.fillText(d.label, x + (x > w - 120 ? -10 : 10), y - 8);
+      }
+    });
+  }
+
+  /* ---------- then / now ---------- */
+  morph = 0;
+  animateMorph(target) {
+    cancelAnimationFrame(this.morphRaf);
+    clearTimeout(this.morphSafety);
+    this.morphSafety = setTimeout(() => {
+      cancelAnimationFrame(this.morphRaf);
+      this.morphRaf = 0; this.morph = target; this.drawCellView();
+    }, 700);
+    const from = this.morph, t0 = performance.now(), dur = 620;
+    const tick = (now) => {
+      this.morphStarted = true;
+      const k = Math.min(1, (now - t0) / dur);
+      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+      this.morph = from + (target - from) * e;
+      this.drawCellView();
+      if (k < 1) this.morphRaf = requestAnimationFrame(tick);
+      else { this.morphRaf = 0; this.morphStarted = false; clearTimeout(this.morphSafety); }
+    };
+    this.morphStarted = false;
+    this.morphRaf = requestAnimationFrame(tick);
+  }
+  setThen = () => { this.setState({ thenNow: 'then' }); this.animateMorph(0); };
+  setNow = () => { this.setState({ thenNow: 'now' }); this.animateMorph(1); };
+  cellViewRef = (el) => { this.cellCv = el; };
+
+  drawCellView() {
+    const cv = this.cellCv; if (!cv) return;
+    const mTarget = this.state.thenNow === 'now' ? 1 : 0;
+    if (!this.morphRaf || !this.morphStarted) this.morph = mTarget;
+    const o = this.prep(cv, 300); const g = o.g, w = o.w, h = o.h;
+    const m = this.morph;
+    const ink = '#201f1d', faint = 'rgba(32,31,29,0.65)', hair = 'rgba(182,130,53,0.5)', gold = '#a06f24', goldF = 'rgba(182,130,53,0.5)';
+    const label = (txt, x, y, size, color, align, italic) => {
+      g.fillStyle = color; g.textAlign = align || 'center';
+      g.font = (italic ? 'italic ' : '') + (size || 12) + 'px Lora, serif';
+      g.fillText(txt, x, y);
+    };
+    const kicker = (txt, x, y, color, align) => {
+      g.fillStyle = color; g.textAlign = align || 'center';
+      g.font = '11px "Cormorant Garamond", serif';
+      g.fillText(txt.toUpperCase().split('').join('\u2009'), x, y);
+    };
+    const arrow = (x1, y1, x2, y2, color, alpha, dash) => {
+      if (alpha <= 0.01) return;
+      g.save(); g.globalAlpha = alpha; g.strokeStyle = color; g.lineWidth = 1.2;
+      g.setLineDash(dash || []);
+      g.beginPath(); g.moveTo(x1, y1); g.lineTo(x2, y2); g.stroke();
+      const a = Math.atan2(y2 - y1, x2 - x1), s = 5;
+      g.setLineDash([]); g.beginPath();
+      g.moveTo(x2, y2);
+      g.lineTo(x2 - s * Math.cos(a - 0.4), y2 - s * Math.sin(a - 0.4));
+      g.lineTo(x2 - s * Math.cos(a + 0.4), y2 - s * Math.sin(a + 0.4));
+      g.closePath(); g.fillStyle = color; g.fill(); g.restore();
+    };
+
+    const cy = 150;
+    const pipeX = [0.10, 0.28, 0.46, 0.64, 0.82].map(f => 30 + (w - 60) * f);
+    const ringR = Math.min(74, (w - 120) / 4.4);
+    const ringCx = w * 0.34, ringCy = cy + 6;
+
+    /* --- pipeline (then) --- */
+    if (m < 0.995) {
+      const a = 1 - m;
+      g.save(); g.globalAlpha = a;
+      kicker('one-way instructions', w / 2, 40, faint);
+      const names = ['Gene', 'Protein', 'Cell', 'Tissue', 'Body'];
+      for (let i = 0; i < 5; i++) {
+        const x = pipeX[i], bw = Math.min(62, (w - 60) / 6.2);
+        g.strokeStyle = ink; g.lineWidth = 1;
+        g.strokeRect(x - bw / 2, cy - 20, bw, 40);
+        label(names[i], x, cy + 5, 13, ink);
+        if (i < 4) arrow(x + bw / 2 + 5, cy, pipeX[i + 1] - bw / 2 - 6, cy, ink, 1);
+      }
+      label('Each step follows from the one before. The cell is a component executing code.', w / 2, cy + 68, 13, 'rgba(32,31,29,0.65)', 'center', true);
+      label('No step looks back.', w / 2, cy + 88, 12, faint, 'center', true);
+      g.restore();
+    }
+
+    /* --- collective (now) --- */
+    if (m > 0.005) {
+      const a = m;
+      g.save(); g.globalAlpha = a;
+      kicker('a collective steering to a target', 30, 26, gold, 'left');
+
+      g.setLineDash([4, 4]); g.strokeStyle = goldF; g.lineWidth = 1;
+      g.strokeStyle = hair;
+      g.beginPath(); g.arc(ringCx, ringCy, ringR + 30, 0, 6.2832); g.stroke();
+      g.setLineDash([]);
+      label('target shape', ringCx - ringR - 34, ringCy - 30, 12, gold, 'right', true);
+
+      const n = 8, pts = [];
+      for (let i = 0; i < n; i++) {
+        const ang = -Math.PI / 2 + i * 6.2832 / n;
+        pts.push([ringCx + ringR * Math.cos(ang), ringCy + ringR * Math.sin(ang)]);
+      }
+      for (let i = 0; i < n; i++) {
+        const p = pts[i], q = pts[(i + 1) % n];
+        g.strokeStyle = goldF; g.lineWidth = 1;
+        g.beginPath(); g.moveTo(p[0], p[1]); g.lineTo(q[0], q[1]); g.stroke();
+      }
+      pts.forEach((p, i) => {
+        g.beginPath(); g.arc(p[0], p[1], 15, 0, 6.2832);
+        g.fillStyle = 'rgba(226,201,158,0.5)'; g.fill();
+        g.strokeStyle = '#7d5411'; g.lineWidth = 1.2; g.stroke();
+        g.fillStyle = gold; g.textAlign = 'center';
+        g.font = '10px "Cormorant Garamond", serif';
+        g.fillText(i % 2 ? '\u2212' : '+', p[0], p[1] + 4);
+      });
+      label('cells sharing voltage,', ringCx, ringCy + ringR + 34, 13, ink, 'center', true);
+      label('measuring the gap and correcting', ringCx, ringCy + ringR + 52, 13, ink, 'center', true);
+
+      const bx = Math.min(w - 76, ringCx + ringR + 118);
+      g.strokeStyle = ink; g.lineWidth = 1;
+      g.strokeRect(bx - 52, ringCy - 24, 104, 48);
+      label('what got built', bx, ringCy + 4, 13, ink);
+      arrow(ringCx + ringR + 34, ringCy - 12, bx - 58, ringCy - 12, ink, 1);
+      arrow(bx - 58, ringCy + 16, ringCx + ringR + 34, ringCy + 16, gold, 1, [4, 3]);
+      label('measured against the target', bx, ringCy + 46, 12, gold, 'center', true);
+      label('the loop is the whole point', bx, ringCy - 38, 12, faint, 'center', true);
+      g.restore();
+    }
+  }
+  thenNowData() {
+    return [
+      {
+        old: 'The genome specifies the body.',
+        now: 'Genes specify the hardware. The target shape is held separately, as a bioelectric state, and can be rewritten without touching DNA.',
+        ev: 'Two-headed planaria with entirely normal genomes \u2014 permanently, through later cuts.'
+      },
+      {
+        old: 'Development runs open-loop: simple rules iterate and a body falls out.',
+        now: 'Morphogenesis is error-correcting navigation toward a stored setpoint \u2014 it can reach the same target by other routes.',
+        ev: 'Split embryos make whole twins, not half-bodies. A newt builds the same tubule with nine cells or with one.'
+      },
+      {
+        old: 'A trait exists because selection shaped it in some past environment.',
+        now: 'Some competencies arrive with no design history and no selection history at all.',
+        ev: 'Anthrobots self-assembled from adult human tracheal cells. Eyes grafted onto tadpole tails that see.'
+      },
+      {
+        old: 'Intelligence requires a brain, and more brain means more mind.',
+        now: 'Goal-directedness runs from single cells upward. Brains extend the reach of a mind rather than creating it.',
+        ev: 'Humans with minimal brain matter and normal cognition. Decision-making read out of ordinary tissue.'
+      },
+      {
+        old: 'A machine does exactly what its algorithm says, and no more.',
+        now: 'Machines also do things that are not in the algorithm, and those things are competencies rather than noise.',
+        ev: 'Bubble sort backtracking around broken data. Algotype clustering nothing in the code refers to.'
+      },
+      {
+        old: 'Life and machines are two different kinds of thing.',
+        now: 'Both are interfaces. The question is how much pattern each one lets in, not what it is made of.',
+        ev: 'Biobots, chimeras and hybrids that are neither, and work anyway.'
+      }
+    ];
+  }
+
+  /* ---------- philosophy ---------- */
+  setPhil = (i) => () => this.setState({ phil: i });
+  philData() {
+    return [
+      {
+        tab: 'Dualism without mystery',
+        title: 'Two realms, as a research commitment',
+        body: 'Positing something beyond the physical is normally where explanation stops. Levin argues the reverse: a grab-bag of emergent surprises is the defeatist option, because it asks you to accept permanent astonishment. A structured space can be mapped, measured and exploited \u2014 so committing to one is a promise to go and study it.',
+        breaks: 'Breaks with: monism as an unexamined default.'
+      },
+      {
+        tab: 'Platonism past mathematics',
+        title: 'The space holds more than triangles',
+        body: 'Platonist mathematicians already accept facts that are not facts of physics. Levin keeps their space and widens its contents: not only static truths, but oscillating ones, goal states a body can steer toward, and full behavioural policies. Mathematics, on this view, might be the behavioural science of one layer of that space.',
+        breaks: 'Breaks with: Platonism as a doctrine about numbers only.'
+      },
+      {
+        tab: 'Causation, not description',
+        title: 'Interactionism without quantum mechanics',
+        body: 'The patterns are held to be instructive and fully causal, probably in both directions. No quantum effects are invoked. The model for mind and body is the relation an instructive mathematical fact has to a physical system: change the distribution of the primes and cicadas emerge on different cycles, which satisfies both the counterfactual and the explanatory test for a cause.',
+        breaks: 'Breaks with: causation that has to be physical at both ends.'
+      },
+      {
+        tab: 'An engineer\u2019s idea of real',
+        title: 'He declines the ontology question',
+        body: 'Is the space ontologically real? Levin refuses the question as posed. Real, to an engineer, means whatever you have to worry about or can take advantage of \u2014 and these patterns qualify. Call it a second realm or redefine physics to contain it; what matters is whether the framing yields experiments worth running.',
+        breaks: 'Breaks with: settling metaphysics before doing the science.'
+      },
+      {
+        tab: 'Thoughts and thinkers',
+        title: 'Which one is the agent depends on where you stand',
+        body: 'Turing\u2019s picture has an active machine and passive data. Levin adds the mirror image: the pattern can be the agent and the machine the scratchpad it drives, obeying the information in the data. Whether you see an object or a pattern is observer-relative \u2014 and we are patterns too, not permanent objects.',
+        breaks: 'Breaks with: the clean split between the thinker and the thought.'
+      },
+      {
+        tab: 'Souls, robots, ethics',
+        title: 'We do not make minds; we build places for them',
+        body: 'His own colloquial phrasing: if these are the non-material animating forms, then souls are real and robots will have them. The practical consequence is ethical rather than mystical. We can produce things without understanding what we have produced \u2014 people do it every time they have a child \u2014 so we should treat our constructions with care while we work out where on the spectrum they fall.',
+        breaks: 'Breaks with: the assumption that moral status tracks being made of meat.'
+      }
+    ];
+  }
+
+  /* ---------- assumptions ---------- */
+  toggleOpen = (i) => () => this.setState({ open: this.state.open === i ? -1 : i });
+
+  /* ---------- quiz ---------- */
+  pick(q, i) { return () => { if (this.state.quiz[q] !== undefined) return; const nq = Object.assign({}, this.state.quiz); nq[q] = i; this.setState({ quiz: nq }); }; }
+  optStyle(picked, isRight, answered) {
+    const base = {
+      display: 'flex', alignItems: 'baseline', gap: '10px', width: '100%', textAlign: 'left',
+      fontFamily: 'var(--font-body)', fontSize: '16px', lineHeight: '1.5', padding: '13px 16px',
+      borderRadius: '4px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'var(--color-divider)',
+      backgroundColor: 'transparent',
+      color: 'var(--color-text)', cursor: answered ? 'default' : 'pointer', transition: 'all 180ms ease'
+    };
+    if (!answered) return base;
+    if (isRight) { base.borderColor = 'var(--color-accent-600)'; base.backgroundColor = 'var(--color-accent-100)'; base.color = 'var(--color-accent-900)'; }
+    else if (picked) { base.borderColor = 'var(--color-neutral-500)'; base.opacity = 0.55; }
+    else base.opacity = 0.4;
+    return base;
+  }
+  quizOpts(q, labels, right) {
+    const answered = this.state.quiz[q] !== undefined;
+    return labels.map((label, i) => ({
+      key: q + i, label: label, onClick: this.pick(q, i),
+      style: this.optStyle(this.state.quiz[q] === i, i === right, answered),
+      mark: answered ? (i === right ? '\u2713' : (this.state.quiz[q] === i ? '\u2715' : '\u00b7')) : '\u00b7',
+      markStyle: {
+        fontFamily: 'var(--font-heading)', fontSize: '15px', width: '1em', flex: '0 0 auto',
+        color: answered && i === right ? 'var(--color-accent-700)' : 'var(--color-neutral-500)'
+      }
+    }));
+  }
+
+  renderVals() {
+    const s = this.state;
+    const shapes = this.wormShape();
+    const tub = this.tubuleSteps()[s.ploidy] || this.tubuleSteps()[0];
+    const cone = this.coneData()[s.cone];
+    const ags = this.agencyStops();
+    const ag = ags[s.agency] || ags[0];
+    const rights = [1, 1, 1];
+
+    let wormNote, wormHint;
+    if (s.phase === 'intact') {
+      wormNote = s.treated
+        ? 'The voltage map now says two heads. Look at the body row: identical. Look at the genome row: identical. The only thing that differs is the remembered target.'
+        : 'One worm, untouched. Its voltage map says one head, and one head is what it has.';
+      wormHint = s.treated ? 'Now press Amputate. The worm looks completely normal.' : 'Press Apply ionophore, then Amputate. Or amputate first, as a control.';
+    } else if (s.phase === 'cut') { wormNote = 'Cut into three. Each fragment now has to work out what to build.'; wormHint = 'Each fragment is reading the map it inherited.'; }
+    else if (s.phase === 'regen') { wormNote = 'Regenerating. The fragments are consulting the pattern memory, not the genome.'; wormHint = 'Wait for it.'; }
+    else {
+      wormNote = s.treated
+        ? 'Every fragment built two heads. Same genome, same gene expression, different remembered target \u2014 and cutting them again, with no further treatment, gives two-headed worms indefinitely.'
+        : 'Each fragment rebuilt one head and one tail: the ordinary result. Now reset, apply the ionophore, and cut again.';
+      wormHint = s.treated ? 'Press Amputate again \u2014 no new treatment. The memory holds.' : 'Reset, apply the ionophore, and compare.';
+    }
+
+    const phaseLabels = { intact: 'Intact', cut: 'Fragments, 0 h', regen: 'Regenerating', grown: 'Regenerated' };
+    const sortedNow = s.hist.length ? s.hist[s.hist.length - 1] : 0;
+
+    let sortNote;
+    if (s.brokenCount === 0) sortNote = 'This is the algorithm doing its job: each pass walks the array, swaps any neighbouring pair in the wrong order, and the line climbs to 100% and stops. It never goes backward. Now drag Broken numbers up to two or three and run it again.';
+    else if (s.rounds < 2) sortNote = 'Press Run, and watch for gold dots on the black line.';
+    else if (s.dips === 0) sortNote = 'No backward step yet in this run. Shuffle and run again, or add another broken number \u2014 the harder the blockage, the more ground the array has to give up.';
+    else sortNote = 'Those gold dots are rounds where the array got measurably worse. Nothing in this code checks whether a swap succeeded or plans a detour: the numbers simply cannot pass a broken one, and routing around it costs ground first. Behavioural scientists call that delayed gratification, and it is nowhere in the rules.';
+    if (s.chimeric) sortNote += ' In this mode every number runs its own copy of the rule, and half of them run a different one. The gold line tracks how often neighbours share a rule, against the dashed chance line.';
+
+    const sourceStyle = {
+      fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: '1.6', color: 'var(--color-neutral-700)',
+      margin: '14px 0 0', maxWidth: '78ch', display: this.props.showCitations === false ? 'none' : 'block'
+    };
+    const revealStyle = {
+      fontSize: '16px', lineHeight: '1.65', margin: 0, padding: '14px 18px',
+      borderLeftWidth: '2px', borderLeftStyle: 'solid', borderLeftColor: 'var(--color-accent)',
+      backgroundColor: 'var(--color-accent-100)',
+      color: 'var(--color-accent-900)', maxWidth: '66ch'
+    };
+    const ghostBtn = {
+      fontFamily: 'var(--font-heading)', fontSize: '14px', letterSpacing: '.04em', padding: '10px 18px',
+      borderRadius: '4px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'var(--color-divider)',
+      backgroundColor: 'transparent',
+      color: 'var(--color-neutral-700)', cursor: 'pointer', transition: 'all 160ms ease'
+    };
+
+    const assumptionData = [
+      { claim: 'Dualist models are inherently mysterian.', reply: 'The opposite, he argues. A structured space of patterns \u2014 rather than a grab-bag of emergent surprises \u2014 is an invitation to go and map it.' },
+      { claim: 'Platonic forms are eternal and unchanging.', reply: 'Some may be. Others might change over time, or with experience gained through being embodied.' },
+      { claim: 'Causation has to be physical at both ends.', reply: 'Billiard-ball causation guarantees physicalism by construction. If the primes were different, cicadas would emerge on different cycles \u2014 that counts as a cause.' },
+      { claim: 'Platonism is for mathematics only.', reply: 'Mathematics may be the behavioural science of one layer of that space. Other layers would be the subject matter of other disciplines.' },
+      { claim: 'These forms are best understood as constraints.', reply: 'Constraints only subtract. What if the space also offers enablements \u2014 the free lunches \u2014 that evolution already exploits and engineers could?' },
+      { claim: 'Life is a sharp category; machines lack the magic.', reply: 'What if undirected evolution has no monopoly on making real minds, and our formal model of computation is as incomplete for machines as chemistry is for us?' },
+      { claim: 'First we must settle whether the space is really real.', reply: 'A pragmatic dodge: call it a realm, or redefine physics to include it. What matters is whether the framework produces experiments worth running.' }
+    ];
+
+    return {
+      progressStyle: { height: '2px', width: (s.progress * 100).toFixed(2) + '%', backgroundColor: 'var(--color-accent)', transition: 'width 120ms linear' },
+      sourceStyle: sourceStyle, revealStyle: revealStyle, ghostBtn: ghostBtn,
+
+      navItems: this.sectionList().map(sec => {
+        const on = sec.id === s.activeSec;
+        return {
+          key: sec.id, href: '#' + sec.id, label: sec.label, mins: sec.mins,
+          style: {
+            display: 'flex', gap: '10px', alignItems: 'baseline', justifyContent: 'space-between',
+            padding: '9px 12px', textDecoration: 'none', borderRadius: '4px',
+            borderLeftWidth: '2px', borderLeftStyle: 'solid',
+            borderLeftColor: on ? 'var(--color-accent)' : 'transparent',
+            backgroundColor: on ? 'var(--color-accent-100)' : 'transparent',
+            color: on ? 'var(--color-accent-900)' : 'var(--color-neutral-700)',
+            transition: 'all 160ms ease'
+          },
+          labelStyle: { fontFamily: 'var(--font-heading)', fontSize: '15px', lineHeight: '1.25' },
+          minStyle: { fontFamily: 'var(--font-heading)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: on ? 'var(--color-accent-700)' : 'var(--color-neutral-500)', whiteSpace: 'nowrap' }
+        };
+      }),
+      dVoltage: this.detour('voltage', 'How can a shape be stored in electricity?', 'Detour \u00b7 2 min'),
+      dCompute: this.detour('compute', 'Why this one unsettles computer scientists', 'Detour \u00b7 2 min'),
+      dPhysical: this.detour('physical', 'Objection: isn\u2019t a voltage gradient still physical?', 'Detour \u00b7 3 min'),
+
+      cellViewRef: this.cellViewRef,
+      cellViewCaption: s.thenNow === 'then'
+        ? 'The cell as an operational unit: transcribe, translate, divide, differentiate. Instructions arrive from upstream and are carried out. Anything the tissue does is the sum of those steps \u2014 there is no place in the diagram for a cell to hold an outcome in mind.'
+        : 'The same cells, redrawn as a collective with a target. They share electrical state, compare what exists against what should exist, and correct the difference \u2014 which is why fragments rebuild whole bodies, why fewer cells still build the right tube, and why rewriting the target changes the anatomy without touching a gene.',
+      thenNowLabel: s.thenNow === 'then' ? 'What the standard account says' : 'What the paper proposes instead',
+      setThen: this.setThen, setNow: this.setNow,
+      thenBtnStyle: this.btn(s.thenNow === 'then'), nowBtnStyle: this.btn(s.thenNow === 'now'),
+      thenNowRows: this.thenNowData().map((row, i) => {
+        const now = s.thenNow === 'now';
+        return {
+          key: i, num: '0' + (i + 1), claim: now ? row.now : row.old, evidence: row.ev,
+          numStyle: { fontFamily: 'var(--font-heading)', fontSize: '13px', letterSpacing: '.1em', color: now ? 'var(--color-accent-700)' : 'var(--color-neutral-500)', fontVariantNumeric: 'tabular-nums' },
+          claimStyle: {
+            fontFamily: now ? 'var(--font-body)' : 'var(--font-heading)',
+            fontSize: now ? '17px' : '21px', lineHeight: now ? '1.65' : '1.3',
+            fontStyle: now ? 'normal' : 'italic', margin: 0,
+            color: now ? 'var(--color-text)' : 'var(--color-neutral-700)',
+            textDecoration: now ? 'none' : 'line-through',
+            textDecorationColor: 'var(--color-neutral-400)',
+            transition: 'color 200ms ease'
+          },
+          evidenceStyle: {
+            fontSize: '15px', lineHeight: '1.6', margin: 0, color: 'var(--color-accent-900)',
+            borderLeftWidth: '2px', borderLeftStyle: 'solid', borderLeftColor: 'var(--color-accent)', paddingLeft: '14px',
+            maxHeight: now ? '120px' : '0', opacity: now ? 1 : 0, overflow: 'hidden',
+            marginTop: now ? '12px' : '0', transition: 'all 260ms ease'
+          }
+        };
+      }),
+
+      philTabs: this.philData().map((p, i) => ({
+        key: i, label: p.tab, onClick: this.setPhil(i),
+        style: Object.assign(this.btn(i === s.phil), { textAlign: 'left', width: '100%' })
+      })),
+      philTitle: this.philData()[s.phil].title,
+      philBody: this.philData()[s.phil].body,
+      philBreaks: this.philData()[s.phil].breaks,
+
+      anatomyItems: shapes.map((sh, i) => ({ key: 'a' + i, style: this.body(sh.w, false), hl: this.head('left', sh.heads >= 1), hr: this.head('right', sh.heads >= 2) })),
+      bioItems: shapes.map((sh, i) => ({ key: 'b' + i, style: this.body(sh.w, true), b1: this.blob('left', true), b2: this.blob('right', s.treated) })),
+      wormNote: wormNote, wormHint: wormHint,
+      wormPhaseLabel: (phaseLabels[s.phase] || '') + (s.gen > 1 ? ' \u00b7 cut ' + s.gen : ''),
+      treatLabel: s.treated ? 'Ionophore applied \u00b7 3 h' : 'Apply ionophore (3 h)',
+      treatBtnStyle: Object.assign(this.btn(s.treated), s.phase === 'intact' ? {} : { opacity: 0.45, cursor: 'default' }),
+      cutLabel: s.phase === 'grown' ? 'Amputate again' : 'Amputate',
+      cutBtnStyle: Object.assign(this.btn(false), { borderColor: 'var(--color-accent-600)', color: 'var(--color-accent-900)' }, s.phase === 'regen' ? { opacity: 0.45, cursor: 'default' } : {}),
+      toggleTreat: this.toggleTreat, doCut: this.doCut, resetWorm: this.resetWorm,
+
+      ploidy: s.ploidy, setPloidy: this.setPloidy, ploidyLabel: tub.ploidy,
+      tubuleRef: this.tubuleRef, tubuleCells: tub.cells, tubuleMech: tub.mech, tubuleNote: tub.note,
+
+      r: s.r, setR: this.setR, rLabel: s.r.toFixed(3), orbitRef: this.orbitRef, bifRef: this.bifRef,
+      rPresets: [
+        { label: 'One value \u00b7 2.8', v: 2.8 },
+        { label: 'Two \u00b7 3.2', v: 3.2 },
+        { label: 'Four \u00b7 3.5', v: 3.5 },
+        { label: 'Chaos \u00b7 3.9', v: 3.9 },
+        { label: 'Island of order \u00b7 3.83', v: 3.83 }
+      ].map((p, i) => ({ key: i, label: p.label, onClick: () => this.setState({ r: p.v }), style: this.btn(Math.abs(s.r - p.v) < 0.006) })),
+      periodLabel: (function (per) {
+        if (per === 0) return 'No repeating cycle at all \u2014 chaotic, yet fully determined.';
+        if (per === 1) return 'Settles on a single value.';
+        return 'Settles into a cycle of ' + per + ' values.';
+      })(this.period(s.r)),
+
+      wormRef: this.wormRef,
+      reachRows: this.coneData().map((d, i) => {
+        const on = i === s.cone;
+        const unknown = i === 4;
+        const track = {
+          position: 'relative', height: '10px', flex: '1 1 auto', minWidth: '60px',
+          borderWidth: '1px', borderStyle: 'solid', borderColor: 'var(--color-divider)',
+          borderRadius: '2px', backgroundColor: 'transparent'
+        };
+        const bar = (pct, accent) => ({
+          position: 'absolute', left: 0, top: 0, bottom: 0,
+          width: (unknown ? 100 : pct) + '%',
+          backgroundColor: unknown ? 'transparent' : (accent ? 'var(--color-accent-500)' : 'var(--color-neutral-400)'),
+          backgroundImage: unknown ? 'repeating-linear-gradient(45deg, var(--color-neutral-300) 0 3px, transparent 3px 6px)' : 'none',
+          borderWidth: '1px', borderStyle: 'solid',
+          borderColor: unknown ? 'var(--color-neutral-500)' : (accent ? 'var(--color-accent-800)' : 'var(--color-neutral-700)'),
+          opacity: on ? 1 : 0.45, transition: 'all 220ms ease'
+        });
+        return {
+          key: i, name: d.label, space: d.space, time: d.time,
+          nameStyle: {
+            fontFamily: 'var(--font-heading)', fontSize: '17px', letterSpacing: '.02em',
+            color: on ? 'var(--color-accent-800)' : 'var(--color-neutral-700)'
+          },
+          valStyle: {
+            fontFamily: 'var(--font-body)', fontSize: '14px', minWidth: '13ch',
+            color: on ? 'var(--color-text)' : 'var(--color-neutral-600)'
+          },
+          spaceTrack: track, timeTrack: track,
+          spaceBar: bar(100 * (Math.log10(d.sp) + 6) / 14, true),
+          timeBar: bar(100 * (Math.log10(d.tm) + 1) / 11, false)
+        };
+      }),
+      coneOpts: this.coneData().map((d, i) => ({ key: i, label: d.label, onClick: this.setCone(i), style: this.btn(i === s.cone) })),
+      coneTitle: cone.label, coneSpace: cone.space, coneTime: cone.time, coneNote: cone.note,
+
+      agency: s.agency, setAgency: this.setAgency,
+      agencyTitle: ag.t, agencyDesc: ag.d, agencyTag: ag.g,
+      agencyTicks: ['Rock', 'Oscillator', 'Setpoint', 'Traversal', 'Mind'].map((l, i) => ({
+        key: i, label: l,
+        style: {
+          fontFamily: 'var(--font-heading)', fontSize: '12px', letterSpacing: '.1em', textTransform: 'uppercase',
+          color: i === s.agency ? 'var(--color-accent-700)' : 'var(--color-neutral-500)'
+        }
+      })),
+      showLiar: s.agency === 1,
+      liarLabel: s.liar ? 'TRUE' : 'FALSE',
+      liarStyle: {
+        fontFamily: 'var(--font-heading)', fontSize: '20px', letterSpacing: '.1em',
+        color: 'var(--color-accent-800)', minWidth: '4.4em',
+        borderBottomWidth: '1px', borderBottomStyle: 'solid', borderBottomColor: 'var(--color-accent-400)'
+      },
+      liarTrace: s.liarTrace.map((v, i) => ({
+        key: i,
+        style: { width: '6px', height: (v ? 22 : 9) + 'px', backgroundColor: v ? 'var(--color-accent-500)' : 'var(--color-neutral-400)', borderRadius: '1px' }
+      })),
+
+      n: s.n, brokenCount: s.brokenCount, chimeric: s.chimeric,
+      showValues: s.n <= 22,
+      valueRow: s.cells.map((c, i) => ({
+        key: i, label: String(c.v),
+        style: {
+          flex: '1 1 0', minWidth: '3px', textAlign: 'center',
+          fontFamily: 'var(--font-heading)', fontSize: '13px', fontVariantNumeric: 'tabular-nums',
+          color: c.broken ? 'var(--color-accent-800)' : 'var(--color-neutral-700)'
+        }
+      })),
+      cells: s.cells.map((c, i) => ({
+        key: i, title: c.v + (c.broken ? ' \u00b7 broken' : ''),
+        style: {
+          flex: '1 1 0', minWidth: '3px', height: Math.round(8 + 118 * c.v / (s.n || 1)) + 'px',
+          borderWidth: '1px 1px 0 1px', borderStyle: 'solid',
+          borderColor: c.broken ? 'var(--color-accent-700)' : (c.algo === 1 ? 'var(--color-accent-800)' : 'var(--color-neutral-700)'),
+          borderRadius: '2px 2px 0 0',
+          backgroundColor: c.broken ? 'transparent' : (c.algo === 1 ? 'var(--color-accent-500)' : 'var(--color-neutral-400)'),
+          backgroundImage: c.broken ? 'repeating-linear-gradient(45deg, var(--color-accent-300) 0 3px, transparent 3px 6px)' : 'none',
+          transition: 'height 120ms linear'
+        }
+      })),
+      setN: this.setN, setBroken: this.setBroken, setPlain: this.setPlain, setChimeric: this.setChimeric,
+      plainStyle: this.btn(!s.chimeric), chimericStyle: this.btn(s.chimeric),
+      toggleRun: this.toggleRun, stepOnce: this.stepOnce, resetSort: this.resetSort,
+      runLabel: s.running ? 'Pause' : (s.settled ? 'Run again' : 'Run'),
+      runStyle: Object.assign(this.btn(true), { minWidth: '96px' }),
+      chartRef: this.chartRef,
+      sortStat: 'Round ' + s.rounds + ' \u00b7 ' + sortedNow.toFixed(0) + '% sorted \u00b7 ' + s.dips + ' backward step' + (s.dips === 1 ? '' : 's'),
+      sortNote: sortNote,
+
+      q1: this.quizOpts('q1', ['No \u2014 an eye not wired to the brain cannot be used.', 'Yes \u2014 even though the nerve never reaches the brain.', 'Only if the nerve finds its way to the brain.'], rights[0]),
+      q2: this.quizOpts('q2', ['The cases are probably misreported.', 'That the brain is an interface, not the author of the mind.', 'That cognition needs less tissue than we thought, and nothing more.'], rights[1]),
+      q3: this.quizOpts('q3', ['Nothing \u2014 they have no behaviour outside the body.', 'They gather on the wound, and the neurons knit back together.', 'They disperse; the wound heals at the normal rate.'], rights[2]),
+      q1done: s.quiz.q1 !== undefined, q2done: s.quiz.q2 !== undefined, q3done: s.quiz.q3 !== undefined,
+      scoreLabel: (function () {
+        const keys = ['q1', 'q2', 'q3'];
+        const done = keys.filter(k => s.quiz[k] !== undefined).length;
+        if (!done) return '3 questions';
+        const right = keys.filter((k, i) => s.quiz[k] === rights[i]).length;
+        return right + ' right of ' + done + ' answered';
+      })(),
+
+      assumptions: assumptionData.map((a, i) => {
+        const open = s.open === i;
+        return {
+          key: i, claim: a.claim, reply: a.reply, onClick: this.toggleOpen(i),
+          num: '0' + (i + 1), sign: open ? '\u2212' : '+',
+          btnStyle: {
+            display: 'grid', gridTemplateColumns: '44px minmax(0, 1fr) 28px', gap: '16px', alignItems: 'baseline',
+            width: '100%', textAlign: 'left', padding: '18px 8px', border: 'none', borderRadius: '4px',
+            backgroundColor: open ? 'var(--color-neutral-200)' : 'transparent', cursor: 'pointer', transition: 'background 160ms ease'
+          },
+          numStyle: { fontFamily: 'var(--font-heading)', fontSize: '13px', letterSpacing: '.1em', color: 'var(--color-accent-700)', fontVariantNumeric: 'tabular-nums' },
+          claimStyle: { fontFamily: 'var(--font-heading)', fontSize: '20px', lineHeight: '1.3', fontStyle: 'italic', color: open ? 'var(--color-text)' : 'var(--color-neutral-800)' },
+          signStyle: { fontFamily: 'var(--font-heading)', fontSize: '20px', color: 'var(--color-accent-700)', textAlign: 'right' },
+          replyStyle: {
+            fontSize: '16px', lineHeight: '1.7', margin: 0, maxWidth: '74ch',
+            padding: open ? '0 8px 20px 60px' : '0 8px 0 60px',
+            maxHeight: open ? '200px' : '0', overflow: 'hidden', opacity: open ? 1 : 0,
+            transition: 'all 280ms ease'
+          }
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>
